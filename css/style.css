@@ -76,6 +76,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 /*****************************
 	Typography
 *****************************/
+
 body {
   font-family: "Jost", sans-serif;
   font-weight: normal;
@@ -8297,4 +8298,3 @@ body:has(#search.open) {
     padding: 10px 0; }
   .widget-menu.menu-style-2 ul li:first-child a {
     padding-top: 0; } }
-
