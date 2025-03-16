@@ -42,6 +42,7 @@ NOTE: This file contains all scripts for the actual Template.
 ======================================*/
 //POTENZA var
 
+
 (function ($) {
 	"use strict";
 	var POTENZA = {};

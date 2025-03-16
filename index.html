@@ -9,11 +9,11 @@
 		<title>Dimond - Digital Marketing Agency HTML5 Template</title>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/log.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<!-- Google Font -->
 		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
 		<!-- CSS Global Compulsory (Do not remove)-->
 		<link rel="stylesheet" href="css/font-awesome/all.min.css">
 		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
@@ -32,29 +32,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 	<style>
-        .slider-container { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
-        .slider { display: flex; width: 200vw; transition: transform 0.5s ease-in-out; }
-        .slide { min-width: 100vw; height: 100vh; position: relative; }
-        .slide video { width: 100%; height: 100%; z-index: 1000; }
+ .slider-container { position: relative; width: 100vw; height: 100vh; overflow: hidden; @media (max-width: 768px) {
+	height:  85%;
+ }}
+        .slider { display: flex; width: 200vw; transition: transform 0.5s ease-in-out; 
+			@media (max-width: 768px) {
+				height:  85%;
+			 }}
+        .slide { min-width: 100vw; height: 100vh; position: relative; 
+			@media (max-width: 768px) {
+				height:  85%;
+			 }}
+        .slide video { width: 100%; height: 100%; object-fit: cover; 
+			@media (max-width: 768px) {
+				height: 70%;
+			 }}
         .text-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-align: center; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); }
         .nav-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: #0a3d62; color: white; border: none; padding: 10px 15px; font-size: 24px; cursor: pointer; border-radius: 50%; }
         .nav-button:hover { background-color: #2384c6; }
         .prev { left: 20px; }
         .next { right: 20px; }
 
+        /* Social Media Icons */
+        .social-icons {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+			@media (max-width: 468px){
+				position: absolute;
+				left: 20%;
+				gap: 10px;
+
+			}
+        }
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            color: #0a3d62;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+			@media (max-width: 468px){
+                 width: 20px !important;
+				 height: 20px !important;
+				 font-size: 14px !important;
+			}
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            background-color: #2384c6;
+            color: white;
+        }
+
         @media (max-width: 768px) {
             .text-overlay { font-size: 1.5rem; padding: 10px; }
             .nav-button { padding: 8px 12px; font-size: 18px; }
+            .social-icons a { width: 35px; height: 35px; font-size: 18px; }
         }
-		.yt-slider-container { position: relative; width: 100%; overflow: hidden; padding: 20px; background: #f5f5f5; }
-        .yt-slider { display: flex; gap: 15px; transition: transform 0.5s ease-in-out; }
+		.yt-slider-wrapper { position: relative; width: 100%; padding: 40px 50px;  display: flex; align-items: center; justify-content: center; @media (max-width: 468px) {
+			position: relative !important;
+		top: 30px !important;
+		}}
+        .yt-slider-container { width: 100%; overflow: hidden; }
+        .yt-slider { display: flex; gap: 11px; transition: transform 0.5s ease-in-out; }
         .yt-slide { flex: 1 0 calc(33.33% - 10px); max-width: calc(33.33% - 10px); position: relative; }
         .yt-slide iframe { width: 100%; height: 200px; border-radius: 10px; }
-        .yt-caption { text-align: center; margin-top: 10px; font-size: 16px; color: white; background: #0a3d62; padding: 8px; border-radius: 5px; }
-        .yt-nav-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: #0a3d62; color: white; border: none; padding: 10px 15px; font-size: 24px; cursor: pointer; border-radius: 50%; z-index: 10; }
+        .yt-caption { text-align: center; margin-top: 10px; font-size: 16px; color: white; background: #0a3d62; padding: 8px; border-radius: 10px; }
+        .yt-nav-button { position: absolute; top: 45%; transform: translateY(-50%); background-color: #0a3d62; color: white; border: none; padding: 10px 15px; font-size: 22px; cursor: pointer; border-radius: 50%; z-index: 10; }
         .yt-nav-button:hover { background-color: #2384c6; }
-        .yt-prev { left: 10px; }
-        .yt-next { right: 10px; }
+        .yt-prev { left: -0px; }
+        .yt-next { right: -0px; }
 
         @media (max-width: 1024px) {
             .yt-slide { flex: 1 0 calc(50% - 10px); max-width: calc(50% - 10px); }
@@ -62,10 +118,14 @@
 
         @media (max-width: 768px) {
             .yt-slide { flex: 1 0 calc(50% - 10px); max-width: calc(50% - 10px); }
-            .yt-slide iframe { height: 180px; }
+            .yt-slide iframe { height: 120px; }
             .yt-caption { font-size: 14px; }
-            .yt-nav-button { padding: 8px 12px; font-size: 18px; }
+            .yt-nav-button { padding: 8px 12px; font-size: 16px; }
+            .yt-prev { left: -0px; }
+            .yt-next { right: -0px; }
         }
+        
+
     </style>
 	</head>
 	<body>
@@ -73,7 +133,7 @@
 		<!--=================================
 		cursor -->
 		<div id="cursor">
-			<div class="cursor__circle"></div>
+			 
 		</div>
 		<!--=================================
 		cursor -->
@@ -90,20 +150,20 @@
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
 								<li class="dropdown nav-item">
 									<a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">About<i class="fa-solid fa-chevron-down"></i
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-									    <li><a class="dropdown-item" href="faq.html"><span>Faq</span></a></li>	
+									    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
 									</ul>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 
 								
 
-								<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+								
 
 								
 								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
@@ -118,7 +178,7 @@
 								</span>
 							</a>
 							<div class="header-phone-number ">
-								<i class="fa-solid fa-phone-volume"></i><a href="tel:+1234567890">+1 (123) 456 7890</a>
+								<i class="fa-solid fa-phone-volume"></i><a href="tel:+1234567890">+251 940 499 999</a>
 							</div>
 							<div class="mobile-action d-block d-lg-none">
 								<div class="mobile-hamburger">
@@ -134,11 +194,53 @@
 					</div>
 				</nav>
 			</header>
-			<!--=================================
-			Header -->
-
-			<!--=================================
-			Main Menu OffCanvas -->
+			<button id="chatbot-toggler">
+				<span class="material-symbols-rounded">mode_comment</span>
+				<span class="material-symbols-rounded">close</span>
+			  </button>
+			  <div class="chatbot-popup">
+				<!-- Chatbot Header -->
+				<div class="chat-header">
+				  <div class="header-info">
+					<svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+					  <path
+						d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
+					  />
+					</svg>
+					<h2 class="logo-text">Chatbot</h2>
+				  </div>
+				  <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+				</div>
+				<!-- Chatbot Body -->
+				<div class="chat-body">
+				  <div class="message bot-message">
+					<svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+					  <path
+						d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
+					  />
+					</svg>
+					<!-- prettier-ignore -->
+					<div class="message-text"> Hey there  <br /> How can I help you today? </div>
+				  </div>
+				</div>
+				<!-- Chatbot Footer -->
+				<div class="chat-footer">
+				  <form action="#" class="chat-form">
+					<textarea placeholder="Message..." class="message-input" required></textarea>
+					<div class="chat-controls">
+					  <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+					  <div class="file-upload-wrapper">
+						<input type="file" accept="image/*" id="file-input" hidden />
+						<img src="#" />
+						<button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+						<button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+					  </div>
+					  <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+					</div>
+				  </form>
+				</div>
+			  </div>
+		  
 			<div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
 				<div class="offcanvas-header">
 					<h5 class="offcanvas-title" id="offcanvasNavbar2Label">Main Menu</h5>
@@ -150,16 +252,16 @@
 					<div class="body-inner h-100 pe-3 lenis-scroll-disable">
 						<nav class="navbar h-100">
 							 <ul class="navbar-nav h-100">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item active"><a class="nav-link" href="index.html "style="color: #2384c6;">Home</a></li>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li><a class="dropdown-item" href="faq.html"><span>Faq</span></a></li>	
+											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
 									</ul>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-								<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+								
 								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
 							</ul>
 						</nav>
@@ -196,8 +298,8 @@
 				<div class="offcanvas-body lenis-scroll-disable">
 					<div class="sidebar-menu h-100 d-flex flex-column">
 						<div class="about-us-box">
-							<h5 class="title">Scalable Business for Startups</h5>
-							<p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement so the faster and better your execution.</p>
+							<h5 class="title">Crafting Radiant Brands</h5>
+							<p>Our company has now expanded with a large scale to be dependable enough, providing the best talent, creativity, technology and digital innovation to our clients.</p>
 						</div>
 
 						<div class="widget-social">
@@ -219,22 +321,17 @@
 										<svg width="22" height="22" fill="#2395D4 " viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
 									</i>
 									<a href="index.html#">Twitter</a></li>
-								<li>
-									<i class="icon">
-										<svg width="22" height="22" fill="#2395D4 " viewBox="0 0 16 16">
-											<path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8m5.284 3.688a6.8 6.8 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A7 7 0 0 1 8 1.18m-2.907.642A43 43 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.87 6.87 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.82 6.82 0 0 1-1.752-4.564zM8 14.837a6.8 6.8 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.3 28.3 0 0 1 1.457 5.18A6.7 6.7 0 0 1 8 14.837m3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.77 6.77 0 0 1-2.924 4.573z"/>
-										</svg>
-									</i>
-									<a href="index.html#">Dribble</a></li>
+								
 							</ul>
 						</div>
 
 						<div class="contact-info-box">
 							<h4 class="title">Contact Details</h4>
 							<ul>
-								<li><a href="mailto:info@example.com">info@example.com</a></li>
-								<li><a href="tel:7042791249">+1 (123) 456 7890</a></li>
-								<li>7164 Barton Terrace, North Penelope, Vermont - 97879, USA</li>
+								<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
+								<li><a href="tel:7042791249">+251 940 499 999</a></li>
+								<li>Meskel flower rood,
+Jems building 9th floor.</li>
 							</ul>
 						</div>
 					</div>
@@ -257,145 +354,46 @@
 
 				<!--=================================
 				Main Banner -->
-				<section>
-					<div class="main-banner main-banner-1 rounded-section">
+				 <div class="slider-container">
+        <div class="slider">
+			<div class="slide">
+                <video src="../Dimond 1/home/home3.mp4" type="video/mp4" autoplay loop muted></video>
+                <div class="text-overlay" style="font-family: 'Times New Roman', Times, serif;" id="style1">Crafting Radiant Brands</div>
+            </div>
+			<div class="slide">
+                <video src="../Dimond 1/home/home2.mp4" type="video/mp4" autoplay loop muted></video>
+                <div class="text-overlay" style="font-family: 'Times New Roman', Times, serif;"  >Elevating Brands with Purpose</div>
+            </div>
+			<div class="slide">
+                <video src="../Dimond 1/home/home1.mp4" type="video/mp4" autoplay loop muted></video>
+                <div class="text-overlay" style="font-family: 'Times New Roman', Times, serif;">Where Creativity Meets Impact</div>
+            </div>
+			<div class="slide">
+                <video src="../Dimond 1/home/5122751_Cloud_Mountain_1280x720.mp4" type="video/mp4" autoplay loop muted></video>
+                <div class="text-overlay" style="font-family: 'Times New Roman', Times, serif;">Designing Excellence, Inspiring Trust</div>
+            </div>
+        </div>
+        <button class="nav-button prev"><i class="fas fa-arrow-left"></i></button>
+        <button class="nav-button next"><i class="fas fa-arrow-right"></i></button>
 
-							<div id="bg-slider">
-								<img src="images/banner/banner-01/banner-img-1.jpg" alt="">
-								<img src="images/banner/banner-01/banner-img-2.jpg" alt="">
-							</div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
 
-							<div class="widget-social vertical">
-								<span class="follow-title">Follow us</span>
-								<ul class="social-icon">
-									<!-- Facebook -->
-									<li>
-										<a href="https://facebook.com" target="_blank">
-											<svg width="22" height="22" fill="#1877F2" viewBox="0 0 320 512">
-												<path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-											</svg>
-										</a>
-									</li>
-									<!-- Instagram -->
-									
-									<!-- LinkedIn -->
-									<li>
-										<a href="https://linkedin.com" target="_blank">
-											<svg width="22" height="22" fill="#0077B5" viewBox="0 0 448 512">
-												<path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.39 53.39 0 1 1 53.39-53.39 53.36 53.36 0 0 1-53.39 53.39zM447.9 448H355.06V302.4c0-34.75-12.43-58.5-43.57-58.5-23.78 0-37.94 15.92-44.17 31.27-2.27 5.54-2.84 13.27-2.84 21.02V448h-92.83s1.2-276.05 0-305h92.83v43.26c12.32-18.94 34.36-45.95 83.6-45.95 61.05 0 106.78 39.92 106.78 125.73V448z"/>
-											</svg>
-										</a>
-									</li>
-									<!-- TikTok -->
-									
-									<!-- Twitter -->
-									<li>
-										<a href="https://twitter.com" target="_blank">
-											<svg width="22" height="22" fill="#2395D4" viewBox="0 0 512 512">
-												<path d="M459.4 151.7c.3 4.6 .3 9.2 .3 13.8 0 141.4-107.3 304.3-302.7 304.3-60.2 0-116.3-17.7-163.2-48 8.3 .9 16.6 1.4 25 1.4 49.2 0 94.3-16.8 130.7-45.1-46.1-.9-85.2-31.2-98.7-73.1 6.5 1.3 13.2 1.9 20 1.9 9.5 0 18.8-1.3 27.5-3.7-48.2-9.7-84.5-52.1-84.5-102.6 0-1.3 0-2.6 .1-3.9 14.1 7.8 30.2 12.5 47.5 13.1-28.1-18.7-46.5-50.4-46.5-86.5 0-19.1 5.1-37 14.2-52.5 51.9 63.9 129.8 105.3 217.1 109.7-1.8-7.6-2.7-15.4-2.7-23.4 0-56.8 46.1-102.8 102.8-102.8 29.6 0 56.2 12.4 75.1 32.5 23.4-4.6 45.5-13.2 65.5-24.9-7.7 24-24.1 44.5-45.5 57.3 20.9-2.5 41-8.1 59.8-16.3z"/>
-											</svg>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-							
-
-							<div class="main-banner-content h-100">
-								<div class="container h-100">
-									<div class="row h-100 align-items-center">
-										<div class="col-md-12">
-											<div class="banner-content">
-												<h1 class="title wow fadeInUp" data-wow-delay="0.0s" data-wow-duration="1500ms">A digital marketing company you can trust</h1>
-												<p class="description wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">I truly believe Augustine’s words are true and if you look at history you know it is true. There are many people in the world dolore magna aliqua.</p>
-												<div class="banner-info wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1500ms">
-													<div class="get-started-btn">
-														<a class="btn btn-white" href="about-us.html">
-															Let's Get Started
-															<svg fill="#ffffff" width="18px" height="18px" viewBox="0 0 32 32" version="1.1">
-																<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-																<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-																<g id="SVGRepo_iconCarrier"><path d="M30.713 16.090c0.009-0.041 0.014-0.087 0.014-0.135 0-0.004-0-0.008-0-0.011v0.001c-0.006-0.184-0.079-0.35-0.196-0.475l0 0-10-10c-0.136-0.135-0.323-0.218-0.529-0.218-0.415 0-0.751 0.336-0.751 0.751 0 0.206 0.083 0.393 0.218 0.528l8.721 8.72h-26.189c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h26.188l-8.72 8.719c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.395-0.084 0.531-0.22l10-10.001c0.025-0.026 0.017-0.064 0.038-0.093 0.040-0.052 0.098-0.088 0.124-0.151 0.013-0.050 0.020-0.108 0.020-0.167 0-0.011-0-0.021-0.001-0.032l0 0.002z"></path></g>
-															</svg>
-														</a>
-													</div>
-													<div class="call-center-box">
-														<div class="call-icon"><i class="bi bi-telephone-outbound-fill"></i></div>
-														<div class="call-info">
-															<a href="tel:1234567890">+(123) 456-7890</a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						<div class="banner-bg-bottom">
-							<svg viewBox="0 0 1000 20" preserveAspectRatio="none">
-								<path class="elementor-shape-fill" d="M0,0v3c0,0,393.8,0,483.4,0c9.2,0,16.6,7.4,16.6,16.6c0-9.1,7.4-16.6,16.6-16.6C606.2,3,1000,3,1000,3V0H0z"></path>
-							</svg>
-						</div>
-					</div>
-				</section>
 
 				<div class="content-wrapper">
 
 				<!--=================================
 				Client Logo -->
-				<section class="client-logo-section wow fadeInUp" data-swiper-animation="fadeInUp" data-duration="0.3s" data-delay="0.25s">
-					<div class="rounded-section bg-dark space-medium-ptb">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12">
-									<h6 class="trusted-client">Trusted by 50+ top companies</h6>
-									<div class="client-logos">
-										<div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="3" data-xx-items="2" data-space="82" data-autoheight="true">
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-1.png" alt="">
-											</div>
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-2.png" alt="">
-											</div>
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-3.png" alt="">
-											</div>
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-4.png" alt="">
-											</div>
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-5.png" alt="">
-											</div>
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-6.png" alt="">
-											</div>
-											<div class="item">
-												<img class="img-fluid" src="images/client-logo/brand-logo-7.png" alt="">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+
 				<!--=================================
 				Client Logo -->
-				<div class="slider-container">
-					<div class="slider">
-						<div class="slide">
-							<video src="/0_Black Hole_Space_1280x720.mp4"autoplay loop muted></video>
-							<div class="text-overlay">Welcome to Our Website</div>
-						</div>
-						<div class="slide">
-							<video src="/5122751_Cloud_Mountain_1280x720.mp4" autoplay loop muted></video>
-							<div class="text-overlay">Experience the Best</div>
-						</div>
-					</div>
-					<button class="nav-button prev"><i class="fas fa-arrow-left"></i></button>
-					<button class="nav-button next"><i class="fas fa-arrow-right"></i></button>
-				</div>
 			
 				<!--=================================
 				About Info -->
@@ -406,7 +404,7 @@
 								<div class="d-flex flex-column justify-content-between h-100">
 									<div class="section-title wow fadeInUp" data-swiper-animation="fadeInUp" data-duration="0.1s" data-delay="0.25s">
 										<span class="sub-title">[ About Us ]</span>
-										<h2 class="title"> Your experience is everything to us </h2>
+										<h2 class="title" style="font-size: 40px;"> Brilliance in Marketing, Precision in Communication </h2>
 									</div>
 									<div class="row">
 										<div class="col-sm-4">
@@ -414,7 +412,10 @@
 										</div>
 										<div class="col-sm-8 mt-4 mt-sm-0">
 											<div class="mb-4 pb-0 pb-md-3 wow fadeInUp" data-swiper-animation="fadeInUp" data-duration="0.1s" data-delay="0.25s">
-												<p class="mb-4 pb-0 pb-md-3" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+												<p class="mb-4 pb-0 pb-md-3" >Since Launching our Company in 2022, Diamond Marketing & Communication plc has now expanded with a large scale to be dependable enough,
+													providing the best talent, creativity, technology and digital innovation to our clients.
+													
+													</p>
 												<a class="btn" href="about-us.html">
 													Let's Get Started
 													<svg fill="#ffffff" width="18px" height="18px" viewBox="0 0 32 32"><path d="M30.713 16.090c0.009-0.041 0.014-0.087 0.014-0.135 0-0.004-0-0.008-0-0.011v0.001c-0.006-0.184-0.079-0.35-0.196-0.475l0 0-10-10c-0.136-0.135-0.323-0.218-0.529-0.218-0.415 0-0.751 0.336-0.751 0.751 0 0.206 0.083 0.393 0.218 0.528l8.721 8.72h-26.189c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h26.188l-8.72 8.719c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.395-0.084 0.531-0.22l10-10.001c0.025-0.026 0.017-0.064 0.038-0.093 0.040-0.052 0.098-0.088 0.124-0.151 0.013-0.050 0.020-0.108 0.020-0.167 0-0.011-0-0.021-0.001-0.032l0 0.002z"/>
@@ -461,7 +462,7 @@
 				About Info -->
 
 				<!--=================================
-				Our Services -->
+				Our Services 
 				<section class="space-ptb">
 					<div class="container">
 						<div class="row justify-content-between">
@@ -544,6 +545,7 @@
 						</div>
 					</div>
 				</section>
+				servide hided-->
 				<!--=================================
 				Our Services -->
 
@@ -555,34 +557,70 @@
 
 				<!--=================================
 				Awards -->
-
-              <div class="yt-slider-container">
+           <h6 class="trusted-client" style="position: relative; top: 100px; font-size: 30px; @media (max-width: 768px) {
+			font-size: 20px;
+		   }" id="bmw">Our Latest Works</h6>
+           <div class="yt-slider-wrapper" style="position: relative; top: 100px;">
         <button class="yt-nav-button yt-prev"><i class="fas fa-arrow-left"></i></button>
-        <div class="yt-slider">
-            <div class="yt-slide">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                <div class="yt-caption">Awesome Video 1</div>
-            </div>
-            <div class="yt-slide">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
-                <div class="yt-caption">Awesome Video 2</div>
-            </div>
-            <div class="yt-slide">
-                <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" allowfullscreen></iframe>
-                <div class="yt-caption">Awesome Video 3</div>
-            </div>
-            <div class="yt-slide">
-                <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" allowfullscreen></iframe>
-                <div class="yt-caption">Awesome Video 4</div>
-            </div>
-            <div class="yt-slide">
-                <iframe src="https://www.youtube.com/embed/L_jWHffIx5E" allowfullscreen></iframe>
-                <div class="yt-caption">Awesome Video 5</div>
+        <div class="yt-slider-container">
+            <div class="yt-slider">
+                <div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/Wavj5NFuLKk " allowfullscreen></iframe>
+                    <div class="yt-caption">Birhan Bank </div>
+                </div>
+                <div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/tVvgP3gz_U8" allowfullscreen></iframe>
+                    <div class="yt-caption">Amco Interior Design</div>
+                </div>
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/v-MLHyNl75Y " allowfullscreen></iframe>
+                    <div class="yt-caption">Awash Bank </div>
+                </div>
+                <div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" allowfullscreen></iframe>
+                    <div class="yt-caption">Amco Interior Design</div>
+                </div>
+                <div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/Zvz8ybnv4gI" allowfullscreen></iframe>
+                    <div class="yt-caption">Awash Bank </div>
+                </div>
+                
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/xeYImPVsAXI " allowfullscreen></iframe>
+                    <div class="yt-caption">Tseday bBank </div>
+                </div>
+				
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/ccuceKo1UoA" allowfullscreen></iframe>
+                    <div class="yt-caption">ZTE Ethiopia </div>
+                </div>
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/jx6K-Ba_d-g " allowfullscreen></iframe>
+                    <div class="yt-caption">Birhan Bank </div>
+                </div>
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/Idrj-cyWrbA " allowfullscreen></iframe>
+                    <div class="yt-caption">ZTE Ethiopia </div>
+                </div>
+				
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/VDHgl448fLI  " allowfullscreen></iframe>
+                    <div class="yt-caption">Nib International Bank</div>
+                </div>
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/hzCDED-mV5A" allowfullscreen></iframe>
+                    <div class="yt-caption">ZTE Ethiopia 10</div>
+                </div>
+				<div class="yt-slide">
+                    <iframe src="https://www.youtube.com/embed/6GGBfwlMUpQ " allowfullscreen></iframe>
+                    <div class="yt-caption">Tseday Bank</div>
+                </div>
             </div>
         </div>
+
         <button class="yt-nav-button yt-next"><i class="fas fa-arrow-right"></i></button>
     </div>
-
+           <!--
 				<section class="space-ptb">
 					<div class="container">
 						<div class="row align-items-end justify-content-between  wow fadeInUp"  data-wow-delay="0.1s" data-wow-duration="1500ms">
@@ -889,179 +927,241 @@
 						</div>
 					</div>
 				</section>
-				<h6 class="trusted-client">See Our Recent Success Stories</h6>
+				achivment hided-->
+				
+				<h6 class="trusted-client" style="position: relative; top: 290px; font-size: 35px; @media (max-width: 768px) {
+					font-size: 20px;
+					
+				   }" id="bvc">Get Inspired by Our Latest Digital Masterpiece</h6>
+				
+					<div class="container11">
+						<div class="icon icon-left">
+							<i class="fa-solid fa-angle-left" onclick="left()"></i>
+						</div>
+			
+						<ul class="tabs">
+							<li class="tab active" data-filter="all">All</li>
+							<li class="tab" data-filter="branding">Branding</li>
+							<li class="tab" data-filter="advertising">Advertising</li>
+							<li class="tab" data-filter="webdev">Web Development</li>
+							<li class="tab" data-filter="system">System Solution</li>
+							<li class="tab" data-filter="byd">Documentary</li>
+							<li class="tab" data-filter="tvc">TVC</li>
+							<li class="tab" data-filter="appdev">Video production</li>
+							<li class="tab" data-filter="content">Digital/Social Media Marketing</li>
+							<li class="tab" data-filter="graphics">BTL</li>
+							<li class="tab" data-filter="videoedit">Marketing Campaign</li>
+						</ul>
+			
+						<div class="icon icon-right">
+							<i class="fa-solid fa-angle-right" onclick="right()"></i>
+						</div>
+					</div>
+				
+			
+				<div class="einstein-gallery">
+					<!-- Video Items -->
+					
 
-				<div class="col-lg-8 mt-4 mt-lg-0 overflow-hidden wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" style="position: relative; left: 18%; ">
-					<div class="owl-carousel owl-nav-center slider-overflow" data-nav-arrow="true" data-items="1" data-lg-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-space="24" style="height: 440px;border-radius: 10px;">
-						<div class="item" data-cursor-type="arrow">
-							<div class="testimonial-wrapper">
-								<iframe id="video-1" src="https://www.youtube.com/embed/Div0iP65aZo?feature=oembed" frameborder='0' allowfullscreen ></iframe>
-							</div>
-						</div>
-						<div class="item" data-cursor-type="arrow">
-							<div class="testimonial-wrapper">
-								<iframe id="video-2" src="https://www.youtube.com/embed/7E5NbqzTQG0?feature=oembed" frameborder='0' allowfullscreen></iframe>
-							</div>
-						</div>
-						<div class="item" data-cursor-type="arrow">
-							<div class="testimonial-wrapper">
-								<iframe id="video-3" src="https://www.youtube.com/embed/5JWcU96QkjU?feature=oembed" frameborder='0' allowfullscreen></iframe>
-							</div>
-						</div>
-						<div class="item" data-cursor-type="arrow">
-							<div class="testimonial-wrapper">
-								<iframe id="video-1" src="https://www.youtube.com/embed/Div0iP65aZo?feature=oembed" frameborder='0' allowfullscreen ></iframe>
-							</div>
-						</div>
-						<div class="item" data-cursor-type="arrow">
-							<div class="testimonial-wrapper">
-								<iframe id="video-2" src="https://www.youtube.com/embed/7E5NbqzTQG0?feature=oembed" frameborder='0' allowfullscreen></iframe>
-							</div>
-						</div>
-						<div class="item" data-cursor-type="arrow">
-							<div class="testimonial-wrapper">
-								<iframe id="video-3" src="https://www.youtube.com/embed/5JWcU96QkjU?feature=oembed" frameborder='0' allowfullscreen></iframe>
-							</div>
-						</div>
+					
 
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="appdev">
+							<video src="../Dimond 1/5122751_Cloud_Mountain_1280x720.mp4" autoplay loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Video production</div>
+							<div class="darwin-tag">Nature</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="branding">
+							<img src="../Dimond 1/videos/bz6.jpg" alt="Web Dev Image">
+							<div class="curie-btn"><i class="fas fa-image"></i></div>
+							<div class="darwin-tag">Awash Bank</div>
+							<div class="darwin-tag">Branding</div>
+						</div>
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="advertising">
+							<video src="../Dimond 1/videos/c.mp4"loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Tseday Bank</div>
+							<div class="darwin-tag">Advertising</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="advertising">
+							<video src="../Dimond 1/videos/d.mp4" loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Amco Interior Design</div>
+							<div class="darwin-tag">Advertising</div>
+							
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="branding">
+							<img src="../Dimond 1/videos/bz3.jpg" alt="Web Dev Image">
+							<div class="curie-btn"><i class="fas fa-image"></i></div>
+							<div class="darwin-tag">Amco Interior Design</div>
+							<div class="darwin-tag">Branding</div>
+						</div>
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="branding">
+							<video src="../Dimond 1/videos/b.mp4" loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Amco Interior Design</div>
+							<div class="darwin-tag">Branding</div>
+						</div>
+						
+					</div>
+
+					
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="graphics">
+							<video src="../Dimond 1/videos/e.mp4"  loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Awash Bank</div>
+							<div class="darwin-tag">BTL</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="graphics">
+							<img src="../Dimond 1/videos/bz4.jpg" alt="Web Dev Image">
+							<div class="curie-btn"><i class="fas fa-image"></i></div>
+							<div class="darwin-tag">Amco Interior Design</div>
+							<div class="darwin-tag">BTL</div>
+						</div>
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="byd">
+							<video src="../Dimond 1/home/home3.mp4"loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Addis Ababa City</div>
+							<div class="darwin-tag">Documentary</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="byd">
+							<video src="../Dimond 1/home/home2.mp4"  loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Addis Ababa City</div>
+							<div class="darwin-tag">Documentary</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="byd">
+							<video src="../Dimond 1/home/home1.mp4" loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Addis Ababa City</div>
+							<div class="darwin-tag">Documentary</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="branding">
+							<video src="../Dimond 1/videos/f.mp4"  loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">ZTE Ethiopia</div>
+							<div class="darwin-tag">Branding</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="tvc">
+							<video src="../Dimond 1/videos/g.mp4" loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Amco Interior Design</div>
+							<div class="darwin-tag">TVC</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="advertising">
+							<video src="../Dimond 1/videos/i.mp4"  loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Berhan Bank</div>
+							<div class="darwin-tag">Advertising</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="branding">
+							<video src="../Dimond 1/videos/k.mp4"  loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">ZTE Ethiopia</div>
+							<div class="darwin-tag">Branding </div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="advertising">
+							<video src="../Dimond 1/videos/l.mp4" loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Tseday Bank</div>
+							<div class="darwin-tag">Advertising</div>
+						</div>
+						
+					</div>
+					<div class="gallery-item">
+						<div class="tesla-item" data-category="tvc">
+							<video src="../Dimond 1/videos/m.mp4"  loop muted></video>
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							<div class="darwin-tag">Berhan Bank</div>
+							<div class="darwin-tag">TVC</div>
+						</div>
+						
+					</div>
+					
+				</div>
+			
+			
+				<!-- Popup -->
+				<div class="hawking-popup" id="hawking-popup">
+					<div class="newton-content">
+						<button class="galileo-close" onclick="closePopup()">✖</button>
+						<img id="popup-img" src="" alt="" style="display: none;">
+						<video id="popup-video" controls style="display: none;"></video>
 					</div>
 				</div>
 				<!--=================================
-				Awards -->
-				<!--=================================
-				Our Testimonial -->
-				<section>
-					<div class="container">
-						<div class="row align-items-end justify-content-between">
-							<div class="col-lg-6">
-								<div class="section-title mb-0 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-									<span class="sub-title">[ Testimonials ]</span>
-									<h2 class="title">Read what Our Client say about work</h2>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<p class="mb-0 px-xxl-5 ms-xxl-5 mt-3 mt-lg-0 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals.</p>
-							</div>
-						</div>
-
-						<div class="row justify-content-between mt-4 mt-md-5">
-							<div class="col-lg-4 pe-xxl-5">
-								<div class="action-box wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-									<div class="client-reviews">
-										<ul class="client-profile">
-											<li>
-												<img class="img-fluid" src="images/avatar/01.jpg" alt="">
-											</li>
-											<li>
-												<img class="img-fluid" src="images/avatar/02.jpg" alt="">
-											</li>
-											<li>
-												<img class="img-fluid" src="images/avatar/03.jpg" alt="">
-											</li>
-										</ul>
-										<div class="reviews"><span class="reviews-number text-white"> 1,000+</span> <span>Client Reviews</span></div>
-									</div>
-									<div class="action-box-content">
-										<div class="counter counter-style-1 p-0">
-											<div class="counter-number">
-												<h2 class="timer" data-to="4.5" data-speed="2000" data-decimals="1">4.5</h2>
+				Contact Us -->
+				
+				<section class="client-logo-section wow fadeInUp" data-swiper-animation="fadeInUp" data-duration="0.3s" data-delay="0.25s" id="trst">
+					<div class="rounded-section bg-dark space-medium-ptb" style="position: relative; top: 150px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<h6 class="trusted-client">Trusted by 50+ top companies</h6>
+									<div class="client-logos">
+										<div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="3" data-xx-items="2" data-space="82" data-autoheight="true">
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-1.png" alt="">
+											   
 											</div>
-										</div>
-										<p class="rating-description">Customers are Satisfied with the Technology Services.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-8 mt-4 mt-lg-0 overflow-hidden wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-								<div class="owl-carousel owl-nav-center slider-overflow" data-nav-arrow="true" data-items="1" data-lg-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-space="24">
-									<div class="item" data-cursor-type="arrow">
-										<div class="testimonial-wrapper">
-											<div class="testimonial-ratings">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-regular fa-star"></i>
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-2.png" alt="">
 											</div>
-											<div class="testimonial-quote">
-												<i class="fa-solid fa-quote-left"></i>
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-3.png" alt="">
 											</div>
-											<div class="testimonial-content">
-												<p>This facility truly stands out for its advanced treatments and empathetic care. The team took the time to explain every detail, offering reassurance and exceptional service.</p>
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-4.png" alt="">
 											</div>
-											<div class="testimonial-author">
-												<div class="author-info">
-													<h6 class="author-name">Mellissa</h6>
-													<span class="author-position">Doe Analyst</span>
-												</div>
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-5.png" alt="">
 											</div>
-										</div>
-									</div>
-									<div class="item" data-cursor-type="arrow">
-										<div class="testimonial-wrapper">
-											<div class="testimonial-ratings">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-regular fa-star"></i>
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-6.png" alt="">
 											</div>
-											<div class="testimonial-quote">
-												<i class="fa-solid fa-quote-left"></i>
-											</div>
-											<div class="testimonial-content">
-												<p>So how do we get clarity? Simply by asking ourselves lots of questions: What do I really want? What does success look like to me? Why do I want a particular thing? How will this achievement change my life?</p>
-											</div>
-											<div class="testimonial-author">
-												<div class="author-info">
-													<h6 class="author-name">Joanna williams</h6>
-													<span class="author-position">Consultant</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item" data-cursor-type="arrow">
-										<div class="testimonial-wrapper">
-											<div class="testimonial-ratings">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-regular fa-star"></i>
-											</div>
-											<div class="testimonial-quote">
-												<i class="fa-solid fa-quote-left"></i>
-											</div>
-											<div class="testimonial-content">
-												<p>Without clarity, you send a very garbled message out to the Universe. We know that the Law of Attraction says that we will attract what we focus on, so if we don’t have clarity, we will attract confusion.</p>
-											</div>
-											<div class="testimonial-author">
-												<div class="author-info">
-													<h6 class="author-name">Anne Smith</h6>
-													<span class="author-position">Officer</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item" data-cursor-type="arrow">
-										<div class="testimonial-wrapper">
-											<div class="testimonial-ratings">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-regular fa-star"></i>
-											</div>
-											<div class="testimonial-quote">
-												<i class="fa-solid fa-quote-left"></i>
-											</div>
-											<div class="testimonial-content">
-												<p>The IT-Hub database has been one of our current sources for recruitment, backed by a very experienced team who would go out of their way to make sure that requests are taken ahead.</p>
-											</div>
-											<div class="testimonial-author">
-												<div class="author-info">
-													<h6 class="author-name">John Doe</h6>
-													<span class="author-position">Director</span>
-												</div>
+											<div class="item">
+												<img class="img-fluid" src="images/client-logo/brand-logo-7.png" alt="">
 											</div>
 										</div>
 									</div>
@@ -1070,20 +1170,8 @@
 						</div>
 					</div>
 				</section>
-                
-				<!--=================================
-				Our Testimonial -->
-
-				<!--=================================
-				Our Staff -->
-	
-				<!--=================================
-				Our Staff -->
-
-				<!--=================================
-				Contact Us -->
-				<section>
-					<div class="space-ptb rounded-section bg-dark">
+				<section >
+					<div class="space-ptb rounded-section bg-dark" style="position: relative; top: 200px;" id="git">
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col-md-12">
@@ -1189,17 +1277,17 @@
 				Contact Us -->
 
 				<!--=================================
-				FAQ -->
+				blog -->
 
 				<!--=================================
-				FAQ -->
+				blog -->
 
 				</div>
 			</div>
-
+             
 			<!--=================================
 			Site Footer -->
-			<footer class="site-footer footer-dark">
+			<footer class="site-footer footer-dark" style="position: relative; top: 300px;">
 				<div class="footer-main">
 					<div class="container">
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
@@ -1215,13 +1303,14 @@
 								</div>
 								<div class="contact-info-box">
 									<ul>
-										<li><a href="mailto:info@example.com">info@example.com</a></li>
-										<li><a href="tel:7042791249">+1 (123) 456 7890</a></li>
-										<li>7164 Barton Terrace, North Penelope, Vermont - 97879, USA</li>
+										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
+										<li><a href="tel:7042791249">+251 940 499 999</a></li>
+										<li>Meskel flower rood,
+Jems building 9th floor.</li>
 									</ul>
 								</div>
 								<div class="contact-number-main">
-									<h5 class="mb-0">1-800-555-500</h5>
+									<h5 class="mb-0">+251 940 299 999</h5>
 								</div>
 							</div>
 
@@ -1231,8 +1320,8 @@
 									<ul class="list-unstyled">
 										<li><a href="index.html">Home</a></li>
 										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="careers.html">Careers</a></li>
-										<li><a href="our-history.html">Our History</a></li>
+										<li><a href="blog.html">blog</a></li>
+										
 										<li><a href="service.html">Services</a></li>
 										<li><a href="contact-us.html">Contact Us</a></li>
 									</ul>
@@ -1302,27 +1391,30 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
-								<p class="copyright-info">Develop and design by <a href="../../index.html">Namik developments</a></p>
+								<p class="copyright-info"> 2025 <a href="../../index.html">Diamond Marketing & Communication</a></p>
 							</div>
 							<div class="col-md-6 mt-2 mt-md-0 text-md-end">
 								<div class="widget-social">
 									<span class="follow-title">Follow us</span>
 									<ul class="social-icon">
 										<li>
-											<a href="index.html#">Fa.</a>
-										</li>
-										<li>
-											<a href="index.html#">Tw.</a>
-										</li>
-										<li>
-											<a href="index.html#">In.</a>
-										</li>
-										<li>
-											<a href="index.html#">Dr.</a>
-										</li>
-										<li>
-											<a href="index.html#">Be.</a>
-										</li>
+											<i class="icon" style="color: #0a3d62 !important;">
+												<svg width="22" height="22" fill="#0a3d62 " viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+											</i>
+											<a href="index.html#" style="position: relative; left: 10px;">Twitter</a></li>
+											<li>
+												<i class="icon">
+													<svg width="22" height="22" fill="#0a3d62 " viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+												</i>
+												<a href="index.html#" style="position: relative; left: 28px;">Facebook</a></li>
+											<li>
+												<i class="icon">
+													<svg width="22" height="22" fill="#0a3d62 " viewBox="0 0 16 16">
+														<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+													</svg>
+												</i>
+												<a href="index.html#" style="position: relative; left: 28px;">Instagram</a></li>
+											<li>
 									</ul>
 								</div>
 							</div>
@@ -1399,36 +1491,36 @@
 
 </script>
 <script>
-	const slider = document.querySelector('.slider');
-	const slides = document.querySelectorAll('.slide');
-	const totalSlides = slides.length;
-	let index = 0;
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let index = 0;
 
-	function updateSliderPosition() {
-		slider.style.transition = 'transform 0.5s ease-in-out';
-		slider.style.transform = `translateX(-${index * 100}vw)`;
-	}
+        function updateSliderPosition() {
+            slider.style.transition = 'transform 0.5s ease-in-out';
+            slider.style.transform = `translateX(-${index * 100}vw)`;
+        }
 
-	document.querySelector('.next').addEventListener('click', () => {
-		if (index >= totalSlides - 1) {
-			index = 0;
-		} else {
-			index++;
-		}
-		updateSliderPosition();
-	});
+        document.querySelector('.next').addEventListener('click', () => {
+            if (index >= totalSlides - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+            updateSliderPosition();
+        });
 
-	document.querySelector('.prev').addEventListener('click', () => {
-		if (index <= 0) {
-			index = totalSlides - 1;
-		} else {
-			index--;
-		}
-		updateSliderPosition();
-	});
-</script>
+        document.querySelector('.prev').addEventListener('click', () => {
+            if (index <= 0) {
+                index = totalSlides - 1;
+            } else {
+                index--;
+            }
+            updateSliderPosition();
+        });
+    </script>
 
-<script>
+ <script>
         const ytSlider = document.querySelector('.yt-slider');
         const ytSlides = document.querySelectorAll('.yt-slide');
         const ytTotalSlides = ytSlides.length;
@@ -1458,3 +1550,332 @@
             updateYtSliderPosition();
         });
     </script>
+
+	<script>
+		const tabsContainer = document.querySelector(".tabs");
+const tabs = document.querySelectorAll(".tabs .tab");
+
+let isTabsDragging = false;
+
+//function to drag tabs on mouse grab
+const drag = (e) => {
+  //if isTabsDragging is false then stop dragging otherwise drag tab list.
+  if (!isTabsDragging) return;
+  //adding 'drag' class to tabs container
+  tabsContainer.classList.add("drag");
+  //e.movementX value is difference between two mouse pointer event value.
+  //assigning mouse pointer movementX value to tab container scroll left property.
+  tabsContainer.scrollLeft -= e.movementX;
+  toggleIcons();
+};
+
+//function to stop dragging
+const stop = () => {
+  isTabsDragging = false;
+  tabsContainer.classList.remove("drag");
+};
+
+//function to remove 'active' class from tab
+const removeActive = () => {
+  let activeTab = tabsContainer.querySelector(".active");
+  activeTab.classList.remove("active");
+};
+
+//looping through all tabs
+tabs.forEach((tab) => {
+  //adding click event listener to each tab
+  tab.addEventListener("click", () => {
+    //remove 'active' class from previous tab
+    removeActive();
+    //adding 'active' class to current tab
+    tab.classList.add("active");
+  });
+});
+
+//function to move tabs to left
+const left = () => {
+  //scrolling tab container to left
+  tabsContainer.scrollLeft -= 400;
+  //handling left and right arrow icons
+  setTimeout(() => toggleIcons(), 40);
+};
+
+//function to move tabs to right
+const right = () => {
+  //scrolling tab container to right
+  tabsContainer.scrollLeft += 400;
+  //handling left and right arrow icons
+  setTimeout(() => toggleIcons(), 40);
+};
+
+//function to handle left and right arrows icons
+const toggleIcons = () => {
+  //contains scroll left value
+  let scroll = tabsContainer.scrollLeft;
+  //contains maximum scrollable value
+  let maxScroll = tabsContainer.scrollWidth - tabsContainer.clientWidth;
+  //left arrow
+  let arrowLeft = document.querySelector(".icon-left");
+  //right arrow
+  let arrowRight = document.querySelector(".icon-right");
+
+  //if scroll value is greater than 0 then show left arrow otherwise hide it.
+  if (scroll > 0) arrowLeft.style.display = "flex";
+  else arrowLeft.style.display = "none";
+
+  //if maximum scroll value is grater than scroll value then show right arrow otherwise hide it.
+  if (maxScroll > scroll) arrowRight.style.display = "flex";
+  else arrowRight.style.display = "none";
+};
+
+//set isTabDragging = true if mouse left button is clicked.
+tabsContainer.addEventListener("mousedown", () => (isTabsDragging = true));
+//drag tab list on mouse move
+tabsContainer.addEventListener("mousemove", drag);
+//stop dragging on mouse button is left
+document.addEventListener("mouseup", stop);
+	</script>
+
+<script>
+	document.querySelectorAll('.tesla-item').forEach(item => {
+		item.addEventListener('click', function () {
+			const img = this.querySelector('img');
+			const video = this.querySelector('video');
+			const popup = document.getElementById('hawking-popup');
+			const popupImg = document.getElementById('popup-img');
+			const popupVideo = document.getElementById('popup-video');
+
+			popup.style.display = 'flex';
+
+			if (img) {
+				popupImg.src = img.src;
+				popupImg.style.display = 'block';
+				popupVideo.style.display = 'none';
+			} else {
+				popupVideo.src = this.dataset.src;
+				popupVideo.style.display = 'block';
+				popupImg.style.display = 'none';
+			}
+		});
+	});
+
+	function closePopup() {
+		document.getElementById('hawking-popup').style.display = 'none';
+	}
+</script>
+<script>
+	document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", function () {
+        document.querySelector(".tab.active").classList.remove("active");
+        this.classList.add("active");
+
+        const filter = this.dataset.filter;
+        document.querySelectorAll(".gallery-item").forEach(item => {
+            if (filter === "all" || item.querySelector(".tesla-item").dataset.category === filter) {
+                item.style.visibility = "visible";
+                item.style.opacity = "1";
+                item.style.transform = "scale(1)";
+                item.style.position = "relative";
+                item.style.height = "auto";
+            } else {
+                item.style.visibility = "hidden";
+                item.style.opacity = "0";
+                item.style.transform = "scale(0.8)";
+                item.style.position = "absolute";
+                item.style.height = "0";
+            }
+        });
+    });
+});
+// Popup Functionality
+document.querySelectorAll(".tesla-item").forEach(item => {
+    item.addEventListener("click", function () {
+        const img = this.querySelector('img');
+        const video = this.querySelector('video');
+        const popup = document.getElementById('hawking-popup');
+        const popupImg = document.getElementById('popup-img');
+        const popupVideo = document.getElementById('popup-video');
+
+        popup.style.display = 'flex';
+
+        if (img) {
+            popupImg.src = img.src;
+            popupImg.style.display = 'block';
+            popupVideo.style.display = 'none';
+        } else {
+            popupVideo.src = video.src;
+            popupVideo.style.display = 'block';
+            popupImg.style.display = 'none';
+        }
+    });
+});
+
+function closePopup() {
+    document.getElementById('hawking-popup').style.display = 'none';
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+<script>
+	const chatBody = document.querySelector(".chat-body");
+const messageInput = document.querySelector(".message-input");
+const sendMessage = document.querySelector("#send-message");
+const fileInput = document.querySelector("#file-input");
+const fileUploadWrapper = document.querySelector(".file-upload-wrapper");
+const fileCancelButton = fileUploadWrapper.querySelector("#file-cancel");
+const chatbotToggler = document.querySelector("#chatbot-toggler");
+const closeChatbot = document.querySelector("#close-chatbot");
+// API setup
+const API_KEY = "AIzaSyCeal00-ejR8WMv9xfsL4uAjtdZuFVRqtQ";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+// Initialize user message and file data
+ 
+const userData = {
+  message: null,
+  file: {
+    data: null,
+    mime_type: null,
+  },
+};
+// Store chat history
+const chatHistory = [];
+const initialInputHeight = messageInput.scrollHeight;
+// Create message element with dynamic classes and return it
+const createMessageElement = (content, ...classes) => {
+  const div = document.createElement("div");
+  div.classList.add("message", ...classes);
+  div.innerHTML = content;
+  return div;
+};
+// Generate bot response using API
+const generateBotResponse = async (incomingMessageDiv) => {
+  const messageElement = incomingMessageDiv.querySelector(".message-text");
+  // Add user message to chat history
+  chatHistory.push({
+    role: "user",
+    parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])],
+  });
+  // API request options
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: chatHistory,
+    }),
+  };
+  try {
+    // Fetch bot response from API
+    const response = await fetch(API_URL, requestOptions);
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error.message);
+    // Extract and display bot's response text
+    const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+    messageElement.innerText = apiResponseText;
+    // Add bot response to chat history
+    chatHistory.push({
+      role: "model",
+      parts: [{ text: apiResponseText }],
+    });
+  } catch (error) {
+    // Handle error in API response
+    console.log(error);
+    messageElement.innerText = error.message;
+    messageElement.style.color = "#ff0000";
+  } finally {
+    // Reset user's file data, removing thinking indicator and scroll chat to bottom
+    userData.file = {};
+    incomingMessageDiv.classList.remove("thinking");
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+  }
+};
+// Handle outgoing user messages
+const handleOutgoingMessage = (e) => {
+  e.preventDefault();
+  userData.message = messageInput.value.trim();
+  messageInput.value = "";
+  messageInput.dispatchEvent(new Event("input"));
+  fileUploadWrapper.classList.remove("file-uploaded");
+  // Create and display user message
+  const messageContent = `<div class="message-text"></div>
+                          ${userData.file.data ? `<img src="data:${userData.file.mime_type};base64,${userData.file.data}" class="attachment" />` : ""}`;
+  const outgoingMessageDiv = createMessageElement(messageContent, "user-message");
+  outgoingMessageDiv.querySelector(".message-text").innerText = userData.message;
+  chatBody.appendChild(outgoingMessageDiv);
+  chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+  // Simulate bot response with thinking indicator after a delay
+  setTimeout(() => {
+    const messageContent = `<svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+            <path
+              d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/></svg>
+          <div class="message-text">
+            <div class="thinking-indicator">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>`;
+    const incomingMessageDiv = createMessageElement(messageContent, "bot-message", "thinking");
+    chatBody.appendChild(incomingMessageDiv);
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+    generateBotResponse(incomingMessageDiv);
+  }, 600);
+};
+// Adjust input field height dynamically
+messageInput.addEventListener("input", () => {
+  messageInput.style.height = `${initialInputHeight}px`;
+  messageInput.style.height = `${messageInput.scrollHeight}px`;
+  document.querySelector(".chat-form").style.borderRadius = messageInput.scrollHeight > initialInputHeight ? "15px" : "32px";
+});
+// Handle Enter key press for sending messages
+messageInput.addEventListener("keydown", (e) => {
+  const userMessage = e.target.value.trim();
+  if (e.key === "Enter" && !e.shiftKey && userMessage && window.innerWidth > 768) {
+    handleOutgoingMessage(e);
+  }
+});
+// Handle file input change and preview the selected file
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    fileInput.value = "";
+    fileUploadWrapper.querySelector("img").src = e.target.result;
+    fileUploadWrapper.classList.add("file-uploaded");
+    const base64String = e.target.result.split(",")[1];
+    // Store file data in userData
+    userData.file = {
+      data: base64String,
+      mime_type: file.type,
+    };
+  };
+  reader.readAsDataURL(file);
+});
+// Cancel file upload
+fileCancelButton.addEventListener("click", () => {
+  userData.file = {};
+  fileUploadWrapper.classList.remove("file-uploaded");
+});
+// Initialize emoji picker and handle emoji selection
+const picker = new EmojiMart.Picker({
+  theme: "light",
+  skinTonePosition: "none",
+  previewPosition: "none",
+  onEmojiSelect: (emoji) => {
+    const { selectionStart: start, selectionEnd: end } = messageInput;
+    messageInput.setRangeText(emoji.native, start, end, "end");
+    messageInput.focus();
+  },
+  onClickOutside: (e) => {
+    if (e.target.id === "emoji-picker") {
+      document.body.classList.toggle("show-emoji-picker");
+    } else {
+      document.body.classList.remove("show-emoji-picker");
+    }
+  },
+});
+document.querySelector(".chat-form").appendChild(picker);
+sendMessage.addEventListener("click", (e) => handleOutgoingMessage(e));
+document.querySelector("#file-upload").addEventListener("click", () => fileInput.click());
+closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+</script>

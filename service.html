@@ -8,7 +8,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Dimond - Digital Marketing Agency HTML5 Template</title>
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="images/logo.png">
+		<link rel="shortcut icon" href="images/log.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
 		<!-- Google Font -->
 		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
@@ -28,9 +32,7 @@
 
 		<!--=================================
 		cursor -->
-		<div id="cursor">
-			<div class="cursor__circle"></div>
-		</div>
+		 
 		<!--=================================
 		cursor -->
 		
@@ -52,14 +54,14 @@
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li><a class="dropdown-item" href="faq.html"><span>Faq</span></a></li>	
+											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+								<li class="nav-item active"><a class="nav-link" href="service.html">Services</a></li>
 
 								
 
-								<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+								
 
 								
 								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
@@ -74,7 +76,7 @@
 								</span>
 							</a>
 							<div class="header-phone-number ">
-								<i class="fa-solid fa-phone-volume"></i><a href="tel:+1234567890">+1 (123) 456 7890</a>
+								<i class="fa-solid fa-phone-volume"></i><a href="tel:+1234567890">+251 940 499 999</a>
 							</div>
 							<div class="mobile-action d-block d-lg-none">
 								<div class="mobile-hamburger">
@@ -92,7 +94,52 @@
 			</header>
 			<!--=================================
 			Header -->
-
+			<button id="chatbot-toggler">
+				<span class="material-symbols-rounded">mode_comment</span>
+				<span class="material-symbols-rounded">close</span>
+			  </button>
+			  <div class="chatbot-popup">
+				<!-- Chatbot Header -->
+				<div class="chat-header">
+				  <div class="header-info">
+					<svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+					  <path
+						d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
+					  />
+					</svg>
+					<h2 class="logo-text">Chatbot</h2>
+				  </div>
+				  <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+				</div>
+				<!-- Chatbot Body -->
+				<div class="chat-body">
+				  <div class="message bot-message">
+					<svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+					  <path
+						d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
+					  />
+					</svg>
+					<!-- prettier-ignore -->
+					<div class="message-text"> Hey there  <br /> How can I help you today? </div>
+				  </div>
+				</div>
+				<!-- Chatbot Footer -->
+				<div class="chat-footer">
+				  <form action="#" class="chat-form">
+					<textarea placeholder="Message..." class="message-input" required></textarea>
+					<div class="chat-controls">
+					  <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+					  <div class="file-upload-wrapper">
+						<input type="file" accept="image/*" id="file-input" hidden />
+						<img src="#" />
+						<button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+						<button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+					  </div>
+					  <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+					</div>
+				  </form>
+				</div>
+			  </div>
 			<!--=================================
       Main Menu OffCanvas -->
 	  <div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
@@ -111,11 +158,11 @@
 							<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-										<li><a class="dropdown-item" href="faq.html"><span>Faq</span></a></li>	
+										<li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
 							</ul>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-						<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+						<li class="nav-item active"><a class="nav-link" href="service.html" style="color: #2384c6;">Services</a></li>
+						
 						<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
 					</ul>
 				</nav>
@@ -152,8 +199,8 @@
         <div class="offcanvas-body lenis-scroll-disable">
           <div class="sidebar-menu h-100 d-flex flex-column">
             <div class="about-us-box">
-              <h5 class="title">Scalable Business for Startups</h5>
-              <p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement so the faster and better your execution.</p>
+              <h5 class="title">Crafting Radiant Brands</h5>
+              <p>Our company has now expanded with a large scale to be dependable enough, providing the best talent, creativity, technology and digital innovation to our clients.</p>
             </div>
 
             <div class="widget-social">
@@ -188,9 +235,10 @@
             <div class="contact-info-box">
               <h4 class="title">Contact Details</h4>
               <ul>
-                <li><a href="mailto:info@example.com">info@example.com</a></li>
-                <li><a href="tel:7042791249">+1 (123) 456 7890</a></li>
-                <li>7164 Barton Terrace, North Penelope, Vermont - 97879, USA</li>
+                <li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
+                <li><a href="tel:7042791249">+251 940 499 999</a></li>
+                <li>Meskel flower rood,
+Jems building 9th floor.</li>
               </ul>
             </div>
           </div>
@@ -200,7 +248,7 @@
       Right menu -->
 
 
-			<div class="site-content">
+			<div class="site-content" style="height: auto;">
 
 				<div class="container-fluid">
 					<div class="item-efftect">
@@ -244,7 +292,7 @@
 								<div class="col-xxl-7 col-lg-9">
 									<div class="section-title mb-0 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
 										<span class="sub-title">[ Our Services ]</span>
-										<h2 class="title mb-0">Digital marketing services that help you grow.</h2>
+										<h2 class="title mb-0" id="dia">Digital marketing services that help you grow.</h2>
 									</div>
 								</div>
 							</div>
@@ -258,10 +306,10 @@
 												<img class="img-fluid hover-icon" src="images/service/icon/information_security.svg" alt="">
 											</div>
 											<div class="service-content">
-												<h5 class="service-title">Information Security</h5>
+												<h5 class="service-title">Content Creation</h5>
 												<p class="service-description">Remind yourself of someone you know who died suddenly and the fact that there is no guarantee that tomorrow</p>
 												<div class="service-action">
-													<a class="btn-arrow" href="information-security.html">
+													<a class="btn-arrow" >
 														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
 													</a>
 												</div>
@@ -277,23 +325,7 @@
 												<h5 class="service-title">Process Automation</h5>
 												<p class="service-description">It must come from the natural product of your desire to achieve something and your belief that you are capable.</p>
 												<div class="service-action">
-													<a class="btn-arrow" href="process-automation.html">
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="images/service/icon/colored-icon/mobile_platforms.svg" alt="">
-												<img class="img-fluid hover-icon" src="images/service/icon/mobile_platforms.svg" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Mobile Platforms</h5>
-												<p class="service-description">There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing.</p>
-												<div class="service-action">
-													<a class="btn-arrow" href="mobile-platforms.html">
+													<a class="btn-arrow">
 														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
 													</a>
 												</div>
@@ -309,7 +341,7 @@
 												<h5 class="service-title">Content Management</h5>
 												<p class="service-description">It must come from the natural product of your desire to achieve something and your belief that you are capable.</p>
 												<div class="service-action">
-													<a class="btn-arrow" href="content-management.html">
+													<a class="btn-arrow">
 														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
 													</a>
 												</div>
@@ -325,41 +357,174 @@
 												<h5 class="service-title">Event Processing</h5>
 												<p class="service-description">There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing.</p>
 												<div class="service-action">
-													<a class="btn-arrow" href="event-processing.html">
+													<a class="btn-arrow">
 														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
 													</a>
 												</div>
 											</div>
 										</div>
 
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1500ms">
+										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
 											<div class="service-icon">
-												<img class="img-fluid main-icon" src="images/service/icon/colored-icon/data_synchronization.svg" alt="">
-												<img class="img-fluid hover-icon" src="images/service/icon/data_synchronization.svg" alt="">
+												<img class="img-fluid main-icon" src="images/service/icon/colored-icon/information_security.svg" alt="">
+												<img class="img-fluid hover-icon" src="images/service/icon/information_security.svg" alt="">
 											</div>
 											<div class="service-content">
-												<h5 class="service-title">Data Synchronization</h5>
+												<h5 class="service-title">Content Creation</h5>
 												<p class="service-description">Remind yourself of someone you know who died suddenly and the fact that there is no guarantee that tomorrow</p>
 												<div class="service-action">
-													<a class="btn-arrow" href="data-synchronization.html">
+													<a class="btn-arrow" >
 														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
 													</a>
 												</div>
 											</div>
 										</div>
+
+										<div class="service-item  wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
+											<div class="service-icon">
+												<img class="img-fluid main-icon" src="images/service/icon/colored-icon/process_automation.svg" alt="">
+												<img class="img-fluid hover-icon" src="images/service/icon/process_automation.svg" alt="">
+											</div>
+											<div class="service-content">
+												<h5 class="service-title">Process Automation</h5>
+												<p class="service-description">It must come from the natural product of your desire to achieve something and your belief that you are capable.</p>
+												<div class="service-action">
+													<a class="btn-arrow">
+														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="service-item  wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
+											<div class="service-icon">
+												<img class="img-fluid main-icon" src="images/service/icon/colored-icon/marketing_strategy.svg" alt="">
+												<img class="img-fluid hover-icon" src="images/service/icon/marketing_strategy.svg" alt="">
+											</div>
+											<div class="service-content">
+												<h5 class="service-title">Content Management</h5>
+												<p class="service-description">It must come from the natural product of your desire to achieve something and your belief that you are capable.</p>
+												<div class="service-action">
+													<a class="btn-arrow">
+														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="service-item  wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+											<div class="service-icon">
+												<img class="img-fluid main-icon" src="images/service/icon/colored-icon/event_processing.svg" alt="">
+												<img class="img-fluid hover-icon" src="images/service/icon/event_processing.svg" alt="">
+											</div>
+											<div class="service-content">
+												<h5 class="service-title">Event Processing</h5>
+												<p class="service-description">There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing.</p>
+												<div class="service-action">
+													<a class="btn-arrow">
+														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
+													</a>
+												</div>
+											</div>
+										</div>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-					<!--=================================
-					Our Services -->
 
-					<!--=================================
-					Setisfied Customer -->
-
-					<!--=================================
-					Setisfied Customer -->
+					<section class="space-ptb overflow-hidden">
+						<div class="container">
+						  <div class="row align-items-center justify-content-between pb-5">
+							<div class="col-md-8">
+							  <div class="section-title mb-4 mb-md-0 pgs-title-effect wow fadeInLeft" data-wow-delay="0.4s" data-wow-duration="1500ms">
+							  <!--<span class="sub-title">[ Recent Post ]</span>-->
+								<h2 class="title" style="position: relative; left: 58%; font-size: 50px;" >Our Gears</h2>
+							  </div>
+							</div>
+							
+						  </div>
+						  <div class="row">
+							<div class="col-lg-12">
+							  <div class="owl-carousel owl-nav-center wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" data-nav-dots="false" data-nav-arrow="true" data-items="3" data-lg-items="3" data-md-items="2" data-sm-items="2" data-xs-items="2" data-space="24" data-autoheight="true">
+								  <div class="item" data-cursor-type="arrow">
+									<div class="blog-post blog-style-02">
+									  <div class="blog-post-img">
+										<img class="img-fluid" src="images/blog/b1.jpg" alt="">
+										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
+										  <div class="post-meta-category">
+											<a href="index-02.html#" rel="category tag">REDKOMODO 6K</a>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								  <div class="item" data-cursor-type="arrow">
+									<div class="blog-post blog-style-02">
+									  <div class="blog-post-img">
+										<img class="img-fluid" src="images/blog/b2.jpg" alt="">
+										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
+										  <div class="post-meta-category">
+											<a href="index-02.html#" rel="category tag">REDKOMODO 8K</a>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								  <div class="item" data-cursor-type="arrow">
+									<div class="blog-post blog-style-02">
+									  <div class="blog-post-img">
+										<img class="img-fluid" src="images/blog/b3.jpg" alt="">
+										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
+										  <div class="post-meta-category">
+											<a href="index-02.html#" rel="category tag">REDKOMODO 8K</a>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								  <div class="item" data-cursor-type="arrow">
+									<div class="blog-post blog-style-02">
+									  <div class="blog-post-img">
+										<img class="img-fluid" src="images/blog/b4.jpg" alt="">
+										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
+										  <div class="post-meta-category" >
+											<a href="index-02.html#" rel="category tag" >REDKOMODO 6K</a>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								  <div class="item" data-cursor-type="arrow">
+									<div class="blog-post blog-style-02">
+									  <div class="blog-post-img">
+										<img class="img-fluid" src="images/blog/b5.jpg" alt="">
+										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
+										  <div class="post-meta-category">
+											<a href="index-02.html#" rel="category tag">REDKOMODO 8K</a>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								  <div class="item" data-cursor-type="arrow">
+									<div class="blog-post blog-style-02">
+									  <div class="blog-post-img">
+										<img class="img-fluid" src="images/blog/b7.jpg" alt="">
+										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
+										  <div class="post-meta-category">
+											<a href="index-02.html#" rel="category tag">REDKOMODO 6K</a>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </section>
 
 					
 					
@@ -384,14 +549,15 @@
 									<h5 class="widget-title">Office</h5>
 								</div>
 								<div class="contact-info-box">
-                  <ul>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
-                    <li><a href="tel:7042791249">+1 (123) 456 7890</a></li>
-                    <li>7164 Barton Terrace, North Penelope, Vermont - 97879, USA</li>
-                  </ul>
-                </div>
+									<ul>
+										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
+										<li><a href="tel:7042791249">+251 940 499 999</a></li>
+										<li>Meskel flower rood,
+Jems building 9th floor.</li>
+									</ul>
+								</div>
 								<div class="contact-number-main">
-									<h5 class="mb-0">1-800-555-500</h5>
+									<h5 class="mb-0">+251 940 299 999</h5>
 								</div>
 							</div>
 
@@ -401,8 +567,8 @@
 									<ul class="list-unstyled">
 										<li><a href="index.html">Home</a></li>
 										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="careers.html">Careers</a></li>
-										<li><a href="our-history.html">Our History</a></li>
+										<li><a href="blog.html">blog</a></li>
+										
 										<li><a href="service.html">Services</a></li>
 										<li><a href="contact-us.html">Contact Us</a></li>
 									</ul>
@@ -421,6 +587,7 @@
 							</div>
 						</div>
 					</div>
+
 					<!--=================================
 					Marquee -->
 					<div class="container-fluid p-0">
@@ -471,27 +638,30 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
-								<p class="copyright-info">Develop and design by <a href="../../index.html">Namik developments</a></p>
+								<p class="copyright-info"> 2025 <a href="../../index.html">Diamond Marketing & Communication</a></p>
 							</div>
 							<div class="col-md-6 mt-2 mt-md-0 text-md-end">
 								<div class="widget-social">
 									<span class="follow-title">Follow us</span>
 									<ul class="social-icon">
 										<li>
-											<a href="service.html#">Fa.</a>
-										</li>
-										<li>
-											<a href="service.html#">Tw.</a>
-										</li>
-										<li>
-											<a href="service.html#">In.</a>
-										</li>
-										<li>
-											<a href="service.html#">Dr.</a>
-										</li>
-										<li>
-											<a href="service.html#">Be.</a>
-										</li>
+											<i class="icon" style="color: #0a3d62 !important;">
+												<svg width="22" height="22" fill="#0a3d62 " viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+											</i>
+											<a href="index.html#" style="position: relative; left: 10px;">Twitter</a></li>
+											<li>
+												<i class="icon">
+													<svg width="22" height="22" fill="#0a3d62 " viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+												</i>
+												<a href="index.html#" style="position: relative; left: 28px;">Facebook</a></li>
+											<li>
+												<i class="icon">
+													<svg width="22" height="22" fill="#0a3d62 " viewBox="0 0 16 16">
+														<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+													</svg>
+												</i>
+												<a href="index.html#" style="position: relative; left: 28px;">Instagram</a></li>
+											<li>
 									</ul>
 								</div>
 							</div>
@@ -509,7 +679,7 @@
 					<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
 				</svg>
 			</div>
-
+        
 		</div>
 		<!--=================================
 		Javascript -->
@@ -532,5 +702,169 @@
 		<script src="js/lenis.min.js"></script>
     <!-- Template Scripts (Do not remove)-->
 		<script src="js/custom.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+<script>
+	const chatBody = document.querySelector(".chat-body");
+const messageInput = document.querySelector(".message-input");
+const sendMessage = document.querySelector("#send-message");
+const fileInput = document.querySelector("#file-input");
+const fileUploadWrapper = document.querySelector(".file-upload-wrapper");
+const fileCancelButton = fileUploadWrapper.querySelector("#file-cancel");
+const chatbotToggler = document.querySelector("#chatbot-toggler");
+const closeChatbot = document.querySelector("#close-chatbot");
+// API setup
+const API_KEY = "PASTE-YOUR-API-KEY";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+// Initialize user message and file data
+const userData = {
+  message: null,
+  file: {
+    data: null,
+    mime_type: null,
+  },
+};
+// Store chat history
+const chatHistory = [];
+const initialInputHeight = messageInput.scrollHeight;
+// Create message element with dynamic classes and return it
+const createMessageElement = (content, ...classes) => {
+  const div = document.createElement("div");
+  div.classList.add("message", ...classes);
+  div.innerHTML = content;
+  return div;
+};
+// Generate bot response using API
+const generateBotResponse = async (incomingMessageDiv) => {
+  const messageElement = incomingMessageDiv.querySelector(".message-text");
+  // Add user message to chat history
+  chatHistory.push({
+    role: "user",
+    parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])],
+  });
+  // API request options
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: chatHistory,
+    }),
+  };
+  try {
+    // Fetch bot response from API
+    const response = await fetch(API_URL, requestOptions);
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error.message);
+    // Extract and display bot's response text
+    const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+    messageElement.innerText = apiResponseText;
+    // Add bot response to chat history
+    chatHistory.push({
+      role: "model",
+      parts: [{ text: apiResponseText }],
+    });
+  } catch (error) {
+    // Handle error in API response
+    console.log(error);
+    messageElement.innerText = error.message;
+    messageElement.style.color = "#ff0000";
+  } finally {
+    // Reset user's file data, removing thinking indicator and scroll chat to bottom
+    userData.file = {};
+    incomingMessageDiv.classList.remove("thinking");
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+  }
+};
+// Handle outgoing user messages
+const handleOutgoingMessage = (e) => {
+  e.preventDefault();
+  userData.message = messageInput.value.trim();
+  messageInput.value = "";
+  messageInput.dispatchEvent(new Event("input"));
+  fileUploadWrapper.classList.remove("file-uploaded");
+  // Create and display user message
+  const messageContent = `<div class="message-text"></div>
+                          ${userData.file.data ? `<img src="data:${userData.file.mime_type};base64,${userData.file.data}" class="attachment" />` : ""}`;
+  const outgoingMessageDiv = createMessageElement(messageContent, "user-message");
+  outgoingMessageDiv.querySelector(".message-text").innerText = userData.message;
+  chatBody.appendChild(outgoingMessageDiv);
+  chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+  // Simulate bot response with thinking indicator after a delay
+  setTimeout(() => {
+    const messageContent = `<svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+            <path
+              d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/></svg>
+          <div class="message-text">
+            <div class="thinking-indicator">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>`;
+    const incomingMessageDiv = createMessageElement(messageContent, "bot-message", "thinking");
+    chatBody.appendChild(incomingMessageDiv);
+    chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+    generateBotResponse(incomingMessageDiv);
+  }, 600);
+};
+// Adjust input field height dynamically
+messageInput.addEventListener("input", () => {
+  messageInput.style.height = `${initialInputHeight}px`;
+  messageInput.style.height = `${messageInput.scrollHeight}px`;
+  document.querySelector(".chat-form").style.borderRadius = messageInput.scrollHeight > initialInputHeight ? "15px" : "32px";
+});
+// Handle Enter key press for sending messages
+messageInput.addEventListener("keydown", (e) => {
+  const userMessage = e.target.value.trim();
+  if (e.key === "Enter" && !e.shiftKey && userMessage && window.innerWidth > 768) {
+    handleOutgoingMessage(e);
+  }
+});
+// Handle file input change and preview the selected file
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    fileInput.value = "";
+    fileUploadWrapper.querySelector("img").src = e.target.result;
+    fileUploadWrapper.classList.add("file-uploaded");
+    const base64String = e.target.result.split(",")[1];
+    // Store file data in userData
+    userData.file = {
+      data: base64String,
+      mime_type: file.type,
+    };
+  };
+  reader.readAsDataURL(file);
+});
+// Cancel file upload
+fileCancelButton.addEventListener("click", () => {
+  userData.file = {};
+  fileUploadWrapper.classList.remove("file-uploaded");
+});
+// Initialize emoji picker and handle emoji selection
+const picker = new EmojiMart.Picker({
+  theme: "light",
+  skinTonePosition: "none",
+  previewPosition: "none",
+  onEmojiSelect: (emoji) => {
+    const { selectionStart: start, selectionEnd: end } = messageInput;
+    messageInput.setRangeText(emoji.native, start, end, "end");
+    messageInput.focus();
+  },
+  onClickOutside: (e) => {
+    if (e.target.id === "emoji-picker") {
+      document.body.classList.toggle("show-emoji-picker");
+    } else {
+      document.body.classList.remove("show-emoji-picker");
+    }
+  },
+});
+document.querySelector(".chat-form").appendChild(picker);
+sendMessage.addEventListener("click", (e) => handleOutgoingMessage(e));
+document.querySelector("#file-upload").addEventListener("click", () => fileInput.click());
+closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+</script>
 	</body>
 </html>
