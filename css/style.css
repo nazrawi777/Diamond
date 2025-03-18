@@ -3147,15 +3147,17 @@ width: 90%;}
     .owl-carousel.owl-nav-center:hover .owl-nav button.owl-next {
       right: 20px; }
 
-.owl-carousel .owl-item img {
-  width: auto;
-  display: inherit;
-color: #201616; }
-.owl-carousel .owl-item img:hover{
-  color: black;
-  background-color: #87abd3;
-  border-radius: 10px;
-}
+      .owl-carousel .owl-item img {
+        width: auto;
+        display: inherit;
+        border: 2px solid #00bcd4;
+        border-radius: 20px;
+        filter: grayscale(100%); /* Makes the image black & white */
+        transition: filter 0.3s ease-in-out; /* Smooth transition */
+      }
+      .owl-carousel .owl-item img:hover {
+        filter: grayscale(0%); /* Restores original color */
+      }
 .owl-carousel .owl-dots {
   text-align: center;
   margin-top: 20px; }
@@ -4960,7 +4962,11 @@ header.header.header-sticky.is-sticky {
   header.header.header-sticky.is-sticky.sticky-show {
     top: 0; }
   header.header.header-sticky.is-sticky .navbar .navbar-brand img {
-    height: 72px; }
+    height: 92px; }
+    .header .navbar .navbar-brand img {
+      height: 80px; 
+    width: 200px !important;}
+   
     header.header.header-sticky.is-sticky .navbar .navbar-brand img.sticky {
       display: block; }
 
@@ -5584,7 +5590,7 @@ left: -390px;} }
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(35, 132, 198, 0.85);
+    background-color: rgba(35, 132, 198, 0.45);
     z-index: -1; }
   .inner-banner .title {
     margin-bottom: 20px; }
@@ -8725,49 +8731,95 @@ bottom: 3780px;}
   padding: 35px;
   gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  transition: all 0.3s ease-in-out;
+  z-index: 99;
 }
 
-.gallery-item {
-  transition: all 0.3s ease-in-out;
-}
+
 
 .tesla-item {
   position: relative;
   border-radius: 25px;
   cursor: pointer;
-  background: transparent;
+  background: #000f22;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  border: none;
+   /* Ensures pseudo-elements don’t go outside */
+  z-index: 1; /* Keeps item above background */
+}
+
+.tesla-item::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 101%;
+  height: 101%;
+  border-radius: inherit;
+  background-image: conic-gradient(from var(--angle), 
+  #00112d, #002650, #003b73, #002650, #00112d);
+  z-index: -1; /* Ensures it's behind the item */
+  animation: spin 3s linear infinite;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 .tesla-item img,
 .tesla-item video {
+  z-index: 99;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 25px;
-  border: 1px solid rgba(191, 200, 206, 0.25);
+  border-radius: 22px 22px 5px 0;
+  border: 1px solid transparent;
+}
+.tesla-item:hover {
+  transform: translateY(-5px);
+  border: 2px solid #00bcd4; /* Bright cyan border */
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
+  transition: all 0.3s ease-in-out;
 }
 
+
+
 .darwin-tag {
+  background-color: #000f22;
   font-size: 19px;
   font-family: 'Times New Roman', Times, serif;
   color: white;
-  margin-top: 5px;
+  width: 101%;
+  padding-top: 5px;
   text-align: center;
   position: relative;
-  top: 0px;
+  top: -1.6px;
+  padding-right: 3px;
+  border-right: 4px solid #000f22;
+  right: -2px;
+  width: 99%;
+  border-radius: 0px;
   display: block;
+}
+#txt1{
+  border-radius: 0 0 20px 20px;
 }
 
 .curie-btn {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
@@ -8778,6 +8830,7 @@ bottom: 3780px;}
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 188;
 }
 
 .curie-btn::after,
@@ -8789,9 +8842,10 @@ bottom: 3780px;}
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 50%;
   animation: animate 1.5s infinite;
+  z-index: 888;
 }
 
 @keyframes animate {
@@ -8816,6 +8870,7 @@ bottom: 3780px;}
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 200;
 }
 
 .newton-content {
@@ -9386,4 +9441,208 @@ body.show-emoji-picker em-emoji-picker {
     position: relative !important;
     top: 40px !important;
  }
+}
+
+/*
+  .tesla-item:hover {
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.5), -10px 0 15px rgba(0, 123, 255, 0.7); 
+  transform: translateX(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+*/
+
+
+
+
+/*=============== VARIABLES CSS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /* Colors */
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /* Font and typography */
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
+}
+
+/* Responsive Typography */
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*=============== CARD STYLING ===============*/
+.container7 {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card__article {
+  position: relative;
+  overflow: visible;
+}
+
+.card__data {
+  width: 250px !important;
+  background-color: #000f22;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 43%;
+  border: 2px solid #00bcd4;
+  transform: translate(-50%, 10px);
+  opacity: 0;
+  visibility: hidden; /* Completely hide */
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
+}
+
+/* Show when hovering */
+.card__article:hover .card__data {
+  opacity: 1;
+  visibility: visible; /* Make visible */
+  transform: translate(-50%, -7rem); /* Move up */
+}
+
+.card__article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+  display: block;
+  width: 85%;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+/* Card Data */
+
+
+.card__description {
+  display: block;
+  font-size: 15px;
+  position: relative;
+  bottom: 20px;
+
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: .75rem;
+}
+
+.card__data:hover {
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.5), -10px 0 15px rgba(0, 123, 255, 0.7); /* Light blue and dark shadow */
+  transform: translateX(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #00bcd4;
+}
+
+
+
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.card__description {
+  font-size: 1rem;
+  color: #00bcd4;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Small devices */
+@media screen and (max-width: 767px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+
+  .card__data {
+    width: 70% !important;
+    
+  }
+  .card__title {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    left: 1px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card__description {
+    font-size: 12px !important;
+    position: relative;
+    left: 20px;
+    color: #00bcd4;
+  }
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+
+  .card__data {
+    width: 100%;
+  }
+}
+
+/* Large devices */
+@media screen and (min-width: 1120px) {
+  .container7 {
+    height: auto;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .card__data {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 1119px) {
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  left: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.card__description {
+  font-size: 1rem;
+  position: relative;
+  left: 20px;
+  color: #00bcd4;
+}
 }

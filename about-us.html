@@ -28,76 +28,148 @@
     <!-- Template Style -->
     <link rel="stylesheet" href="css/style.css">
     <style>
-      .slider-container {
-          width: 100%;
-          overflow: hidden;
-          position: relative;
-      }
-      .slider {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
-      }
-      .slide {
-    position: relative;
-    padding: 30px;
-    flex: 0 0 33.30%;
-    cursor: pointer;
+/* Existing styles */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  padding: 40px;
+  flex: 0 0 33.30%;
+}
+/* Image styles with border gradient and hover effect */
+/* Image styles with border gradient and hover effect */
 .slide img {
-    cursor: pointer;
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+  width: 90%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 4px solid transparent; /* Make border gradient visible */
+  
+  /* Cyan to Magenta Gradient for border */
+  background: 
+    linear-gradient(135deg, 
+      rgba(0, 255, 255, 0.85) 0%,  /* Cyan */
+      rgba(0, 0, 0, 0.3) 50%, 
+      rgba(255, 0, 255, 0.85) 100%) border-box; /* Magenta */
 }
 
+/* Hover effect for image scaling and applying the gradient border animation */
 .slide:hover img {
-    transform: scale(1.1);
-    opacity: 0.3; /* Dim the image on hover */
+  transform: scale(1.05); /* Slightly scale the image */
+  opacity: 0.8; /* Dim the image on hover */
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.8); /* Neon Green glow */
+  animation: gradient-border 1.5s infinite alternate; /* Apply gradient animation on hover */
+}
+
+/* Keyframe animation for the gradient border effect */
+@keyframes gradient-border {
+  0% {
+    background: 
+      linear-gradient(135deg, 
+        rgba(0, 255, 255, 0.85) 0%,  /* Cyan */
+        rgba(0, 0, 0, 0.3) 50%, 
+        rgba(255, 0, 255, 0.85) 100%) border-box; /* Magenta */
+  }
+  100% {
+    background: 
+      linear-gradient(135deg, 
+        rgba(255, 0, 255, 0.85) 0%,  /* Magenta */
+        rgba(0, 0, 0, 0.3) 50%, 
+        rgba(0, 255, 255, 0.85) 100%) border-box; /* Cyan */
+  }
+}
+
+
+
+/* Button Styles */
+.slide a {
+  position: absolute;
+  top: 50%;
+  font-size: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #161a20 !important;  /* Black background before hover */
+  color: white;
+  border-radius: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0;  /* Initially hidden */
+  z-index: 88 !important;
+  box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+  transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transitions for opacity and background color */
+  border: 4px solid transparent; /* Make border gradient visible */
+  background: linear-gradient(135deg, #008cff, #e100ff); /* Initial gradient border */
+}
+
+/* Gradient Border Before Hover */
+.slide a::after {
+  opacity: 1;  /* Gradient border visible before hover */
+  position: absolute;
+  content: '';
+  align-items: center;
+  justify-content: center;
+  height: 107%;
+  top: -1.4px;
+  z-index: -1;
+  left: -1px;
+  width: 102%;
+  border-radius: 1000px;
+  background-color: #161a20 !important;
+  transition: opacity 0.3s ease, background 0.3s ease; /* Smooth transition for gradient */
+}
+
+/* Hover Effect for Button */
+.slide:hover a {
+  opacity: 1;  /* Show the button on hover */
+  pointer-events: auto; /* Ensure it's clickable */
+  background-color: #2384c6; /* Change button background color on hover */
+}
+
+/* Hover effect to intensify the gradient border */
+.slide:hover a::after {
+  opacity: 1; /* Gradient border stays visible on hover */
+ 
 }
 
 /* Ensure the "Open PDF" button is properly displayed */
-.slide a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    opacity: 0;  /* Initially hidden */
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1000;
+/* Button Styles */
+/* Button Styles */
+
+
+.dots {
+  text-align: center;
+  padding-top: 10px;
 }
 
-.slide:hover a {
-    opacity: 1;  /* Show the button on hover */
-    pointer-events: auto; /* Ensure it's clickable */
-    background-color: #2384c6;
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 5px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
-      .dots {
-          text-align: center;
-          padding-top: 10px;
-      }
-      .dot {
-          height: 12px;
-          width: 12px;
-          margin: 5px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.3s;
-          cursor: pointer;
-      }
-      .dot .active {
-          background-color: #2384c6;
-      }
-      @media (max-width: 768px) {
-          .slide { flex: 0 0 50%; }
-      }
+
+.dot.active {
+  background-color: #2384c6; /* Active dot color */
+}
+
+
+@media (max-width: 768px) {
+  .slide { flex: 0 0 50%; }
+}
 
   </style>
   </head>
@@ -312,8 +384,8 @@
               <ul>
                 <li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
                 <li><a href="tel:7042791249">+251 940 499 999</a></li>
-                <li>Meskel flower rood,
-Jems building 9th floor.</li>
+                <li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower rood,
+                                        Jems building 9th floor.</a></li>
               </ul>
             </div>
           </div>
@@ -562,61 +634,46 @@ Jems building 9th floor.</li>
 
           <!--=================================
           Our Staff -->
-
-        </div>
-      </div>
-        <div class="space-ptb">
-        <div class="container">
           <h6 class="trusted-client" style="font-size: 40px; position: relative; top: 10%;@media (max-width: 768px) { 
             font-size: 20px;}" >Our Staff Team</h6>
-    
-          <div class="row">
-            <div class="col-md-12">
-              <div class="team-boxs grid-wrapper grid-xl-4 grid-lg-3 grid-md-2 grid-sm-2 grid-xs-1">
-                <div class="team-item team-style-1 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                  <div class="team-img">
-                    <img class="img-fluid" src="images/team/01.png" alt="">
-                  </div>
-                  <div class="team-info">
-                    <a href="team-single.html" class="team-title">Demon Cats</a>
-                    <span class="team-designation">President</span>
+          <div class="container7">
+            <div class="card__container">
+               <article class="card__article">
+                  <img src="/images/team/01.png" alt="image" class="card__img">
+      
+                  <div class="card__data">
                      
+                     <h2 class="card__title"> Simon Cyrene</h2>
+                     <span class="card__description">Vice President</span>
+                      
                   </div>
-                </div>
-                <div class="team-item team-style-1 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
-                  <div class="team-img">
-                    <img class="img-fluid" src="/images/team/01.png" alt="">
-                  </div>
-                  <div class="team-info">
-                    <a href="team-single.html" class="team-title">Joanna williams</a>
-                    <span class="team-designation">Consultant</span>
+               </article>
+      
+               <article class="card__article">
+                  <img src="/images/team/01.png" alt="image" class="card__img">
+      
+                  <div class="card__data">
                      
+                     <h2 class="card__title">Joanna williams</h2>
+                     <span class="card__description">Manager</span>
+                      
                   </div>
-                </div>
-                <div class="team-item team-style-1 wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
-                  <div class="team-img">
-                    <img class="img-fluid" src="/images/team/01.png" alt="">
-                  </div>
-                  <div class="team-info">
-                    <a href="team-single.html" class="team-title">Simmy Flavius</a>
-                    <span class="team-designation">Vice president</span>
+               </article>
+      
+               <article class="card__article">
+                  <img src="/images/team/01.png" alt="image" class="card__img">
+      
+                  <div class="card__data">
                      
+                     <h2 class="card__title"> Simmy Flavius</h2>
+                     <span class="card__description">Consultant</span>
+                      
                   </div>
-                </div>
-                <div class="team-item team-style-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
-                  <div class="team-img">
-                    <img class="img-fluid" src="/images/team/01.png" alt="">
-                  </div>
-                  <div class="team-info">
-                    <a href="team-single.html" class="team-title">Simon Cyrene</a>
-                    <span class="team-designation">Manager</span>
-                     
-                  </div>
-                </div>
-                
-              </div>
+               </article>
+      
+              
             </div>
-          </div>
+         </div>
         </div>
       </div>
       <h1 class="title" style="font-size: 40px;text-align: center; @media (max-width: 768px) {font-size: 20px;}">Testimonial</h1>
@@ -646,6 +703,7 @@ Jems building 9th floor.</li>
         </div>
         <div class="dots"></div>
     </div>
+    
       <!--=================================
       Site Footer -->
 			<footer class="site-footer footer-dark"  >
@@ -666,12 +724,12 @@ Jems building 9th floor.</li>
 									<ul>
 										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
 										<li><a href="tel:7042791249">+251 940 499 999</a></li>
-										<li>Meskel flower rood,
-Jems building 9th floor.</li>
+										<li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower rood,
+                                        Jems building 9th floor.</a></li>
 									</ul>
 								</div>
 								<div class="contact-number-main">
-									<h5 class="mb-0">+251 940 299 999</h5>
+									<h5 class="mb-0"><a href="tel:+251 940 299 999">+251 940 299 999</a></h5>
 								</div>
 							</div>
 
@@ -752,7 +810,7 @@ Jems building 9th floor.</li>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
-								<p class="copyright-info"> 2025 <a href="../../index.html">Diamond Marketing & Communication</a></p>
+								<p class="copyright-info"> 2025 ©<a href="../../index.html">Diamond Marketing & Communication</a></p>
 							</div>
 							<div class="col-md-6 mt-2 mt-md-0 text-md-end">
 								<div class="widget-social">
@@ -816,40 +874,58 @@ Jems building 9th floor.</li>
     <!-- Template Scripts (Do not remove)-->
     <script src="js/custom.js"></script>
     <script>
-      const slider = document.querySelector('.slider');
-      const slides = document.querySelectorAll('.slide');
-      const dotsContainer = document.querySelector('.dots');
-      let index = 0;
+      
+    </script>
+<script>
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const dotsContainer = document.querySelector('.dots');
+  let index = 0;
 
-      function updateDots() {
-          dotsContainer.innerHTML = '';
-          for (let i = 0; i < Math.ceil(slides.length / getSlidesPerView()); i++) {
-              const dot = document.createElement('span');
-              dot.classList.add('dot');
-              if (i === index) dot.classList.add('active');
-              dot.addEventListener('click', () => moveToSlide(i));
-              dotsContainer.appendChild(dot);
-          }
+  // Function to update the dots based on the current index
+  function updateDots() {
+      dotsContainer.innerHTML = ''; // Clear all dots
+      // Create dots based on the number of slides and the slidesPerView
+      const slidesPerView = getSlidesPerView();
+      const totalDots = Math.ceil(slides.length / slidesPerView);
+      
+      for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          if (i === index) dot.classList.add('active'); // Add 'active' class to the current dot
+          dot.addEventListener('click', () => moveToSlide(i));
+          dotsContainer.appendChild(dot);
       }
+  }
 
-      function getSlidesPerView() {
-          return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-      }
+  // Function to get the number of slides to display based on the viewport width
+  function getSlidesPerView() {
+      return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+  }
 
-      function moveToSlide(i) {
-          index = i;
-          updateSliderPosition();
-      }
+  // Function to move to the clicked slide
+  function moveToSlide(i) {
+      index = i; // Update index to the clicked dot
+      updateSliderPosition(); // Update the slider position
+  }
 
-      function updateSliderPosition() {
-          const slidesPerView = getSlidesPerView();
-          slider.style.transform = `translateX(-${index * (100 / slidesPerView)}%)`;
-          updateDots();
-      }
+  // Function to update the slider's transform property to show the correct slide
+  function updateSliderPosition() {
+      const slidesPerView = getSlidesPerView();
+      const offset = index * (100 / slidesPerView);
+      slider.style.transform = `translateX(-${offset}%)`; // Adjust slide position
+      updateDots(); // Update the dots to reflect the current active slide
+  }
 
-      window.addEventListener('resize', updateSliderPosition);
-      updateDots();
-  </script>
+  // Event listener for window resize to adjust the slides' display based on the screen size
+  window.addEventListener('resize', updateSliderPosition);
+
+  // Initialize the dots and slider position when the page loads
+  updateDots();
+  updateSliderPosition();
+</script>
+
+
   <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
   <script>
     const chatBody = document.querySelector(".chat-body");
