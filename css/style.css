@@ -5282,7 +5282,7 @@ header.header.header-sticky.is-sticky {
   .header .navbar .navbar-nav {
     gap: 0 25px; 
   position: relative;
-left: -390px;} }
+left: -50px;} }
 
     
 @media (max-width: 1399px) {
@@ -5758,8 +5758,18 @@ left: -390px;} }
     .inner-banner .title {
       font-size: 42px; } }
 
+      @media (max-width: 675px) {
+        /* Main Banner 1 ----------*/
+        #style1{
+          font-size: 17px !important;
+        }
+      }
+
 @media (max-width: 575px) {
   /* Main Banner 1 ----------*/
+  #style1{
+    font-size: 17px !important;
+  }
   .main-banner-1 .widget-social {
     display: none; }
   .main-banner-1 .banner-content {
@@ -7267,7 +7277,7 @@ body:has(#search.open) {
     .header .navbar .navbar-nav {
       gap: 0 25px; 
     position: relative;
-  left: -210px;} }
+  left: 0px;} }
 .onsale {
   min-width: auto;
   min-height: auto;
@@ -8405,13 +8415,72 @@ body:has(#search.open) {
     padding: 30px 20px; }
   .sidebar .widget:not(:last-child) {
     margin-bottom: 45px; } }
+    @media (max-width: 1299px) {
+    .tesla-item iframe{
+      z-index: 199;
+      width: 100%;
+      height: 100%;
+      min-height: 200px !important;
+      object-fit: cover;
+      border-radius: 22px 22px 5px 0;
+      border: 1px solid transparent;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1298px) {
+    .tesla-item iframe{
+      z-index: 199;
+      width: 100%;
+      height: 100%;
+      min-height: 170px !important;
+      object-fit: cover;
+      border-radius: 22px 22px 5px 0;
+      border: 1px solid transparent;
+    }
 
+  }
 @media (max-width: 991px) {
   .sidebar.blog-sidebar .widget {
     padding: 25px 20px;
-    margin-bottom: 30px; } }
-
+    margin-bottom: 30px; } 
+    .tesla-item iframe{
+      z-index: 199;
+      width: 100%;
+      height: 100%;
+      min-height: 150px !important;
+      object-fit: cover;
+      border-radius: 22px 22px 5px 0;
+      border: 1px solid transparent;
+    }
+  }
+  @media (min-width: 332px) and (max-width: 468px) {
+    .tesla-item iframe{
+      z-index: 199;
+      width: 100%;
+      height: 50% !important;
+      min-height: 50px !important;
+      max-height: 55px !important;
+      object-fit: cover;
+      border-radius: 22px 22px 5px 0;
+      border: 1px solid transparent;
+    }
+    .darwin-tag{
+      width: 97% !important;
+      font-size: 15px !important;
+    }
+    #txt1{
+      font-size: 12px !important;
+    }
+  }
 @media (max-width: 767px) {
+  .tesla-item iframe{
+    z-index: 199;
+    width: 100%;
+    height: 100%;
+    min-height: 120px !important;
+    object-fit: cover;
+    border-radius: 22px 22px 5px 0;
+    border: 1px solid transparent;
+  }
   .sidebar .widget:not(:last-child) {
     margin-bottom: 50px; }
   .sidebar .widget {
@@ -8729,7 +8798,7 @@ bottom: 3780px;}
   display: grid;
   margin-top: 300px;
   padding: 35px;
-  gap: 18px;
+  gap: 58px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   z-index: 99;
 }
@@ -8740,7 +8809,8 @@ bottom: 3780px;}
   position: relative;
   border-radius: 25px;
   cursor: pointer;
-  background: #000f22;
+
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8778,11 +8848,19 @@ bottom: 3780px;}
   }
 }
 
-.tesla-item img,
-.tesla-item video {
+.tesla-item img {
   z-index: 99;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 22px 22px 5px 0;
+  border: 1px solid transparent;
+}
+.tesla-item iframe{
+  z-index: 199;
+  width: 100%;
+  height: 100%;
+  min-height: 250px ;
   object-fit: cover;
   border-radius: 22px 22px 5px 0;
   border: 1px solid transparent;
@@ -8928,7 +9006,7 @@ bottom: 3780px;}
 }
 
 .hawking-popup img,
-.hawking-popup video {
+.hawking-popup iframe {
   width: 100%;
   border-radius: 10px;
   position: relative;

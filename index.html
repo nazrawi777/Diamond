@@ -47,6 +47,10 @@
 			@media (max-width: 768px) {
 				height: 70%;
 			 }}
+			 .slide img { width: 100%; height: 100%; object-fit: cover; 
+			@media (max-width: 768px) {
+				height: 70%;
+			 }}
         .text-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-align: center; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); }
         .nav-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: #0a3d62; color: white; border: none; padding: 10px 15px; font-size: 24px; cursor: pointer; border-radius: 50%; }
         .nav-button:hover { background-color: #2384c6; }
@@ -156,7 +160,8 @@
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-									    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
+									    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
+												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
@@ -257,7 +262,9 @@
 									<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
+											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
+												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>	
+					
 									</ul>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
@@ -364,6 +371,10 @@
 			<div class="slide">
                 <video src="/home/home2.mp4" type="video/mp4" autoplay loop muted></video>
                 <div class="text-overlay" style="font-family: 'Times New Roman', Times, serif;"  >Elevating Brands with Purpose</div>
+            </div>
+			<div class="slide">
+                <img class="img-fluid" src="../Dimond 1/images/banner/inner-header/01.jpg" alt="">
+                <div class="text-overlay" style="font-family: 'Times New Roman', Times, serif;"  > Brands with Purpose</div>
             </div>
 			<div class="slide">
                 <video src="/home/home1.mp4" type="video/mp4" autoplay loop muted></video>
@@ -560,7 +571,7 @@
 				Awards -->
            <h6 class="trusted-client" style="position: relative; top: 100px; font-size: 30px; @media (max-width: 768px) {
 			font-size: 20px;
-		   }" id="bmw">Our Latest Works</h6>
+		   }" id="bmw">Our Works</h6>
            <div class="yt-slider-wrapper" style="position: relative; top: 100px;">
         <button class="yt-nav-button yt-prev"><i class="fas fa-arrow-left"></i></button>
         <div class="yt-slider-container">
@@ -933,7 +944,7 @@
 				<h6 class="trusted-client" style="position: relative; top: 290px; font-size: 35px; @media (max-width: 768px) {
 					font-size: 20px;
 					
-				   }" id="bvc">Get Inspired by Our Latest Digital Masterpiece</h6>
+				   }" id="bvc">360° Marketing</h6>
 				
 					<div class="container11">
 						<div class="icon icon-left">
@@ -942,13 +953,12 @@
 			
 						<ul class="tabs">
 							<li class="tab active" data-filter="all">All</li>
-							<li class="tab" data-filter="branding">Branding</li>
-							<li class="tab" data-filter="advertising">Advertising</li>
-							<li class="tab" data-filter="webdev">Web Development</li>
-							<li class="tab" data-filter="system">System Solution</li>
 							<li class="tab" data-filter="byd">Documentary</li>
 							<li class="tab" data-filter="tvc">TVC</li>
 							<li class="tab" data-filter="appdev">Video production</li>
+							<li class="tab" data-filter="branding">Branding</li>
+							<li class="tab" data-filter="webdev">Web Development</li>
+							<li class="tab" data-filter="system">System Solution</li>
 							<li class="tab" data-filter="content">Digital/Social Media Marketing</li>
 							<li class="tab" data-filter="graphics">BTL</li>
 							<li class="tab" data-filter="videoedit">Marketing Campaign</li>
@@ -968,36 +978,29 @@
 
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="appdev">
-							<video src="/5122751_Cloud_Mountain_1280x720.mp4" autoplay loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Video production</div>
-							<div class="darwin-tag" id="txt1">Nature</div>
+							<iframe src="https://www.youtube.com/embed/Zvz8ybnv4gI" allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Video production</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<img src="/videos/bz2.jpg" alt="Web Dev Image">
+							<img src="../Dimond 1/videos/bz1.jpg" alt="Web Dev Image">
 							<div class="curie-btn"><i class="fas fa-image"></i></div>
-							<div class="darwin-tag">Awash Bank</div>
-							<div class="darwin-tag" id="txt1">Branding</div>
+							<div class="darwin-tag" id="txt1">Awash Bank</div>
 						</div>
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="advertising">
-							<video src="/videos/c.mp4"loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Tseday Bank</div>
-							<div class="darwin-tag" id="txt1">Advertising</div>
+							<iframe src="https://www.youtube.com/embed/xeYImPVsAXI " allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Tseday Bank</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="advertising">
-							<video src="/videos/d.mp4" loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Amco Interior Design</div>
-							<div class="darwin-tag" id="txt1">Advertising</div>
+							<iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 							
 						</div>
 						
@@ -1006,16 +1009,13 @@
 						<div class="tesla-item" data-category="branding">
 							<img src="/videos/bz3.jpg" alt="Web Dev Image">
 							<div class="curie-btn"><i class="fas fa-image"></i></div>
-							<div class="darwin-tag">Amco Interior Design</div>
-							<div class="darwin-tag" id="txt1">Branding</div>
+							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<video src="/videos/b.mp4" loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Amco Interior Design</div>
-							<div class="darwin-tag" id="txt1">Branding</div>
+							<iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
 						
 					</div>
@@ -1023,10 +1023,8 @@
 					
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="graphics">
-							<video src="/videos/e.mp4"  loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Awash Bank</div>
-							<div class="darwin-tag" id="txt1">BTL</div>
+							<iframe src="https://www.youtube.com/embed/xeYImPVsAXI " allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Awash Bank</div>
 						</div>
 						
 					</div>
@@ -1034,88 +1032,70 @@
 						<div class="tesla-item" data-category="graphics">
 							<img src="/videos/bz4.jpg" alt="Web Dev Image">
 							<div class="curie-btn"><i class="fas fa-image"></i></div>
-							<div class="darwin-tag">Amco Interior Design</div>
-							<div class="darwin-tag" id="txt1">BTL</div>
+							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="byd">
-							<video src="/home/home3.mp4"loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Addis Ababa City</div>
-							<div class="darwin-tag" id="txt1">Documentary</div>
+							<iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Addis Ababa City</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="byd">
-							<video src="/home/home2.mp4"  loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Addis Ababa City</div>
-							<div class="darwin-tag" id="txt1">Documentary</div>
+							<img src="/videos/bz2.jpg" alt="Web Dev Image">
+							<div class="curie-btn"><i class="fas fa-image"></i></div>
+							<div class="darwin-tag" id="txt1">Addis Ababa City</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="byd">
-							<video src="/home/home1.mp4" loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Addis Ababa City</div>
-							<div class="darwin-tag" id="txt1">Documentary</div>
+							<iframe src="https://www.youtube.com/embed/ccuceKo1UoA" allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Addis Ababa City</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<video src="/videos/f.mp4"  loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">ZTE Ethiopia</div>
-							<div class="darwin-tag"id="txt1">Branding</div>
+							<iframe src="https://www.youtube.com/embed/ccuceKo1UoA" allowfullscreen></iframe>
+							<div class="darwin-tag"id="txt1">ZTE Ethiopia</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="tvc">
-							<video src="/videos/g.mp4" loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Amco Interior Design</div>
-							<div class="darwin-tag" id="txt1">TVC</div>
+							<iframe src="https://www.youtube.com/embed/tVvgP3gz_U8" allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="advertising">
-							<video src="/videos/i.mp4"  loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Berhan Bank</div>
-							<div class="darwin-tag" id="txt1">Advertising</div>
+							<iframe src="https://www.youtube.com/embed/Wavj5NFuLKk " allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Berhan Bank</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<video src="/videos/k.mp4"  loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">ZTE Ethiopia</div>
-							<div class="darwin-tag" id="txt1">Branding </div>
+							<iframe src="https://www.youtube.com/embed/Idrj-cyWrbA " allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">ZTE Ethiopia</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="advertising">
-							<video src="/videos/l.mp4" loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Tseday Bank</div>
-							<div class="darwin-tag" id="txt1">Advertising</div>
+							<iframe src="https://www.youtube.com/embed/xeYImPVsAXI " allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Tseday Bank</div>
 						</div>
 						
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="tvc">
-							<video src="/videos/m.mp4"  loop muted></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag">Berhan Bank</div>
-							<div class="darwin-tag" id="txt1">TVC</div>
+							<iframe src="https://www.youtube.com/embed/Wavj5NFuLKk " allowfullscreen></iframe>
+							<div class="darwin-tag" id="txt1">Berhan Bank</div>
 						</div>
 						
 					</div>
@@ -1205,24 +1185,23 @@
 													<div class="icon-box-info">
 														<h6 class="title">Call Center</h6>
 														<ul>
-															<li>123 456-7890</li>
-															<li>+ (000) 123-456-7890</li>
+															<i><a href="tel:+1234567890">+251 940 499 999</a></i>
+															<li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
 														</ul>
 													</div>
 												</div>
 												<div class="contact-icon-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms">
 													<div class="icon-box-info">
 														<h6 class="title">Our Location</h6>
-														<p class="description mb-0">214 West Arnold St. New York, NY 10002</p>
+														<p class="description mb-0"><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower rood,
+															Jems building 9th floor.</a></p>
 													</div>
 												</div>
 												<div class="contact-icon-box wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1500ms">
 													<div class="icon-box-info">
 														<h6 class="title">Email</h6>
 														<ul>
-															<li>
-																<a class="email" href="mailto:sample@example.com">sample@example.com</a>
-															</li>
+															<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
 														</ul>
 													</div>
 												</div>
@@ -1232,21 +1211,30 @@
 														<div class="widget-social">
 															<ul class="social-icon">
 																<li>
-																	<a href="index.html#">Fa.</a>
-																</li>
+																  <i class="icon">
+																	<svg width="22" height="22" fill="#2395D4 " viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+																  </i>
+																  <a href="contact-us.html#">Facebook</a></li>
 																<li>
-																	<a href="index.html#">Tw.</a>
-																</li>
+																  <i class="icon">
+																	<svg width="22" height="22" fill="#2395D4 " viewBox="0 0 16 16">
+																	  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+																	</svg>
+																  </i>
+																  <a href="contact-us.html#">Instagram</a></li>
 																<li>
-																	<a href="index.html#">In.</a>
-																</li>
+																  <i class="icon">
+																	<svg width="22" height="22" fill="#2395D4 " viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+																  </i>
+																  <a href="contact-us.html#">Twitter</a></li>
 																<li>
-																	<a href="index.html#">Dr.</a>
-																</li>
-																<li>
-																	<a href="index.html#">Be.</a>
-																</li>
-															</ul>
+																  <i class="icon">
+																	<svg width="22" height="22" fill="#2395D4 " viewBox="0 0 16 16">
+																	  <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8m5.284 3.688a6.8 6.8 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A7 7 0 0 1 8 1.18m-2.907.642A43 43 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.87 6.87 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.82 6.82 0 0 1-1.752-4.564zM8 14.837a6.8 6.8 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.3 28.3 0 0 1 1.457 5.18A6.7 6.7 0 0 1 8 14.837m3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.77 6.77 0 0 1-2.924 4.573z"/>
+																	</svg>
+																  </i>
+																  <a href="contact-us.html#">Dribble</a></li>
+															  </ul>
 														</div>
 													</div>
 												</div>
