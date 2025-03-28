@@ -1105,6 +1105,30 @@ blockquote.blockquote-style-1 cite, blockquote.blockquote-style-1 p + p {
 .rounded-section {
   border-radius: 30px; }
 
+  #bnf {
+    box-shadow: 
+      0 10px 15px rgba(220, 20, 60, 0.6), /* Crimson Red from top */
+      10px 10px 20px rgba(0, 255, 255, 0.5), /* Aqua from the right */
+      -10px -10px 15px rgba(230, 230, 250, 0.5), /* Lavender from the left */
+      5px -5px 20px rgba(50, 205, 50, 0.5); /* Lime Green from the bottom */
+      transform: translateZ(20px); /* 3D effect */
+  transition: box-shadow 0.3s ease-in-out;
+  }
+  
+
+#bnf:hover {
+  box-shadow: 
+    0 15px 25px rgba(220, 20, 60, 0.8), 
+    15px 15px 30px rgba(0, 255, 255, 0.6),
+    -15px -15px 25px rgba(230, 230, 250, 0.6),
+    10px -10px 30px rgba(50, 205, 50, 0.6);
+  transform: translateZ(30px); /* Enhance 3D effect on hover */
+}
+
+
+
+
+
 .rounded-section.jarallax .jarallax-container {
   border-radius: 30px; }
 
@@ -1876,22 +1900,33 @@ section:has(.rounded-section) {
 /* Service Style 1 */
 .service-item {
   position: relative;
-  margin: 0;
-  padding: 60px 40px;
+  margin-left: 60px;
+  margin-top: 60px;
+  padding-top: 33%;
+  width: 300px;  /* Set a fixed width */
+  height: 300px; /* Set the same value for height */
   background: #07192f;
   border: 1px solid rgba(191, 200, 206, 0.25);
-  border-radius: 50%;
-  height: 75%;
-  transition: all 0.3s ease-in-out; }
-  .service-item .service-icon {
-    opacity: 1;
-    margin-bottom: 30px;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    width: 45px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.service-item .service-icon {
+  opacity: 1;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
   position: relative;
-bottom: 10%;
-left: 40%; }
+  width: 105px;
+  position: relative;
+  bottom: 113%;
+  filter: invert(1) grayscale(1) brightness(2);
+  left: 50%;
+}
+
     .service-item .service-icon .main-icon {
       transition: all 0.3s ease-in-out; }
     .service-item .service-icon .hover-icon {
@@ -1906,18 +1941,20 @@ left: 40%; }
       transition: all 0.3s ease-in-out; }
   .service-item .service-content .service-title {
     margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
 text-align: center; }
   .service-item .service-content .service-description {
-    margin-bottom: 55px;
+    margin-bottom: 25px;
   font-size: 16px; }
     .service-item .service-content{
       position: relative;
       bottom: 20%;
+      text-align: center;
     }
     .service-item .btn-arrow{
       position: relative;
-      left: 40%;
+      left: 0%;
+      bottom: 5px;
     }
   .service-item .service-content .service-action {
     transition: all 0.3s ease-in-out;
@@ -3148,10 +3185,10 @@ width: 90%;}
       right: 20px; }
 
       .owl-carousel .owl-item img {
-        width: auto;
+        max-width: 90% !important;
+        border-radius: 15px;
         display: inherit;
-        border: 2px solid #00bcd4;
-        border-radius: 20px;
+
         filter: grayscale(100%); /* Makes the image black & white */
         transition: filter 0.3s ease-in-out; /* Smooth transition */
       }
@@ -9724,3 +9761,8 @@ body.show-emoji-picker em-emoji-picker {
   color: #00bcd4;
 }
 }
+
+
+/*
+#07192f
+#000f22*/

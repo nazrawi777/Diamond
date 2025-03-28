@@ -27,6 +27,126 @@
 		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
 		<!-- Template Style -->
 		<link rel="stylesheet" href="css/style.css">
+		<style>
+     /* Responsive Grid Layout */
+	.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
+    gap: 120px;
+    padding: 20px;
+    justify-content: center;
+	margin-right: 100px;
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+    }
+}
+
+/* 3D Rotation on Hover */
+/* Product Item with 3D Effect */
+.product-item {
+    position: relative;
+    width: 135%;
+	margin-right: 60px;
+    height: 147%;
+    background: #07192f;
+    clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
+    border-radius: 20px; /* Smooth edges */
+    padding: 15px;
+    text-align: center;
+    color: white;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 
+        0 10px 30px rgba(255, 255, 255, 0.15), /* Softer outer glow */
+        inset 0 0 15px rgba(255, 255, 255, 0.25); /* More visible inner glow */
+}
+
+/* 3D Border Effect (Always Visible) */
+.product-item::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), transparent);
+    border-radius: 25px;
+    z-index: -1;
+    box-shadow: 
+        2px 2px 10px rgba(255, 255, 255, 0.3), 
+        -2px -2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effect: 3D Rotation */
+.product-item:hover {
+    transform: rotateX(10deg) rotateY(10deg);
+    box-shadow: 
+        0 15px 40px rgba(255, 255, 255, 0.2), 
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Shine Effect */
+.product-item::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover::before {
+    opacity: 0.7;
+}
+
+
+
+
+/* Icon Positioning */
+.product-icon img {
+    width: 40px; /* Small icons */
+    height: auto;
+    display: block;
+    margin: 10px auto 1px;
+	position: relative;
+	bottom: 14px;
+	filter: invert(1) grayscale(1) brightness(2);
+}
+
+/* Product Content */
+.product-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #bbb;
+	height: 60px;
+
+}
+		</style>
 	</head>
 	<body>
 
@@ -175,17 +295,7 @@
 
       <!--=================================
       Search -->
-      <div id="search">
-       
-        <button type="button" class="close"></button>
-        <div class="search-inner">
-          <h2 class="title">Search here...</h2>
-          <form>
-            <input type="search" value="" placeholder="Search">
-            <button type="submit" class="search-btn btn"><span>Search</span></button>
-          </form>
-        </div>
-      </div>
+     
       <!--=================================
       Search -->
 
@@ -269,13 +379,10 @@
 				inner-banner -->
 
 				<div class="content-wrapper">
-
-					<!--=================================
-					Our Services -->
-					<section class="space-ptb">
+					<section class="space-ptb overflow-hidden">
 						<div class="container">
 							<div class="row justify-content-between">
-								<div class="col-xxl-7 col-lg-9">
+								<div class="col-xxl-7 col-lg-9" style="margin-bottom: 50px;">
 									<div class="section-title mb-0 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
 										<span class="sub-title">[ Our Services ]</span>
 										<h2 class="title mb-0" id="dia">Digital marketing services that help you grow.</h2>
@@ -283,237 +390,296 @@
 								</div>
 							</div>
 
-							<div class="row mt-4 mt-md-5">
-								<div class="col-sm-12">
-									<div class="services grid-wrapper grid-xl-3 grid-lg-2 grid-xs-1">
+							
+						</div>
+						<div class="product-grid">
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/awareness.png" alt="Branding">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Branding</h5>
+									<p class="product-description">Create a unique identity for your  business <br> that resonates with  customers and <br> builds lasting emotional <br>connections.</p>
+									
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/analysis.png" alt="Marketing Strategy">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Marketing Strategy</h5>
+									<p class="product-description">Craft a comprehensive marketing <br>strategy  that drives growth, <br> and ensures brand <br> success.</p>
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/billboard.png" alt="Outdoor Advert">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Printing & Outdoor Advert</h5>
+									<p class="product-description">Utilize print and outdoor advertising to make <br> a visual impact and  reach a broad <br> audience effectively.</p>
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/bullhorn.png" alt="Marketing Campaign">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Marketing Campaign</h5>
+									<p class="product-description">Create impactful marketing
+										 campaigns  that <br>  resonate with your audience, <br>boosting brand <br>visibility.</p>
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/consultation.png" alt="Marketing Consultancy">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Marketing Consultancy</h5>
+									<p class="product-description">
+										Partner with experts to develop tailored <br>digital marketing strategies 
+										that <br>increase online presence <br> and drive <br>results.
+									  </p>
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/movie.png" alt="Video Production">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Video Production</h5>
+									<p class="product-description">Produce high-quality videos that captivate <br>audiences, tell compelling stories,<br> and leave a memorable<br> impact.</p>
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/statisctics.png" alt="Data Analysis">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Data Analysis</h5>
+									<p class="product-description">A well-thought-out 
+										marketing strategy helps <br> achieve business goals by targeting <br> the right audience<br> effectively.</p>
+								</div>
+							</div>
+						
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/coding.png" alt="Website Development">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Website Development</h5>
+									<p class="product-description">Develop a responsive, user-friendly website <br> that enhances brand presence and <br> visitors through seamless <br> navigation.</p>
+								</div>
+							</div>
+							<div class="product-item">
+								<div class="product-icon">
+									<img class="img-fluid" src="/images/service/money.png" alt="Media Buying and Monitoring">
+								</div>
+								<div class="product-content">
+									<h5 class="product-title">Media Buying and Monitoring</h5>
+									<p class="product-description">
+										Strategically purchase ad placements across <br> various platforms 
+                                         while tracking <br> performance to maximize<br> reach and ROI.
+									</p>
+								</div>
+							</div>
+							
+						</div>
+						
+						<!--
+						<div class="row mt-4 mt-md-5">
+							<div class="col-sm-12">
+								<div class="services grid-wrapper grid-xl-3 grid-lg-2 grid-xs-1">
 
-
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/awareness.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/awareness.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Branding</h5>
-												<p class="service-description">Create a unique identity for your business that resonates with customers and builds lasting emotional connections.</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/awareness.png" alt="Branding">
+											<img class="img-fluid hover-icon" src="/images/service/awareness.png" alt="Branding">
 										</div>
-
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/analysis.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/analysis.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Marketing Strategy</h5>
-												<p class="service-description">Craft a comprehensive marketing strategy that drives growth, engages the right audience, and ensures brand success</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/billboard.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/billboard.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Printing & Outdoor Advert</h5>
-												<p class="service-description">Utilize print and outdoor advertising to make a visual impact and reach a broad audience effectively.</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-												</div>
-										</div>
-
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/bullhorn.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/billboard.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Marketing Campaign</h5>
-												<p class="service-description">Create impactful marketing campaigns that resonate with your audience, encouraging engagement and boosting brand visibility</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
-										</div>
-
-										
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/consultation.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/consultation.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Marketing Consultancy</h5>
-												<p class="service-description">Partner with experts to develop tailored digital marketing strategies that increase online presence and drive results</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/movie.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/movie.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Video Production</h5>
-												<p class="service-description">Produce high-quality videos that captivate audiences, tell compelling stories, and leave a memorable impact</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/statisctics.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/statisctics.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Marketing Strategy</h5>
-												<p class="service-description">A well-thought-out marketing strategy helps achieve business goals by targeting the right audience effectively</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
-											</div>
-										</div>
-									     
-										<div class="service-item  wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-											<div class="service-icon">
-												<img class="img-fluid main-icon" src="/images/service/coding.png" alt="">
-												<img class="img-fluid hover-icon" src="/images/service/coding.png" alt="">
-											</div>
-											<div class="service-content">
-												<h5 class="service-title">Website Development</h5>
-												<p class="service-description">Develop a responsive, user-friendly website that enhances brand presence and engages visitors through seamless navigation</p>
-												<div class="service-action">
-													<a class="btn-arrow" >
-														<svg width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></svg>
-													</a>
-												</div>
+										<div class="service-content">
+											<h5 class="service-title">Branding</h5>
+											<p class="service-description">Create a unique identity for your business that resonates with customers and builds lasting emotional connections.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
 											</div>
 										</div>
 									</div>
+									
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/analysis.png" alt="Marketing Strategy">
+											<img class="img-fluid hover-icon" src="/images/service/analysis.png" alt="Marketing Strategy">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Marketing Strategy</h5>
+											<p class="service-description">Craft a comprehensive marketing strategy that drives growth and ensures brand success.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
 
+									</div>
+									
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/billboard.png" alt="Printing & Outdoor Advert">
+											<img class="img-fluid hover-icon" src="/images/service/billboard.png" alt="Printing & Outdoor Advert">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Printing & Outdoor Advert</h5>
+											<p class="service-description">Utilize print and outdoor advertising to make a visual impact and reach a broad audience effectively.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/bullhorn.png" alt="Marketing Campaign">
+											<img class="img-fluid hover-icon" src="/images/service/bullhorn.png" alt="Marketing Campaign">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Marketing Campaign</h5>
+											<p class="service-description">Create impactful marketing campaigns that resonate with your audience, boosting brand visibility.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/consultation.png" alt="Marketing Consultancy">
+											<img class="img-fluid hover-icon" src="/images/service/consultation.png" alt="Marketing Consultancy">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Marketing Consultancy</h5>
+											<p class="service-description">
+												Partner with experts to develop tailored digital marketing strategies that increase online presence and drive results.
+											</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/movie.png" alt="Video Production">
+											<img class="img-fluid hover-icon" src="/images/service/movie.png" alt="Video Production">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Video Production</h5>
+											<p class="service-description">Produce high-quality videos that captivate audiences, tell compelling stories, and leave a memorable impact.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/statisctics.png" alt="Data Analysis">
+											<img class="img-fluid hover-icon" src="/images/service/statisctics.png" alt="Data Analysis">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Data Analysis</h5>
+											<p class="service-description">A well-thought-out marketing strategy helps achieve business goals by targeting the right audience effectively.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/coding.png" alt="Website Development">
+											<img class="img-fluid hover-icon" src="/images/service/coding.png" alt="Website Development">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Website Development</h5>
+											<p class="service-description">Develop a responsive, user-friendly website that enhances brand presence and visitors through seamless navigation.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="service-item wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1500ms">
+										<div class="service-icon">
+											<img class="img-fluid main-icon" src="/images/service/money.png" alt="Media Buying and Monitoring">
+											<img class="img-fluid hover-icon" src="/images/service/money.png" alt="Media Buying and Monitoring">
+										</div>
+										<div class="service-content">
+											<h5 class="service-title">Media Buying</h5>
+											<p class="service-description">Strategically purchase ad placements across various platforms while tracking performance to maximize reach and ROI.</p>
+											<div class="service-action">
+												<a class="btn-arrow">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+														<path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path>
+														<path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									
 								</div>
 							</div>
 						</div>
-					</section>
+						-->
+                           
 
-					<section class="space-ptb overflow-hidden">
-						<div class="container">
-						  <div class="row align-items-center justify-content-between pb-5">
-							<div class="col-md-8">
-							  <div class="section-title mb-4 mb-md-0 pgs-title-effect wow fadeInLeft" data-wow-delay="0.4s" data-wow-duration="1500ms">
-							  <!--<span class="sub-title">[ Recent Post ]</span>-->
-								<h2 class="title" style="position: relative; left: 58%; font-size: 50px;" >Our Gears</h2>
-							  </div>
-							</div>
-							
-						  </div>
-						  <div class="row">
-							<div class="col-lg-12">
-							  <div class="owl-carousel owl-nav-center wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" data-nav-dots="false" data-nav-arrow="true" data-items="3" data-lg-items="3" data-md-items="2" data-sm-items="2" data-xs-items="2" data-space="24" data-autoheight="true">
-								  <div class="item" data-cursor-type="arrow">
-									<div class="blog-post blog-style-02">
-									  <div class="blog-post-img">
-										<img class="img-fluid" src="images/blog/b1.jpg" alt="">
-										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
-										  <div class="post-meta-category">
-											<a href="index-02.html#" rel="category tag">REDKOMODO 6K</a>
-										  </div>
-										</div>
-									  </div>
-									</div>
-								  </div>
-								  <div class="item" data-cursor-type="arrow">
-									<div class="blog-post blog-style-02">
-									  <div class="blog-post-img">
-										<img class="img-fluid" src="images/blog/b2.jpg" alt="">
-										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
-										  <div class="post-meta-category">
-											<a href="index-02.html#" rel="category tag">REDKOMODO 8K</a>
-										  </div>
-										</div>
-									  </div>
-									</div>
-								  </div>
-								  <div class="item" data-cursor-type="arrow">
-									<div class="blog-post blog-style-02">
-									  <div class="blog-post-img">
-										<img class="img-fluid" src="images/blog/b3.jpg" alt="">
-										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
-										  <div class="post-meta-category">
-											<a href="index-02.html#" rel="category tag">REDKOMODO 8K</a>
-										  </div>
-										</div>
-									  </div>
-									</div>
-								  </div>
-								  <div class="item" data-cursor-type="arrow">
-									<div class="blog-post blog-style-02">
-									  <div class="blog-post-img">
-										<img class="img-fluid" src="images/blog/b4.jpg" alt="">
-										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
-										  <div class="post-meta-category" >
-											<a href="index-02.html#" rel="category tag" >REDKOMODO 6K</a>
-										  </div>
-										</div>
-									  </div>
-									</div>
-								  </div>
-								  <div class="item" data-cursor-type="arrow">
-									<div class="blog-post blog-style-02">
-									  <div class="blog-post-img">
-										<img class="img-fluid" src="images/blog/b5.jpg" alt="">
-										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
-										  <div class="post-meta-category">
-											<a href="index-02.html#" rel="category tag">REDKOMODO 8K</a>
-										  </div>
-										</div>
-									  </div>
-									</div>
-								  </div>
-								  <div class="item" data-cursor-type="arrow">
-									<div class="blog-post blog-style-02">
-									  <div class="blog-post-img">
-										<img class="img-fluid" src="images/blog/b7.jpg" alt="">
-										<div class="blog-post-category" style="position: relative; left: 40px; top: 10px;">
-										  <div class="post-meta-category">
-											<a href="index-02.html#" rel="category tag">REDKOMODO 6K</a>
-										  </div>
-										</div>
-									  </div>
-									</div>
-								  </div>
-							  </div>
-							</div>
-						  </div>
-						</div>
 					  </section>
-
+                     
 					
+
 					
 
 				</div>
