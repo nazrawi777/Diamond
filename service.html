@@ -61,7 +61,7 @@
 .product-item {
     position: relative;
     width: 135%;
-	margin-right: 60px;
+    margin-right: 60px;
     height: 147%;
     background: #07192f;
     clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
@@ -71,10 +71,15 @@
     color: white;
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 
-        0 10px 30px rgba(255, 255, 255, 0.15), /* Softer outer glow */
-        inset 0 0 15px rgba(255, 255, 255, 0.25); /* More visible inner glow */
+    transition: transform 0.4s ease, filter 0.4s ease;
+
+    /* REPLACED box-shadow with drop-shadow for outer */
+    filter: 
+        drop-shadow(0 15px 40px rgba(0, 0, 0, 0.8)) /* strong black outer shadow */
+        drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5)); /* soft layer */
+
+    /* Keep inner glow */
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
 /* 3D Border Effect (Always Visible) */
@@ -96,9 +101,10 @@
 /* Hover Effect: 3D Rotation */
 .product-item:hover {
     transform: rotateX(10deg) rotateY(10deg);
-    box-shadow: 
-        0 15px 40px rgba(255, 255, 255, 0.2), 
-        inset 0 0 20px rgba(255, 255, 255, 0.3);
+    filter: 
+        drop-shadow(0 20px 50px rgba(0, 0, 0, 1)) 
+        drop-shadow(0 5px 15px rgba(0, 0, 0, 0.6));
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Shine Effect */
@@ -119,9 +125,6 @@
 .product-item:hover::before {
     opacity: 0.7;
 }
-
-
-
 
 /* Icon Positioning */
 .product-icon img {
