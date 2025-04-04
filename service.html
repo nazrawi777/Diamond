@@ -65,7 +65,7 @@
     height: 147%;
     background: #07192f;
     clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
-    border-radius: 20px; /* Smooth edges */
+    border-radius: 20px;
     padding: 15px;
     text-align: center;
     color: white;
@@ -73,12 +73,12 @@
     perspective: 1000px;
     transition: transform 0.4s ease, filter 0.4s ease;
 
-    /* REPLACED box-shadow with drop-shadow for outer */
+    /* Apply vibrant color drop-shadow */
     filter: 
-        drop-shadow(0 15px 40px rgba(0, 0, 0, 0.8)) /* strong black outer shadow */
-        drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5)); /* soft layer */
+        drop-shadow(0 15px 30px rgba(255, 0, 255, 0.8)) /* Magenta vibrant shadow */
+        drop-shadow(0 0 10px rgba(0, 255, 255, 0.6));  /* Cyan color shadow */
 
-    /* Keep inner glow */
+    /* Keep inner shadow */
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
@@ -102,8 +102,8 @@
 .product-item:hover {
     transform: rotateX(10deg) rotateY(10deg);
     filter: 
-        drop-shadow(0 20px 50px rgba(0, 0, 0, 1)) 
-        drop-shadow(0 5px 15px rgba(0, 0, 0, 0.6));
+        drop-shadow(0 20px 40px rgba(255, 0, 255, 1)) 
+        drop-shadow(0 5px 15px rgba(0, 255, 255, 0.8));
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
