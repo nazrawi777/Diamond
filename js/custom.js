@@ -92,6 +92,7 @@ NOTE: This file contains all scripts for the actual Template.
 	/*************************
 		Sticky
 	*************************/
+
 	POTENZA.isSticky = function () {
 		var $window       = $(window);
 		var lastScrollTop = 0;
@@ -122,6 +123,28 @@ NOTE: This file contains all scripts for the actual Template.
 			$('#windowtop').text('scrollTop: ' + windowTop);
 		});
 	};
+
+	/*************************
+		Tooltip
+	*************************/
+	POTENZA.Tooltip = function() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	}
+
+	/*************************
+		Popover
+	*************************/
+	POTENZA.Popover = function() {
+		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+			var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+				return new bootstrap.Popover(popoverTriggerEl)
+		})
+	}
+
+	
 
 	/*************************
 		Tooltip
