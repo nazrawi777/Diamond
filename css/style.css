@@ -1,81 +1,4 @@
-/*!*******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./template/scss/style.scss ***!
-  \*******************************************************************************************************************/
-/*
 
-Template: Dimond - Digital Marketing Agency HTML5 Template
-Version: 1.0
-Author: potenzaglobalsolutions
-Design and Developed by: potenzaglobalsolutions.com
-
-NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
-
-*/
-/*================================================
-[  Table of contents  ]
-================================================
-
- :: Typography
- :: Helper Classes
- :: Shortcodes
-  	- Accordion
-    - Address Info
-    - Awards
-  	- Button
-    - Blog Post
-    - Info Box
-  	- Case Study
-    - Countdown
-    - Counter
-    - Client
-    - Feature Info
-    - Form Control
-    - Find Job
-    - History
-    - List style
-    - Location
-    - Marquee
-    - Newsletter
-    - Owl Carousel
-    - Portfolio
-    - Pricing Table
-    - Progress Bar
-    - Range Slider
-    - Workspaces
-    - Steps
-    - Skill
-    - Team
-    - Testimonial
-    - Timeline
-    - Video
-
- :: Header
-   - Header
-   - Header Style 02
-   - Header Style 03
-   - Header Transparent
- :: Banner
-   - Banner
-   - banner 02
-   - banner 03
- :: Layout
-   - Section Title
-   - Sticky column
-   - Header Inner
- :: Blog
-   - Blog
-   - blog post sticky
- :: Not Found
- :: Footer
- :: Responsive
-
-======================================
-[ End table content ]
-======================================*/
-/*Transition*/
-/*****************************
-	Typography
-*****************************/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 body {
   font-family:"railway" ;
@@ -4264,9 +4187,9 @@ form .form-control {
   color: #000f22;
   margin-bottom: 15px; }
   form .form-control::-ms-input-placeholder {
-    color: #ced0df; }
+    color: #3f9ab6; }
   form .form-control::placeholder {
-    color: #ced0df; }
+    color: #2882a5; }
   form .form-control:focus {
     color: #000f22;
     box-shadow: none;
@@ -4280,8 +4203,9 @@ form textarea.form-control {
 
 form.form-style-border .form-control {
   padding: 15px 20px;
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.07); }
+  border-radius: 25px;
+  color: #000f22 !important;
+  border: 1px solid rgba(15, 58, 87, 0.7); }
   form.form-style-border .form-control:focus {
     border-color: #2384c6; }
 
@@ -8597,7 +8521,8 @@ body:has(#search.open) {
     }
     #txt1{
       font-size: 12px !important;
-      color: #000f22 !important;
+      color: #fff !important;
+      background-color: #000f22 !important;
     }
   }
 @media (max-width: 767px) {
@@ -9032,10 +8957,12 @@ bottom: 3780px;}
 
 
 .tesla-item {
+  border: 4px solid #000f22 !important; /* Bright cyan border */
+  color: white !important;
   position: relative;
   border-radius: 2px;
   cursor: pointer;
-  background: white;
+  background: white !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9051,9 +8978,7 @@ bottom: 3780px;}
   left: -2px;
   width: 101%;
   height: 101%;
-  border-radius: inherit;
-  background-image: conic-gradient(from var(--angle), 
-  #00112d, #002650, #003b73, #002650, #00112d);
+  border-radius: inherit;;
   z-index: -1; /* Ensures it's behind the item */
   animation: spin 3s linear infinite;
 }
@@ -9078,7 +9003,7 @@ bottom: 3780px;}
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
+  background-color: white !important;
   border: 1px solid transparent;
 }
 .tesla-item iframe{
@@ -9100,17 +9025,18 @@ bottom: 3780px;}
 
 
 .darwin-tag {
-  background-color: #fff;
+  color: #00acc1 !important;
+  background: linear-gradient(45deg, #000f22, #003366, #006699); /* 3 Background colors */
   font-size: 19px;
   font-family: 'Times New Roman', Times, serif;
-  color: #000f22;
   width: 101%;
   padding-top: 5px;
   text-align: center;
   position: relative;
   top: -1.6px;
   padding-right: 3px;
-  border-right: 4px solid #fff;
+  border-top: 4px solid #fff;
+
   right: -2px;
   width: 99%;
   border-radius: 0px;
@@ -9124,7 +9050,7 @@ bottom: 3780px;}
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  color: #fff;
+  color: #000f22;
   padding: 15px;
   border-radius: 50%;
   font-size: 20px;
@@ -9241,9 +9167,9 @@ bottom: 3780px;}
   z-index: 9999;
   top: 70px;
   right: 30px;
-  background: transparent;
+  background: lightblue;
   color: black;
-  border: 2px solid rgba(191, 200, 206, 0.25);
+  border: 2px solid rgba #fff;
   padding: 5px 14px;
   cursor: pointer;
   font-size: 16px;
@@ -9263,6 +9189,7 @@ bottom: 3780px;}
 /* Filtering styles */
 .gallery-item {
   transition: all 0.3s ease-in-out;
+  background-color: white !important;
 }
 
 .hidden {
@@ -9749,8 +9676,7 @@ body.show-emoji-picker em-emoji-picker {
 
 /* Hover Effect with Text Animation */
 #bvc:hover {
-  animation: textBounce 0.5s ease-in-out infinite; /* Text bounce animation on hover */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Shadow change on hover */
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
 }
 #bvc {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.); /* Larger, softer shadow */
@@ -9811,7 +9737,27 @@ body.show-emoji-picker em-emoji-picker {
     width: 100%; /* Full width */
     animation: moveBackground 5s infinite alternate, borderAnimation 5s infinite alternate; /* Animation */
   }
+  @media (min-width: 1400px) and (max-width: 1584px){
+      #bzzzc{
+    text-align: center;
+    font-weight: bold;
+	position: relative;
+	bottom: 60px;
+    color: white;
+    padding: 20px;
+    position: relative;
+  	top: -60px !important;
+    background: linear-gradient(45deg, #000f22, #003366, #006699); /* 3 Background colors */
+    border: 3px solid green; /* Teal border color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Shadow effect */
+    display: block; /* Make it take full width */
+    width: 100%; /* Full width */
+    animation: moveBackground 5s infinite alternate, borderAnimation 5s infinite alternate; /* Animation */
+  }
+}
   #bzzzc{
+    position: relative;
+    top: 0px;
     text-align: center;
     font-weight: bold;
     color: white;
@@ -9823,6 +9769,9 @@ body.show-emoji-picker em-emoji-picker {
     display: block; /* Make it take full width */
     width: 100%; /* Full width */
     animation: moveBackground 5s infinite alternate, borderAnimation 5s infinite alternate; /* Animation */
+  }
+  #bzzc:hover {
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
   }
   #bzxc{
     text-align: center;
@@ -9851,8 +9800,7 @@ body.show-emoji-picker em-emoji-picker {
   /**box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Shadow effect */
   /* Hover Effect with Text Animation */
   #bzzzc:hover {
-    animation: textBounce 0.5s ease-in-out infinite; /* Text bounce animation on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Shadow change on hover */
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
   }
   #bzzzc {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.); /* Larger, softer shadow */
@@ -9904,8 +9852,7 @@ body.show-emoji-picker em-emoji-picker {
     /**box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Shadow effect */
   /* Hover Effect with Text Animation */
   #bzzzc:hover {
-    animation: textBounce 0.5s ease-in-out infinite; /* Text bounce animation on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Shadow change on hover */
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
   }
   #bzzzc {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.); /* Larger, softer shadow */
@@ -9918,7 +9865,7 @@ body.show-emoji-picker em-emoji-picker {
       position: relative; top: -120px !important;
     }
   }
-  @media (max-width: 1025px) {
+  @media (max-width: 1399px) {
 						#bzzzc {
               position: relative; top: -90px ;
 						
@@ -9992,7 +9939,7 @@ body.show-emoji-picker em-emoji-picker {
     padding: 20px;
     margin-top: 80px;
     background: linear-gradient(45deg, #000f22, #003366, #006699); /* 3 Background colors */
-    border: 3px solid green; /* Teal border color */
+    border: 3px solid teal; /* Teal border color */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Shadow effect */
     display: block; /* Make it take full width */
     width: 100%; /* Full width */
@@ -10002,8 +9949,7 @@ body.show-emoji-picker em-emoji-picker {
   
   /* Hover Effect with Text Animation */
   #byzc:hover {
-    animation: textBounce 0.5s ease-in-out infinite; /* Text bounce animation on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Shadow change on hover */
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
   }
   #byzc {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.); /* Larger, softer shadow */
@@ -10091,7 +10037,7 @@ body.show-emoji-picker em-emoji-picker {
     position: relative;
     top: -0px !important;
   }
-  .site-footer {
+  #nnd {
     position: relative !important;
     top: 40px !important;
  }

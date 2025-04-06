@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="keywords" content="HTML5 Template">
-    <meta name="description" content="Dimond - Digital Marketing Agency HTML5 Template">
+    <meta name="description" content="Dimond - Digital Marketing">
     <meta name="author" content="potenzaglobalsolutions.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dimond - Digital Marketing Agency HTML5 Template</title>
+    <title>Dimond - Digital Marketing</title>
     <!-- Favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<!-- Google Font -->
@@ -168,7 +168,60 @@
 
 
 @media (max-width: 768px) {
+  .slider-container{
+    width: 87%;
+  }
   .slide { flex: 0 0 50%; }
+  .slide img {
+  width: 140%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 4px solid transparent; /* Make border gradient visible */
+  
+  /* Cyan to Magenta Gradient for border */
+  background: 
+    linear-gradient(135deg, 
+      rgba(0, 255, 255, 0.85) 0%,  /* Cyan */
+      rgba(0, 0, 0, 0.3) 50%, 
+      rgba(255, 0, 255, 0.85) 100%) border-box; /* Magenta */
+}
+.slide a {
+  position: absolute;
+  top: 50%;
+  font-size: 10px;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  background-color: #161a20 !important;  /* Black background before hover */
+  color: white;
+  border-radius: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0;  /* Initially hidden */
+  z-index: 88 !important;
+  box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+  transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transitions for opacity and background color */
+  border: 4px solid transparent; /* Make border gradient visible */
+  background: linear-gradient(135deg, #008cff, #e100ff); /* Initial gradient border */
+}
+
+/* Gradient Border Before Hover */
+.slide a::after {
+  opacity: 1;  /* Gradient border visible before hover */
+  position: absolute;
+  content: '';
+  align-items: center;
+  justify-content: center;
+  height: 107%;
+  top: -1.4px;
+  z-index: -1;
+  left: -1px;
+  width: 102%;
+  border-radius: 1000px;
+  background-color: #161a20 !important;
+  transition: opacity 0.3s ease, background 0.3s ease; /* Smooth transition for gradient */
+}
 }
 
 @media (min-width: 700px) and (max-width: 1398px) {
@@ -465,7 +518,7 @@ providing <br>the best talent, creativity, technology and digital innovation to 
                         </div>
                         <div class="content">
                           <h6 class="title">Company Vision</h6>
-                          <p class="description">To be the most preferred production company in East Africa</p>
+                          <p class="description">To be the most preferred production company in East Africa.</p>
                         </div>
                       </div>
                       
@@ -476,7 +529,7 @@ providing <br>the best talent, creativity, technology and digital innovation to 
                         <div class="content">
                           <h6 class="title">Company Mission </h6>
                           <p class="description">To deliver exceptional advertising and branding solutions to our clients, employing
-                            strategic thinking, bold ideas, flawless execution., and utilizing cutting edge technologies, working with highly creative teams
+                            strategic thinking, bold ideas, flawless execution., and utilizing cutting edge technologies, working with highly creative teams.
                             </p>
                         </div>
                       </div>
@@ -487,9 +540,9 @@ providing <br>the best talent, creativity, technology and digital innovation to 
                         </div>
                         <div class="content">
                           <h6 class="title">Company Goals</h6>
-                          <p class="description">n delivering creative efficienct and
+                          <p class="description">Delivering creative efficienct and
                             cost-effective solution for you company, by being commited to create an exceptional
-                            and remarkable strategy that will make your brand outshine from the crowd</p>
+                            and remarkable strategy that will make your brand outshine from the crowd.</p>
                         </div>
                       </div>
 

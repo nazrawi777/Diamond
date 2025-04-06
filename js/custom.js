@@ -1,6 +1,6 @@
 /*
 
-Template: Dimond - Digital Marketing Agency HTML5 Template
+Template: Dimond - Digital Marketing
 Author: potenzaglobalsolutions
 Design and Developed by: potenzaglobalsolutions.com
 
