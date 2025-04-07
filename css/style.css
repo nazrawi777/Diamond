@@ -4195,7 +4195,12 @@ form .form-control {
     box-shadow: none;
     border-color: #2384c6;
     background: transparent; }
-
+@media (min-width: 1400px) and (max-width: 1584px){
+           #ufff
+           { position: relative;
+            top: 100px;
+          }
+        }
 form textarea.form-control {
   margin-bottom: 30px; }
   form textarea.form-control.pre-textarea {
