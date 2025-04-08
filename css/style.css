@@ -1,7 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 body {
-  font-family:"railway" ;
+  font-family: 'Open Sans', sans-serif !important;
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -44,7 +44,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Bai Jamjuree", serif;
+  
   font-weight: 700;
   color: #000f22;
   margin: 0px 0px 1rem; }
@@ -179,11 +179,31 @@ figure.caption {
 /*----------------------------------*/
 @media (min-width: 1400px) {
   .container {
-    max-width: 1424px; } }
+    max-width: 1424px; }
+    #vvdd{
+      font-size: 25px;
+      width: 140%;
+    } 
+    #xxxd{
+      font-size: 31px;
+      position: relative;
+      top: 50px;
+      width: 100%;
+      white-space: nowrap ;
+    }
+    #bcbcbc{
+      position: relative;
+       right : 70px;
+    }
+  }
     @media (max-width: 768px) {
       .trusted-client{
 			font-size: 24px !important;
       }
+      #vvdd{
+        font-size: 25px;
+        width: 140%;
+      } 
 		   }
 @media (max-width: 991px) {
   .container {
@@ -202,7 +222,7 @@ figure.caption {
     margin-bottom: 20px;
     display: inline-block;
     text-transform: uppercase;
-    font-family: "Bai Jamjuree", serif; }
+     }
   .section-title .title {
     margin-bottom: 0;
     text-transform: capitalize; }
@@ -333,7 +353,7 @@ blockquote.blockquote-style-1 {
       color: #2384c6; }
   blockquote.blockquote-style-1:before {
     content: "\f10d";
-    font-family: "Font Awesome 6 Free";
+    ;
     font-weight: 900;
     position: absolute;
     top: 30px;
@@ -1375,7 +1395,7 @@ section:has(.rounded-section) {
     .accordion .accordion-item .accordion-header .accordion-button:after {
       content: "\2b";
       background-image: inherit;
-      font-family: 'Font Awesome 5 Free';
+      ;
       font-size: 18px;
       font-weight: 600;
       color: #000f22;
@@ -1400,7 +1420,7 @@ section:has(.rounded-section) {
     color: #2384c6; }
     .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
       content: "\f068";
-      font-family: 'Font Awesome 5 Free';
+      ;
       color: #2384c6; }
   .accordion .accordion-item .accordion-button:focus {
     border-color: #2384c6;
@@ -1442,7 +1462,7 @@ section:has(.rounded-section) {
     background-color: #2384c6; }
     .accordion.accordion-style-pgs-two .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
       content: "\f068";
-      font-family: 'Font Awesome 5 Free';
+      ;
       color: #000f22; }
   .accordion.accordion-style-pgs-two .accordion-item .accordion-collapse .accordion-body {
     background-color: transparent;
@@ -1508,7 +1528,7 @@ section:has(.rounded-section) {
       margin-top: 0;
       border-top: none; }
       .action-box.action-box-style-02 .action-box-content .title {
-        font-family: "Bai Jamjuree", serif;
+        
         font-size: 36px;
         font-weight: 700;
         text-transform: capitalize;
@@ -1799,7 +1819,7 @@ section:has(.rounded-section) {
       display: inline-block;
       line-height: normal;
       color: #ced0df;
-      font-family: "Jost", sans-serif;
+      
       font-weight: normal; }
       .contact-info-box ul li a:hover {
         color: #2384c6; }
@@ -2006,7 +2026,7 @@ top: -20px; }
           transition: all 0.3s ease-in-out;
           z-index: -1; }
   .service-fancy .service-item .service-title {
-    font-family: "Bai Jamjuree", serif;
+    
     font-size: 30px;
     font-weight: 700;
     line-height: 42px;
@@ -2316,7 +2336,7 @@ width: 90%;}
     font-size: 22px;
     line-height: 32px;
     font-weight: 600;
-    font-family: "Bai Jamjuree", serif;
+    
     color: #000f22;
     display: inline-block; }
     .team-item .team-info .team-title:hover {
@@ -2637,15 +2657,18 @@ width: 90%;}
     line-height: 1; }
     .counter .counter-info .counter-title {
       display: inline-block;
-      font-family: "Bai Jamjuree", serif;
-      font-size: 20px;
+      
+      font-size: 25px;
       line-height: 28px;
       font-weight: 600; }
   .counter .counter-number {
-    font-family: "Bai Jamjuree", serif;
+   
     display: flex;
     align-items: center;
     gap: 3px; }
+    .highlight{
+      color: #00afef;
+    }
     .counter .counter-number span {
       display: inline-block;
       font-size: 50px;
@@ -2830,7 +2853,7 @@ width: 90%;}
 
 .trusted-client {
   font-size: 20px;
-  font-family: "Bai Jamjuree", serif;
+  
   font-weight: 600;
   line-height: 32px;
   margin-bottom: 40px;
@@ -3009,7 +3032,7 @@ width: 90%;}
     font-size: 18px;
     line-height: 28px;
     font-weight: 600;
-    font-family: "Jost", sans-serif;
+    
     display: flex;
     align-items: start; }
     .challange-item h6.title svg {
@@ -3289,7 +3312,7 @@ width: 90%;}
         padding: 10px 20px;
         font-weight: normal;
         background-color: #2384c6;
-        font-family: "Jost", sans-serif;
+        
         border-radius: 10px 10px 10px 0px; }
       .portfolio-fancy-wrapper .portfolio-item .item-info .item-category {
         display: inline-block;
@@ -3453,7 +3476,7 @@ width: 90%;}
     display: block; }
   .pricing-box .pricing-header .title {
     color: #000000;
-    font-family: "Bai Jamjuree", serif;
+    
     font-size: 32px;
     font-weight: 600;
     line-height: 42px;
@@ -3473,7 +3496,7 @@ width: 90%;}
     .pricing-box .pricing-price .price-currency {
       font-size: 18px;
       font-weight: 600;
-      font-family: "Bai Jamjuree", serif;
+      
       line-height: 1;
       align-self: flex-start;
       color: #000000;
@@ -3483,7 +3506,7 @@ width: 90%;}
       font-weight: 600;
       line-height: .8;
       color: #000000;
-      font-family: "Bai Jamjuree", serif; }
+       }
     .pricing-box .pricing-price .after-price {
       display: flex;
       flex-wrap: wrap;
@@ -3498,7 +3521,7 @@ width: 90%;}
         font-weight: 600;
         margin-top: 7px;
         color: #000000;
-        font-family: "Bai Jamjuree", serif;
+        
         line-height: normal;
         letter-spacing: normal;
         text-transform: none; }
@@ -3512,7 +3535,7 @@ width: 90%;}
     padding: 0;
     line-height: 1; }
     .pricing-box .pricing-content .package-list li {
-      font-family: "Jost", sans-serif;
+      
       font-size: 17px;
       font-weight: 400;
       line-height: 30px;
@@ -4394,7 +4417,7 @@ input[type="search"]::-webkit-search-cancel-button {
         height: auto;
         fill: #2384c6; }
       .marquee-wrapper .marquee-inner .marquee-item .title {
-        font-family: "Bai Jamjuree", serif;
+        
         font-size: 80px;
         font-weight: 700;
         line-height: normal;
@@ -4700,7 +4723,7 @@ input[type="search"]::-webkit-search-cancel-button {
       .video-wrapper.video-style-2 .video-btn-wrapper span {
         font-size: 20px;
         line-height: 32px;
-        font-family: "Bai Jamjuree", serif;
+        
         font-weight: 600;
         color: #000f22; }
 
@@ -4798,12 +4821,12 @@ input[type="search"]::-webkit-search-cancel-button {
           position: relative;
           transition: all 0.3s ease-in-out;
           left: 0;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 30px;
-          font-weight: 500;
+          font-weight: lighter !important;
           padding: 0px;
           color: #fff;
-          text-transform: capitalize;
+          text-transform: uppercase;
           display: flex;
           align-items: center;
           gap: 7px;
@@ -4813,11 +4836,15 @@ input[type="search"]::-webkit-search-cancel-button {
             font-weight: bold;
             font-size: 13px; }
           .header .navbar .navbar-nav > li .nav-link:hover {
-            color: #2384c6; }
+            color: #2384c6;
+            font-weight: lighter !important; }
       .header .navbar .navbar-nav .nav-item:has(.megamenu) {
-        position: inherit; }
+        position: inherit; 
+        font-weight: lighter !important;
+      text-transform: uppercase;}
       .header .navbar .navbar-nav .nav-item.active .nav-link {
-        color: #2384c6; }
+        color: #2384c6; 
+      text-transform: uppercase;}
       .header .navbar .navbar-nav .nav-title {
         margin-top: 0px;
         margin-bottom: 5px;
@@ -4826,12 +4853,14 @@ input[type="search"]::-webkit-search-cancel-button {
         color: #ffff; }
     .header .navbar .dropdown-menu {
       padding: 20px 0px;
-      z-index: 999; }
+      z-index: 999;
+      text-transform: uppercase; }
       .header .navbar .dropdown-menu li a i {
         margin-left: auto; }
   .header .search ul li a {
-    font-size: 20px;
-    color: #fff; }
+    font-size: 16px;
+    color: #fff; 
+  text-transform: uppercase;}
     .header .search ul li a:hover {
       color: #2384c6; }
 
@@ -4970,23 +4999,31 @@ bottom: 10px;}
 
 .header li > .dropdown-item:focus {
   color: #2384c6;
-  background: none; }
+  background: none;
+text-transform: uppercase; }
 
 .header li > .dropdown-item:hover {
   color: #2384c6;
-  background: none; }
+  background: none; 
+text-transform: uppercase;
+text-transform: uppercase;}
 
 .header .dropdown-item.active {
-  background: none; }
+  background: none; 
+text-transform: uppercase;
+text-transform: uppercase;}
 
 .header .dropdown-item:active {
-  background: none; }
+  background: none; 
+text-transform: uppercase;}
 
 .header .dropdown-item:focus {
-  background: none; }
+  background: none; 
+text-transform: uppercase;}
 
 .header .dropdown-item:hover {
-  background: none; }
+  background: none; 
+text-transform: uppercase;}
 
 .header .dropdown-toggle::after {
   content: none; }
@@ -5004,7 +5041,7 @@ bottom: 10px;}
   border-radius: 0px;
   position: relative;
   color: white;
-  font-family: "Jost", sans-serif; }
+   }
   .navbar .dropdown > .dropdown-menu li > a:hover {
     color: #2384c6;
     padding-left: 35px; }
@@ -5061,7 +5098,7 @@ bottom: 10px;}
   margin: 0px;
   padding: 0px;
   font-size: 24px;
-  color: #000f22 !important; }
+  color: #fff !important; }
   .offcanvas .btn-close:hover {
     color: #2384c6 !important; }
   .offcanvas .btn-close:focus {
@@ -5554,7 +5591,7 @@ bottom: 0; }
       .main-banner-1 .banner-content .banner-info .call-center-box a {
         font-size: 22px;
         line-height: 32px;
-        font-family: "Bai Jamjuree", serif;
+        
         font-weight: 600;
         color: #000f22; }
   .main-banner-1 .banner-bg-bottom {
@@ -5594,7 +5631,7 @@ bottom: 0; }
       align-items: center;
       margin-bottom: 15px;
       text-transform: uppercase;
-      font-family: "Bai Jamjuree", serif; }
+       }
     .main-banner.main-banner-2 .banner-conent .title {
       font-size: 72px;
       font-weight: 600;
@@ -6238,7 +6275,7 @@ body:has(#search.open) {
   background-size: 70%;
   background-position-x: 50%;
   background-repeat: no-repeat;
-  background-position-y: 370px;
+  background-position-y: 220px;
   position: relative;
   z-index: 1; }
   .contact-top:before {
@@ -6250,7 +6287,15 @@ body:has(#search.open) {
     top: 0;
     left: 0;
     z-index: -1; }
-
+#bvcd:before{
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 59%, #fff 100%) !important;
+}
+#bvcd{
+  position: relative;
+  top: -70px;
+  width: 90%;
+  left: 5%;
+}
 .contact-address-wrapper {
   margin-top: 80px; }
 
@@ -6419,7 +6464,7 @@ body:has(#search.open) {
     position: absolute;
     z-index: -1; }
   .coming-soon-section .countdown-wrapper .countdown span {
-    font-family: "Bai Jamjuree", serif; }
+     }
 
 .inner-content {
   display: flex;
@@ -6433,7 +6478,7 @@ body:has(#search.open) {
   line-height: 70px;
   font-weight: 700;
   color: #000f22;
-  font-family: "Bai Jamjuree", serif; }
+   }
 
 .coming-soon-description {
   font-size: 18px;
@@ -7358,7 +7403,7 @@ body:has(#search.open) {
         font-size: 20px;
         line-height: 26px;
         font-weight: bold;
-        font-family: "Bai Jamjuree", serif;
+        
         color: #000f22; }
         .product .product-content .product-info .product-title a:hover {
           color: #2384c6; }
@@ -7434,7 +7479,7 @@ body:has(#search.open) {
   line-height: 39px;
   color: #000f22;
   font-weight: 700;
-  font-family: "Jost", sans-serif; }
+   }
   .shop-single .product-detail .product-prize del {
     font-size: 24px;
     line-height: 36px;
@@ -7765,7 +7810,7 @@ body:has(#search.open) {
       line-height: 26px;
       color: #2384c6;
       font-weight: 500;
-      font-family: "Jost", sans-serif; }
+       }
       .cart-table .cart-product-prices .product-min-price del {
         color: #000f22;
         opacity: 0.5; }
@@ -8070,7 +8115,7 @@ body:has(#search.open) {
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 3px;
-    font-family: 'Raleway', sans-serif;
+    
   }
   .site-footer .footer-logo {
     display: inline-block; }
@@ -8266,7 +8311,7 @@ body:has(#search.open) {
       border-radius: 6px; }
   .widget-recent-posts .recent-posts .post-info .post-title {
     color: #000f22;
-    font-family: "Bai Jamjuree", serif;
+    
     font-size: 18px;
     line-height: 24px;
     display: -webkit-box;
@@ -8408,7 +8453,7 @@ body:has(#search.open) {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: "Jost", sans-serif;
+      
       font-size: 18px;
       font-weight: normal;
       text-transform: capitalize;
@@ -8520,14 +8565,29 @@ body:has(#search.open) {
       
       border: 1px solid transparent;
     }
+    #nvnv{
+      position: relative;
+      top: 100px;
+    }
+    #bvcd{
+      position: relative;
+      top: 0px;
+    }
     .darwin-tag{
       width: 97% !important;
       font-size: 15px !important;
     }
     #txt1{
-      font-size: 12px !important;
-      color: #fff !important;
-      background-color: #000f22 !important;
+      font-size: 15px !important;
+      position: relative;
+        top: 0px !important;
+        
+        
+      
+    }
+    #bvf{
+       position: relative;
+       top: 140px;   
     }
   }
 @media (max-width: 767px) {
@@ -8835,10 +8895,9 @@ bottom: 3780px;}
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 25px;
-  color: #000f22;
+  color: #000;
   white-space: nowrap;
-  border: 1px solid rgba(191, 200, 206, 0.95);
-  background-color: transparent;
+  border: 2px solid #00afef;
   cursor: pointer;
 }
 .tabs .tab:hover{
@@ -8962,7 +9021,6 @@ bottom: 3780px;}
 
 
 .tesla-item {
-  border: 4px solid #000f22 !important; /* Bright cyan border */
   color: white !important;
   position: relative;
   border-radius: 2px;
@@ -8988,23 +9046,9 @@ bottom: 3780px;}
   animation: spin 3s linear infinite;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
 
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
-}
-
-.tesla-item img {
-  z-index: 99;
+.tesla-item img, video {
+  z-index: -9;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -9022,26 +9066,27 @@ bottom: 3780px;}
 }
 .tesla-item:hover {
   transform: translateY(-5px);
-  border: 2px solid #00bcd4; /* Bright cyan border */
-  box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Soft cyan glow */
   transition: all 0.3s ease-in-out;
 }
 
-
+#txt1{
+  position: relative;
+  top: 30px ;
+  font-size: 1.3rem;
+  
+}
 
 .darwin-tag {
-  color: #00acc1 !important;
-  background: linear-gradient(45deg, #000f22, #003366, #006699); /* 3 Background colors */
+  color: #000f22 !important;
+  background-color: white;
   font-size: 19px;
-  font-family: 'Times New Roman', Times, serif;
+  
   width: 101%;
   padding-top: 5px;
   text-align: center;
   position: relative;
-  top: -1.6px;
+  top: 6.6px;
   padding-right: 3px;
-  border-top: 4px solid #fff;
-
   right: -2px;
   width: 99%;
   border-radius: 0px;
@@ -9055,41 +9100,14 @@ bottom: 3780px;}
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  color: #000f22;
+  color: #00acc1;
   padding: 15px;
   border-radius: 50%;
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 188;
-}
-
-.curie-btn::after,
-.curie-btn::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  border: 1px solid white;
-  border-radius: 50%;
-  animation: animate 1.5s infinite;
-  z-index: 888;
-}
-
-@keyframes animate {
-  0% {
-    width: 100px;
-    height: 100px;
-  }
-  100% {
-    width: 150px;
-    height: 150px;
-    opacity: 0;
-  }
+  z-index: 108;
 }
 
 .hawking-popup {
@@ -9434,7 +9452,7 @@ body.show-chatbot .chatbot-popup {
   background: #F2F2FF;
   z-index: 9999;
   color: #07192f;
-  font-family: 'Times New Roman', Times, serif;
+  
   border-radius: 13px 13px 13px 3px;
 }
 .chat-body .user-message {
@@ -9870,22 +9888,56 @@ body.show-emoji-picker em-emoji-picker {
       position: relative; top: -120px !important;
     }
   }
+  @media (max-width: 1030px){
+    #bcbcbc{
+      position: relative;
+       right : 3px;
+    }
+  }
+  @media (min-width: 1020px) and (max-width: 1199px){
+  #diaa{
+		font-size: 32px;
+		width: 140% !important; 
+		position: relative; 
+		margin-left: 130px;
+		top: 10px ;
+		white-space: nowrap;
+	}
+}
+  @media (min-width: 1200px) and (max-width: 1398px){
+    #bcbcbc{
+      position: relative;
+       right : 60px;
+    }
+    #xxxd{
+      position: relative !important;
+      width: 110%;
+      font-size: 27px;
+     }
+     #diaa{
+      font-size: 38px;
+      width: 140% !important; 
+      position: relative; 
+      margin-left: 50px;
+      
+      white-space: nowrap;
+    }
+
+  }
   @media (max-width: 1399px) {
 						#bzzzc {
               position: relative; top: -90px ;
 						
 					   }
-             #xxxd{
-              position: relative !important;
-              top: -120px !important;
-              margin-bottom: 0;
-              text-align: center !important;
-             }
+             
+             
              #xxxdd{
-              text-align: center !important;
+              
               line-height: 36px !important;
               position: relative !important;
-              top: -70px !important;
+              top: -30px !important;
+              width: 100%;
+              font-size: 20px;
             }
             #xxxddd{
               
@@ -9895,7 +9947,7 @@ body.show-emoji-picker em-emoji-picker {
             #xxxdddd{
               
               position: relative !important;
-              top: 50px !important;
+              top: 0px !important;
             }
           }
   
