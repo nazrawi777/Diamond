@@ -7,27 +7,40 @@
 		<meta name="author" content="potenzaglobalsolutions.com">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Dimond - Digital Marketing</title>
-		<!-- Favicon -->
+		
+		<!-- Google Font for Open Sans -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	
+		<!-- Other necessary CSS links -->
 		<link rel="shortcut icon" href="images/log.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-		<!-- Google Font -->
-		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-		<!-- Google Font -->
-		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-		<!-- CSS Global Compulsory (Do not remove)-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/font-awesome/all.min.css">
 		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-		<!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+		<link rel="stylesheet" href="css/bootstrap/bootstrap-icons.min.css">
 		<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/lenis/lenis.css">
+		<link rel="stylesheet" href="css/lenis/lenis.css">
 		<link rel="stylesheet" href="css/swiper/swiper.min.css">
-    <link rel="stylesheet" href="css/animate/animate.min.css">
+		<link rel="stylesheet" href="css/animate/animate.min.css">
 		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
-		<!-- Template Style -->
+		<link rel="stylesheet" href="css/slideshow/subtle-slideshow.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+		<link rel="stylesheet" href="styles.css">
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 		<link rel="stylesheet" href="css/style.css">
-		<style>
+	
+	
+	<style>
+	/* Apply Comfortaa font globally */
+/* Apply Open Sans font globally */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+	
      /* Responsive Grid Layout */
 	.product-grid {
     display: grid;
@@ -46,8 +59,9 @@
     margin-right: -140px;
 	padding-top: 0px;
     clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
-    background-color: rgb(255, 255, 255);
-    box-shadow: inset 30px  10px 35px 25px rgba(0, 15, 34, 0.25);
+    background-color: rgb(246, 249, 250);
+	z-index: 99;
+    box-shadow: inset 30px  10px 35px 35px rgba(0, 175, 239, 0.25);
     
 	padding-left: 40px;
 	padding-right: 40px;
@@ -273,7 +287,7 @@
 /* Product Content */
 .product-title {
 	color: #000f22;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight:bolder;
 	text-align: center;
 	position: relative;
@@ -292,7 +306,7 @@
 	font-weight:bolder;
     font-size: 0.85rem !important;
     color: #000f22;
-	background-color: #ffffff;
+	
 	text-align: center;
 }
 		</style>
@@ -544,105 +558,14 @@
                      
 					  <div class="product-grid" id="bnv">
 			
-					
-						<div class="product-item">
-							<div class="product-box">
-							  <div class="product-icon">
-								<img class="img-fluid" src="/images/service/awareness.png" alt="Branding" />
-							  </div>
-							  <div class="product-content">
-								<h5 class="product-title">Branding</h5>
-								<p class="product-description">Create a unique identity for your  business <br> that resonates with  customers and <br> builds lasting emotional <br>connections.</p>
-							  </div>
-							</div>
-						  </div>
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/analysis.png" alt="Marketing Strategy">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Marketing Strategy</h5>
-								<p class="product-description">Craft a comprehensive marketing <br>strategy  that drives growth, <br> and ensures brand <br> success.</p>
-							</div>
-							</div>
-						</div>
-					
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/billboard.png" alt="Outdoor Advert">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Printing & Outdoor Advert</h5>
-								<p class="product-description">Utilize outdoor advertising to <br> make  a visual impact and  <br> reach a broad  audience <br> effectively.</p>
-							</div>
-							</div>
-						</div>
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/bullhorn.png" alt="Marketing Consultancy">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Marketing Campaign</h5>
-								<p class="product-description">Create impactful marketing
-									 campaigns  that <br>  resonate with your audience, <br>boosting brand <br>visibility.</p>
-							</div>
-							</div>
-						</div>
-						
-					
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/consultation.png" alt="Marketing Consultancy">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Marketing Consultancy</h5>
-								<p class="product-description">
-									Partner with experts to develop tailored <br>digital marketing strategies 
-									that <br>increase online presence <br> and drive results.
-								  </p>
-							</div>
-							</div>
-						</div>
-					
 						<div class="product-item">
 							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/movie.png" alt="Video Production">
 							</div>
 							<div class="product-content">
-								<h5 class="product-title">Video Production</h5>
+								<h5 class="product-title">Video and Audio Production</h5>
 								<p class="product-description">Produce high-quality videos that captivate <br>audiences, tell compelling stories,<br> and leave a memorable<br> impact.</p>
-							</div>
-							</div>
-						</div>
-					
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/statisctics.png" alt="Data Analysis">
-							</div>
-							<div class="product-content">
-								
-								<h5 class="product-title">Data Analysis</h5>
-								<p class="product-description">A well-thought 
-									marketing strategy helps <br> achieve business goals by targeting <br> the right audience<br> effectively.</p>
-							</div>
-							</div>
-						</div>
-					
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/coding.png" alt="Website Development" id="vvd">
-							</div>
-							<div class="product-content">
-								
-								<h5 class="product-title">Website Development</h5>
-								<p class="product-description">Develop a responsive, user-friendly website <br> that enhances brand presence and <br> visitors through seamless <br> navigation.</p>
 							</div>
 							</div>
 						</div>
@@ -660,6 +583,128 @@
 							</div>
 							</div>
 						</div>
+						<div class="product-item">
+							<div class="product-box">
+							  <div class="product-icon">
+								<img class="img-fluid" src="/images/service/digital-marketing_3141343.png" alt="Branding" />
+							  </div>
+							  <div class="product-content">
+								<h5 class="product-title">Digital Marketing</h5>
+								<p class="product-description">
+									Boost your online presence and reach
+									more <br> customers through social media, <br>
+									 and data-driven<br> strategies.
+								</p>
+							  </div>
+							</div>
+						  </div>
+						<div class="product-item">
+							<div class="product-box">
+							<div class="product-icon">
+								<img class="img-fluid" src="/images/service/bullhorn.png" alt="Marketing Consultancy">
+							</div>
+							<div class="product-content">
+								<h5 class="product-title">Marketing Campaign</h5>
+								<p class="product-description">Create impactful marketing
+									 campaigns  that <br>  resonate with your audience, <br>boosting brand <br>visibility.</p>
+							</div>
+							</div>
+						</div>
+
+						<div class="product-item">
+							<div class="product-box">
+							<div class="product-icon">
+								<img class="img-fluid" src="/images/service/content-management_8292451.png" alt="Marketing Consultancy">
+							</div>
+							<div class="product-content">
+								<h5 class="product-title">Social Media Management</h5>
+								<p class="product-description">
+									Build a strong online presence with consistent <br>
+									content, community engagement,<br> and 
+									 across all major<br> platforms.
+								</p>
+							</div>
+							
+							
+							
+							</div>
+						</div>
+						<div class="product-item">
+							<div class="product-box">
+							<div class="product-icon">
+								<img class="img-fluid" src="/images/service/coding.png" alt="Website Development" id="vvd">
+							</div>
+							<div class="product-content">
+								
+								<h5 class="product-title">Website Development</h5>
+								<p class="product-description">Develop a responsive, user-friendly website <br> that enhances brand presence and <br> visitors through seamless <br> navigation.</p>
+							</div>
+							</div>
+						</div>
+						  
+						<div class="product-item">
+							<div class="product-box">
+							  <div class="product-icon">
+								<img class="img-fluid" src="/images/service/awareness.png" alt="Branding" />
+							  </div>
+							  <div class="product-content">
+								<h5 class="product-title">Branding</h5>
+								<p class="product-description">Create a unique identity for your  business <br> that resonates with  customers and <br> builds lasting emotional <br>connections.</p>
+							  </div>
+							</div>
+						  </div>
+						
+						<div class="product-item">
+							<div class="product-box">
+							<div class="product-icon">
+								<img class="img-fluid" src="/images/service/user_17995436.png" alt="Outdoor Advert">
+							</div>
+							<div class="product-content">
+								<h5 class="product-title">Event Management</h5>
+								<p class="product-description">
+									Plan and execute memorable events with <br>
+									seamless coordination, 
+									and digital <br>engagement strategies that <br> deliver impact.
+								</p>
+							</div>
+							</div>
+						</div>
+						
+						
+					
+						<div class="product-item">
+							<div class="product-box">
+							<div class="product-icon">
+								<img class="img-fluid" src="/images/service/billboard.png" alt="Outdoor Advert">
+							</div>
+							<div class="product-content">
+								<h5 class="product-title">Printing & Outdoor Advert</h5>
+								<p class="product-description">Utilize outdoor advertising to <br> make  a visual impact and  <br> reach a broad  audience <br> effectively.</p>
+							</div>
+							</div>
+						</div>
+						
+						
+						<div class="product-item">
+							<div class="product-box">
+							<div class="product-icon">
+								<img class="img-fluid" src="/images/service/analysis.png" alt="Marketing Strategy">
+							</div>
+							<div class="product-content">
+								<h5 class="product-title">Marketing Strategy Development</h5>
+								<p class="product-description">Craft a comprehensive marketing <br>strategy  that drives growth, <br> and ensures brand <br> success.</p>
+							</div>
+							</div>
+						</div>
+					
+						
+					
+						
+					
+						
+					
+						
+						
 						
 					</div>
 
