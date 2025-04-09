@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 body {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Comfortaa', sans-serif !important;
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -201,8 +201,8 @@ figure.caption {
 			font-size: 24px !important;
       }
       #vvdd{
-        font-size: 25px;
-        width: 140%;
+        font-size: 17px;
+        width: 100%;
       } 
 		   }
 @media (max-width: 991px) {
@@ -1019,7 +1019,7 @@ blockquote.blockquote-style-1 cite, blockquote.blockquote-style-1 p + p {
   .grid-wrapper.grid-xs-6 {
     grid-template-columns: repeat(6, 1fr); }
     .section-title .title{
-      font-size: 30px !important;
+      font-size: 27px !important;
       position: relative !important;
       left: 3% !important;
     top: 10px;}
@@ -3441,7 +3441,13 @@ width: 90%;}
   .portfolio-fancy-wrapper .portfolio-item .item-info .item-title,
   .portfolio-fancy-wrapper .portfolio-item .item-info .item-category {
     font-size: 16px;
-    padding: 5px 15px; } }
+    padding: 5px 15px; } 
+  #conta{
+    max-height: 980px;
+    position: relative;
+    bottom: 110px;
+  }
+  }
 
 /*Pricing*/
 .pricing-box {
@@ -4987,7 +4993,7 @@ header.header.header-sticky {
     position: relative;
 bottom: 25px; }
     .header .navbar .navbar-brand img {
-      height: 90px;
+      height: 85px;
     width: 150%!important;
   position: relative;
 bottom:25px;}
@@ -5475,8 +5481,8 @@ left: -50px;} }
   border-radius: 25px;
 }
   header.header.header-sticky.is-sticky .navbar .navbar-brand img {
-    height: 75px !important;
-    width: 120px !important;
+    height: 70px !important;
+    width: 260px !important;
     top: 4px;
   position: relative;}
   .header .navbar .navbar-brand img {
@@ -5511,12 +5517,7 @@ bottom: 0; }
   .main-menu-offcanvas {
     width: 270px !important; } }
 
-/*****************************
-	Site Banner
-*****************************/
-/*-----------------------------------*/
-/* Main Banner 1 */
-/*-----------------------------------*/
+
 .main-banner-1 {
   overflow: hidden;
   position: relative;
@@ -6817,8 +6818,8 @@ body:has(#search.open) {
   .about-details {
     gap: 15px; }
     .site-footer .footer-logo img{
-      height: 80px !important;
-      width: 230px !important;
+      height: 70px !important;
+      width: 210px !important;
     }
     .site-footer .footer-logo a{
       width: 130px !important;
@@ -8123,7 +8124,8 @@ body:has(#search.open) {
     .site-footer .footer-logo img {
       position: relative;
       top: 40px;
-      height: 90px; }
+      height: 90px; 
+    right: 10%;}
   .site-footer .footer-main .contact-number-main {
     margin-top: 30px; }
   .site-footer .widget .widget-title {
@@ -8592,7 +8594,23 @@ body:has(#search.open) {
     #bvf{
        position: relative;
        top: 140px;   
+       
     }
+    #bvf img,
+    #segu img,
+    #nnd img,
+    #nn3 img,
+    #nnd img,
+    #ftr img{
+      height: 60px !important;
+        width: 140px !important;
+        position: relative;
+        right: 20%;
+    }
+    #nnd img{
+      width: 140% !important;
+      height: 140% !important;
+     }
   }
 @media (max-width: 767px) {
   .tesla-item iframe{
@@ -8619,8 +8637,29 @@ body:has(#search.open) {
       #clr1{
         color: #000f22 !important;
       }
+      
 
 @media (max-width: 575px) {
+  #bf img{  
+    position: relative;
+    right: 10%;
+    height: 70px !important;
+      width: 210px !important;
+  }
+  #bvf img,
+  #segu img, 
+  #nn3 img,
+  #nnd img,
+  #ftr img{  
+    position: relative;
+    right: 29%;
+    height: 60px !important;
+      width: 170px !important;
+  }
+  #nnd img{
+    width: 140% !important;
+    height: 180% !important;
+   }
   .sidebar .widget:not(:last-child) {
     margin-bottom: 30px; 
   position: relative;
@@ -8628,7 +8667,7 @@ bottom: 3780px;}
 #nn3{
   overflow-x: hidden !important;
   position: relative;
-  top: 40px !important;
+  top: 90px !important;
 }
 #clr{
   color: #000f22 !important;
@@ -9765,6 +9804,26 @@ body.show-emoji-picker em-emoji-picker {
     animation: moveBackground 5s infinite alternate, borderAnimation 5s infinite alternate; /* Animation */
   }
   @media (min-width: 1400px) and (max-width: 1584px){
+    #bf img,
+    #bvf img,
+    #segu img,
+    #nn3 img,
+    #nnd img,
+    #ftr img{
+      position: relative;
+      right: 60%;
+      width: 100%;
+      height: 100%;
+     }
+     #nnd img{
+      width: 100%;
+      height: 100%;
+     }
+     #nn3{
+      overflow-x: hidden !important;
+      position: relative;
+      top: 100px !important;
+    }
       #bzzzc{
     text-align: center;
     font-weight: bold;
@@ -9898,6 +9957,21 @@ body.show-emoji-picker em-emoji-picker {
        right : 3px;
     }
   }
+  @media (min-width: 500px) and (max-width: 1119px){
+  #bf img,
+  #bvf img,
+  #segu img,
+  #nn3 img,
+  #nnd img,
+  #ftr img{  
+    position: relative;
+    right: 10%;
+  }
+  #nnd img{
+  width: 100% !important;
+  height: 100% !important;
+ }
+}
   @media (min-width: 1020px) and (max-width: 1199px){
   #diaa{
 		font-size: 32px;
@@ -9907,12 +9981,66 @@ body.show-emoji-picker em-emoji-picker {
 		top: 10px ;
 		white-space: nowrap;
 	}
+  #bf img,
+  #bvf img,
+  #segu img,
+  #nn3 img,
+  #nnd img,
+  #ftr img{  
+    position: relative;
+    right: 10%;
+  }
+  #nnd img{
+    width: 100% !important;
+    height: 100% !important;
+   }
+  #bf .img-fluid,
+  #bvf .img-fluid,
+  #segu .img-fluid,
+  #nn3 .img-fluid,
+  #ftr .img-fluid{
+    max-width: 120% !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1300px){
+#bf img,
+#bvf img,
+#segu img,
+#nn3 img,
+#nnd img,
+#ftr img{  
+  position: relative;
+  right: 30%;
+}
+#nnd img{
+  width: 100% !important;
+  height: 100% !important;
+ }
+
 }
   @media (min-width: 1200px) and (max-width: 1398px){
     #bcbcbc{
       position: relative;
        right : 60px;
     }
+    #segu img{  
+      position: relative;
+      right: 30%;
+    }
+    #bf img,
+#bvf img,
+#segu img,
+#nn3 img,
+#nnd img,
+#ftr img{  
+  position: relative;
+  right: 30%;
+}
+#nnd img{
+  width: 100%!important;
+  height: 100%!important;
+ }
+    
     #xxxd{
       position: relative !important;
       width: 110%;

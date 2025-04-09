@@ -32,14 +32,48 @@
 	.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
-    gap: 120px;
+    gap: 0px;
     padding: 20px;
     justify-content: center;
-	margin-right: 100px;
+	
 	position: relative;
 	bottom: 100px ;
 	
 }
+.product-box {
+	
+	margin-left: -140px;
+    margin-right: -140px;
+	padding-top: 0px;
+    clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 30px  10px 35px 25px rgba(0, 15, 34, 0.25);
+    
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top:40px ;
+	padding-bottom: 20px;
+    border-radius: 20px;
+    transform: rotateX(5deg) rotateY(4deg); /* stays here */
+    transition: transform 0.4s ease;
+}
+
+.product-item {
+	margin-left: -30px;
+    margin-right: -30px;
+    transform: none !important; /* no transformation here */
+    width: 100%; /* avoid 140% scaling */
+}
+.product-item {
+    width: 100% !important;
+    max-width: 300px;
+	padding: 50px;
+    margin: auto;
+}
+.product-box {
+    will-change: transform;
+}
+
 
 @media (min-width: 1024px) {
     .product-grid {
@@ -57,11 +91,12 @@
 @media (min-width: 1024px) and (max-width: 1384px) {
 	.product-description {
 		font-size: 0.85rem !important;
+		line-height: 35px;
 	}
-	.product-item {
-    position: relative;
-    width: 140% !important;
-}
+	.product-grid {
+      gap: 90px;
+    }
+
 }
 @media (min-width: 1400px) and (max-width: 1584px){
       #bzzzc{
@@ -107,7 +142,7 @@
 	}
 	#bf{
 	position: relative !important;
-	margin-top: 110px !important;
+	margin-top: 10px !important;
   }
   }
 
@@ -123,16 +158,13 @@
         grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
     }
 .product-grid{
-	gap: 100px !important;
+	gap: 0px !important;
 }
-.product-item{
-	height: 128% !important;
-}
+
 .product-description {
 		font-size: 0.5rem !important;
 		position: relative;
-		bottom: 10px;
-		
+		bottom: 10px;		
 		font-weight: 900;
 		color: black !important;
 	}
@@ -148,8 +180,6 @@
 @media (max-width: 848px) {
 	.product-item {
     position: relative;
-	right: 50px;
-    width: 170% !important;
 	position: relative;
 	overflow: hidden;
    
@@ -170,6 +200,12 @@
 	position: relative;
 	right: 35px;
 }
+.product-grid{
+	gap: 30px;
+	margin-right: -70px;
+	position: relative;
+	left: 3px;
+}
 
 }
 @media (min-width: 1024px){
@@ -177,78 +213,17 @@
 }
 
 /* 3D Rotation on Hover */
-/* Product Item with 3D Effect */
-.product-item {
-    position: relative;
-	
-    width: 135%;
-    margin-right: 60px;
-    height: 147%;
-	transform: rotateX(5deg) rotateY(4deg);
-	filter: 
-	drop-shadow(0 10px 15px rgba(220, 20, 60, 0.6))
-	drop-shadow(-10px -10px 15px rgba(230, 230, 250, 0.5))
-	drop-shadow(5px -5px 20px rgba(50, 205, 50, 0.5))
-	drop-shadow(10px 10px 20px rgba(0, 255, 255, 0.5));
-    background-color: white;
-    clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
-    border-radius: 20px;
-    padding: 15px;
-    text-align: center;
-    color: rgb(0, 15, 34);
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-	box-shadow: inset 30px  10px 65px 35px rgba(0, 15, 34, 0.25); /* More visible inner glow */
-}
 
-
-/* 3D Border Effect (Always Visible) */
-.product-item::after {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    background: linear-gradient(135deg, rgba(136, 94, 94, 0.11), transparent);
-    border-radius: 25px;
-    		
-}
-
-/* Hover Effect: 3D Rotation */
-.product-item:hover {
-    transform: rotateX(10deg) rotateY(10deg);
-}
-
-/* Shine Effect */
-.product-item::before {
-    content: "";
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
-    border-radius: 20px;
-    
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
-
-.product-item:hover::before {
-    opacity: 0.7;
-}
 @media (max-width: 768px) {
 #bzzxc{			
      font-size: 40px !important;
 }
 #diaa{
 		text-align: center!important; 
-		width: 100% !important; 
+		width: 110% !important; 
 		position: relative; 
-		font-size: 30px;
-		margin-left: -130px !important;
+		font-size: 29px;
+		margin-left: -41px !important;
 	}
 }
 @media (max-width: 525px) {
@@ -262,12 +237,12 @@
 		text-align: center!important; 
 		width: 100% !important; 
 		position: relative; 
-		font-size: 20px !important;
-		margin-left: -70px !important;
+		font-size: 24px !important;
+		margin-left: -16px !important;
 	}
 #bf{
 		position: relative !important;
-		top: -0px !important;
+		top: -90px !important;
 
 	}
 }
@@ -284,12 +259,12 @@
 
 /* Icon Positioning */
 .product-icon img {
-    width: 40px; /* Small icons */
+    width: 45px; /* Small icons */
     height: auto;
     display: block;
     margin: 10px auto 1px;
 	position: relative;
-	bottom: 14px;
+	bottom: 35px;
 	filter: invert(0) grayscale(1) brightness(2);
 }
 #vvd{
@@ -298,14 +273,27 @@
 /* Product Content */
 .product-title {
 	color: #000f22;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight:bolder;
+	text-align: center;
+	position: relative;
+	bottom: 24px;
+}
+.product-title,
+.product-description {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    
 }
 
 .product-description {
-    font-size: 16px;
-    color: black;
-	height: 60px;
+	position: relative;
+	bottom: 30px;
+	font-weight:bolder;
+    font-size: 0.85rem !important;
+    color: #000f22;
+	background-color: #ffffff;
+	text-align: center;
 }
 		</style>
 	</head>
@@ -504,7 +492,7 @@
                 <li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
                 <li><a href="tel:7042791249">+251 940 499 999</a></li>
 <li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
-                <li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D"></a>Meskel flower rood,
+                <li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D"></a>Meskel flower road,
                                         Jems building 9th floor.</a></li>
               </ul>
             </div>
@@ -555,18 +543,21 @@
 					  </section>
                      
 					  <div class="product-grid" id="bnv">
-						<div class="product-item">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/awareness.png" alt="Branding">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Branding</h5>
-								<p class="product-description">Create a unique identity for your  business <br> that resonates with  customers and <br> builds lasting emotional <br>connections.</p>
-								
-							</div>
-						</div>
+			
 					
 						<div class="product-item">
+							<div class="product-box">
+							  <div class="product-icon">
+								<img class="img-fluid" src="/images/service/awareness.png" alt="Branding" />
+							  </div>
+							  <div class="product-content">
+								<h5 class="product-title">Branding</h5>
+								<p class="product-description">Create a unique identity for your  business <br> that resonates with  customers and <br> builds lasting emotional <br>connections.</p>
+							  </div>
+							</div>
+						  </div>
+						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/analysis.png" alt="Marketing Strategy">
 							</div>
@@ -574,30 +565,36 @@
 								<h5 class="product-title">Marketing Strategy</h5>
 								<p class="product-description">Craft a comprehensive marketing <br>strategy  that drives growth, <br> and ensures brand <br> success.</p>
 							</div>
+							</div>
 						</div>
 					
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/billboard.png" alt="Outdoor Advert">
 							</div>
 							<div class="product-content">
 								<h5 class="product-title">Printing & Outdoor Advert</h5>
-								<p class="product-description">Utilize print and outdoor advertising to make <br> a visual impact and  reach a broad <br> audience effectively.</p>
+								<p class="product-description">Utilize outdoor advertising to <br> make  a visual impact and  <br> reach a broad  audience <br> effectively.</p>
+							</div>
 							</div>
 						</div>
-					
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/bullhorn.png" alt="Marketing Campaign">
+								<img class="img-fluid" src="/images/service/bullhorn.png" alt="Marketing Consultancy">
 							</div>
 							<div class="product-content">
 								<h5 class="product-title">Marketing Campaign</h5>
 								<p class="product-description">Create impactful marketing
 									 campaigns  that <br>  resonate with your audience, <br>boosting brand <br>visibility.</p>
 							</div>
+							</div>
 						</div>
+						
 					
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/consultation.png" alt="Marketing Consultancy">
 							</div>
@@ -605,12 +602,14 @@
 								<h5 class="product-title">Marketing Consultancy</h5>
 								<p class="product-description">
 									Partner with experts to develop tailored <br>digital marketing strategies 
-									that <br>increase online presence <br> and drive <br>results.
+									that <br>increase online presence <br> and drive results.
 								  </p>
+							</div>
 							</div>
 						</div>
 					
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/movie.png" alt="Video Production">
 							</div>
@@ -618,29 +617,37 @@
 								<h5 class="product-title">Video Production</h5>
 								<p class="product-description">Produce high-quality videos that captivate <br>audiences, tell compelling stories,<br> and leave a memorable<br> impact.</p>
 							</div>
+							</div>
 						</div>
 					
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/statisctics.png" alt="Data Analysis">
 							</div>
 							<div class="product-content">
+								
 								<h5 class="product-title">Data Analysis</h5>
-								<p class="product-description">A well-thought-out 
+								<p class="product-description">A well-thought 
 									marketing strategy helps <br> achieve business goals by targeting <br> the right audience<br> effectively.</p>
+							</div>
 							</div>
 						</div>
 					
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/coding.png" alt="Website Development" id="vvd">
 							</div>
 							<div class="product-content">
+								
 								<h5 class="product-title">Website Development</h5>
 								<p class="product-description">Develop a responsive, user-friendly website <br> that enhances brand presence and <br> visitors through seamless <br> navigation.</p>
 							</div>
+							</div>
 						</div>
 						<div class="product-item">
+							<div class="product-box">
 							<div class="product-icon">
 								<img class="img-fluid" src="/images/service/money.png" alt="Media Buying and Monitoring">
 							</div>
@@ -650,6 +657,7 @@
 									Strategically purchase ad placements across <br> various platforms 
 									 while tracking <br> performance to maximize<br> reach and ROI.
 								</p>
+							</div>
 							</div>
 						</div>
 						
@@ -681,7 +689,7 @@
 										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction<br> @gmail.com</a></li>
 										<li><a href="tel:7042791249">+251 940 499 999</a></li>
 <li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
-										<li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower rood,
+										<li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower road,
                                         Jems building 9th floor.</a></li>
 									</ul>
 								</div>
