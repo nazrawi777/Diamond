@@ -4983,19 +4983,20 @@ header.header.header-sticky {
     top: 0;
   position: fixed;}
   header.header.header-sticky.is-sticky .navbar .navbar-brand img {
-    height: 92px;
+    height: 60x;
     position: relative;
-bottom: 20px; }
+bottom: 25px; }
     .header .navbar .navbar-brand img {
-      height: 80px; 
-    width: 200px !important;
+      height: 90px;
+    width: 150%!important;
   position: relative;
-bottom: 10px;}
+bottom:25px;}
+.img-fluid{
+  max-width: 170%!important;
+}
    
     header.header.header-sticky.is-sticky .navbar .navbar-brand img.sticky {
       display: block; }
-
-
 
 .header li > .dropdown-item:focus {
   color: #2384c6;
@@ -8538,8 +8539,11 @@ body:has(#search.open) {
       
       border: 1px solid transparent;
     }
+    header.header .navbar .navbar-brand {
+      flex: 0 0 210px !important;
 
   }
+}
 @media (max-width: 991px) {
   .sidebar.blog-sidebar .widget {
     padding: 25px 20px;
