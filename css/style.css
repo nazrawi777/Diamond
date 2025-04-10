@@ -11,24 +11,30 @@ body {
   background-color: #fff; }
 
 a {
+  font-family: 'Open Sans', sans-serif;
   outline: medium none !important;
   color: #2384c6;
   transition: all 0.3s ease-in-out;
   text-decoration: none; }
   a:focus {
+    font-family: 'Open Sans', sans-serif;
     color: #000f22;
     text-decoration: none !important; }
   a:hover {
+    font-family: 'Open Sans', sans-serif;
     color: #000f22;
     text-decoration: none !important; }
 
 a.text-dark:focus {
+  font-family: 'Open Sans', sans-serif;
   color: #2384c6 !important; }
 
 a.text-dark:hover {
+  font-family: 'Open Sans', sans-serif;
   color: #2384c6 !important; }
 
 input {
+  font-family: 'Open Sans', sans-serif;
   outline: medium none !important;
   color: #2384c6; }
 
@@ -44,7 +50,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   color: #000f22;
   margin: 0px 0px 1rem; }
@@ -60,30 +66,37 @@ h6,
   .h4 a,
   .h5 a,
   .h6 a {
+    font-family: 'Open Sans', sans-serif;
     color: inherit; }
 
 h1 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 66px;
   font-style: normal;
   line-height: normal; }
 
 h2 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 60px;
   line-height: 70px; }
 
 h3 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 42px;
   line-height: 52px; }
 
 h4 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   line-height: 42px; }
 
 h5 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 26px;
   line-height: normal; }
 
 h6 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 22px;
   line-height: normal; }
 
@@ -99,6 +112,7 @@ h6 {
 .bg-black .h4,
 .bg-black .h5,
 .bg-black .h6 {
+  font-family: 'Open Sans', sans-serif;
   color: #000f22; }
 
 .bg-dark h1,
@@ -113,24 +127,29 @@ h6 {
 .bg-dark .h4,
 .bg-dark .h5,
 .bg-dark .h6 {
+  font-family: 'Open Sans', sans-serif;
   color: #000f22; }
 
 .bg-black p,
 .bg-dark p {
+  font-family: 'Open Sans', sans-serif;
   color: #000f22; }
 
 iframe {
+  font-family: 'Open Sans', sans-serif;
   width: 100%; }
 
 label {
   font-weight: normal; }
 
 *::-moz-selection {
+  font-family: 'Open Sans', sans-serif;
   background: #2384c6;
   color: #000f22;
   text-shadow: none; }
 
 ::-moz-selection {
+  font-family: 'Open Sans', sans-serif;
   background: #2384c6;
   color: #000f22;
   text-shadow: none; }
