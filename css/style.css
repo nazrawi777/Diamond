@@ -4995,6 +4995,7 @@ bottom: 25px; }
     .header .navbar .navbar-brand img {
       height: 80px;
     width: 150%!important;
+    filter: invert(1) grayscale(1) brightness(2);
   position: relative;
 bottom:25px;}
 .img-fluid{
@@ -8120,6 +8121,7 @@ body:has(#search.open) {
     
   }
   .site-footer .footer-logo {
+    filter: invert(1) grayscale(1) brightness(2);
     display: inline-block; }
     .site-footer .footer-logo img {
       position: relative;
