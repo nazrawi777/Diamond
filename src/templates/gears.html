@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 	<head>
+    {% load static %}
 		<meta charset="utf-8">
 		<meta name="keywords" content="HTML5 Template">
 		<meta name="description" content="Dimond - Digital Marketing">
@@ -34,50 +35,48 @@
 <meta property="og:image" content="https://www.diamondmarketinget.com/images/share.png">
 
   <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.diamondmarketinget.com/service.html">
->
+  <link rel="canonical" href="https://www.diamondmarketinget.com/gears.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Diamond Marketing",
+  "url": "https://www.diamondmarketinget.com",
+  "logo": "https://www.diamondmarketinget.com/images/logo.png",
+  "description": "We provide expert digital marketing services in Ethiopia, including SEO, social media marketing, website development, e-commerce, video marketing, and more.",
+  "sameAs": [
+    "https://www.facebook.com/diamondmarketinget",
+    "https://www.instagram.com/diamondmarketinget"
+  ]
+}
+</script>
 
 		
 		<!-- Google Font for Open Sans -->
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 	
 		<!-- Other necessary CSS links -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="shortcut icon" href="images/log.png">
+		<link rel="shortcut icon" href="{% static 'images/log.png' %}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome/all.min.css">
-		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap/bootstrap-icons.min.css">
-		<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/lenis/lenis.css">
-		<link rel="stylesheet" href="css/swiper/swiper.min.css">
-		<link rel="stylesheet" href="css/animate/animate.min.css">
-		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
-		<link rel="stylesheet" href="css/slideshow/subtle-slideshow.css">
+		<link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-icons.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/lenis/lenis.css' %}">
+		<link rel="stylesheet" href="{% static 'css/swiper/swiper.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/animate/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/slideshow/subtle-slideshow.css' %}">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="{% static 'styles.css' %}">
 		
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script type="application/ld+json">
-			{
-			  "@context": "https://schema.org",
-			  "@type": "Organization",
-			  "name": "Diamond Marketing",
-			  "url": "https://www.diamondmarketinget.com",
-			  "logo": "https://www.diamondmarketinget.com/images/logo.png",
-			  "description": "We provide expert digital marketing services in Ethiopia, including SEO, social media marketing, website development, e-commerce, video marketing, and more.",
-			  "sameAs": [
-				"https://www.facebook.com/diamondmarketinget",
-				"https://www.instagram.com/diamondmarketinget"
-			  ]
-			}
-		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	
-	
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<style>
 	/* Apply Comfortaa font globally */
 /* Apply Open Sans font globally */
@@ -85,287 +84,321 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-	
-     /* Responsive Grid Layout */
-	.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
-    gap: 0px;
-    padding: 20px;
-    justify-content: center;
-	
-	position: relative;
-	bottom: 100px ;
-	
+			html{
+  /*   *****   Storing Colors In Variables   *****  */
+  --body-clr: #f6f9fe;
+  --primary-clr: #05555c;
+  --primary-light-clr: #eaf3fa;
+  --links-clr: #186f78;
+  --text-clr: #3f7277;
 }
-.product-box {
-	
-	margin-left: -140px;
-    margin-right: -140px;
-	padding-top: 0px;
-    clip-path: polygon(50% 100%, 88% 31%, 74% 0%, 27% 2%, 14% 31%);
-    background-color: rgb(246, 249, 250);
-	z-index: 99;
-    box-shadow: inset 30px  10px 35px 35px rgba(0, 175, 239, 0.25);
-    
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-top:40px ;
-	padding-bottom: 20px;
-    border-radius: 20px;
-    transform: rotateX(5deg) rotateY(4deg); /* stays here */
-    transition: transform 0.4s ease;
+			.curie-btn1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #000f22;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 188;
 }
 
-.product-item {
-	margin-left: -30px;
-    margin-right: -30px;
-    transform: none !important; /* no transformation here */
-    width: 100%; /* avoid 140% scaling */
-}
-.product-item {
-    width: 100% !important;
-    max-width: 300px;
-	padding: 50px;
-    margin: auto;
-}
-.product-box {
-    will-change: transform;
-}
-
-
-@media (min-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-    }
-
+.curie-btn1::after,
+.curie-btn1::before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 50%;
+  animation: animate 1.5s infinite;
+  z-index: 888;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-    }
-
-}
-@media (min-width: 1024px) and (max-width: 1384px) {
-	.product-description {
-		font-size: 0.85rem !important;
-		line-height: 35px;
-	}
-	.product-grid {
-      gap: 90px;
-    }
-
-}
-@media (min-width: 1400px) and (max-width: 1584px){
-      #bzzzc{
-    text-align: center;
-    font-weight: bold;
-	position: relative;
-	bottom: 100px;
-    color: white;
-    padding: 20px;
-    position: relative;
-	top: -100px !important;
-    background: linear-gradient(45deg, #000f22, #003366, #006699); /* 3 Background colors */
-    border: 3px solid green; /* Teal border color */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Shadow effect */
-    display: block; /* Make it take full width */
-    width: 100%; /* Full width */
-    animation: moveBackground 5s infinite alternate, borderAnimation 5s infinite alternate; /* Animation */
+@keyframes animate {
+  0% {
+    width: 100px;
+    height: 100px;
   }
-	#bzzxc{
-      text-align: center;
-      font-weight: bold;
-      color: #000f22;
-      padding: 20px;
-      margin-top: 0px;
-      position: relative;
-      left: 50px;
-      background-color: transparent !important; /* 3 Background colors */
-      display: block; /* Make it take full width */
-      /**box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); /* Shadow effect */
-      
-    }
-    .product-grid {
-      position: relative !important;
-      top: 20px !important;
-    }
-	#diaa{
-		font-size: 38px;
-		width: 140% !important; 
-		position: relative; 
-		margin-left: 130px;
-		top: 90px ;
-		white-space: nowrap;
-	}
-	#bf{
-	position: relative !important;
-	margin-top: 10px !important;
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
   }
+}
+@media (max-width: 600px) {
+  .hawking1-popup {
+  position: fixed;
+  bottom: 500px;
+  left: 550px;
+  width: 50%;
+  height: 40%;
+  background: transparent;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.newton-content1 {
+  --border-radius: 1rem;
+  --bg-color: #000f22;
+  position: relative;
+  width: 50%;
+  top: 280px !important;
+  max-width: 800px;
+  right: -30px !important;
+  background: transparent;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.newton-content1::before,
+.newton-content1::after {
+  content: '';
+  position: absolute;
+}
+
+
+  .curie-btn1::after,
+  .curie-btn1::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    animation: animate 1.5s infinite;
   }
 
-  @media (max-width: 1399){
-    #bnv {
-      position: relative ;
-      bottom: 100px !important;
-    }
+  .curie-btn1 {
+    font-size: 15px;
+    padding: 10px;
   }
-
-@media (min-width: 320px) and (max-width: 586px) {
-    .product-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
-    }
-.product-grid{
-	gap: 0px !important;
+}
+			.hawking1-popup {
+  position: fixed;
+  bottom: 500px;
+  left: 550px;
+  width: 50%;
+  height: 40%;
+  background: transparent;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
 }
 
-.product-description {
-		font-size: 0.5rem !important;
-		position: relative;
-		bottom: 10px;		
-		font-weight: 900;
-		color: black !important;
-	}
-	#bf{
-		width: 101% !important;
-	}
-
-}
-#bf{
-	position: relative;
-	top: 0px;
-}
-@media (max-width: 848px) {
-	.product-item {
-    position: relative;
-	position: relative;
-	overflow: hidden;
-   
+.newton-content1 {
+  --border-radius: 1rem;
+  --bg-color: #000f22;
+  position: relative;
+  width: 50%;
+  top: 150px;
+  max-width: 800px;
+  right: -90px;
+  background: transparent;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
 }
 
-
-.product-description {
-		font-size: 0.6rem !important;
-	}
+.newton-content1::before,
+.newton-content1::after {
+  content: '';
+  position: absolute;
 }
 
-
-@media (width: 1024px) {
-.product-item {
-    position: relative;
-    width: 173% !important;
-	margin-right: 90px !important;
-	position: relative;
-	right: 35px;
-}
-.product-grid{
-	gap: 30px;
-	margin-right: -70px;
-	position: relative;
-	left: 3px;
+.newton-content1::before {
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(var(--color) 0deg, transparent 60deg, transparent 180deg, var(--color) 180deg, transparent 240deg);
+  inset: -50%;
+  z-index: -2;
+  animation: borderanimation 4s linear infinite;
 }
 
-}
-@media (min-width: 1024px){
-
-}
-
-/* 3D Rotation on Hover */
-
-@media (max-width: 768px) {
-#bzzxc{			
-     font-size: 40px !important;
-}
-#diaa{
-		text-align: center!important; 
-		width: 110% !important; 
-		position: relative; 
-		font-size: 29px;
-		margin-left: -41px !important;
-	}
-}
-@media (max-width: 525px) {
-#bzzxc{			
-     font-size: 30px !important;
-	 position: relative;
-	 top: 100px !important;
-	 
-}
-#diaa{
-		text-align: center!important; 
-		width: 100% !important; 
-		position: relative; 
-		font-size: 24px !important;
-		margin-left: -16px !important;
-	}
-#bf{
-		position: relative !important;
-		top: -90px !important;
-
-	}
-}
-@media (min-width: 340px) and (max-width: 390px){
-	.product-item{
-		position: relative;
-		right: 45px;
-
-}
+.newton-content1:hover::before {
+  animation-play-state: paused;
 }
 
-
-
-
-/* Icon Positioning */
-.product-icon img {
-    width: 45px; /* Small icons */
-    height: auto;
-    display: block;
-    margin: 10px auto 1px;
-	position: relative;
-	bottom: 35px;
-	filter: invert(0) grayscale(1) brightness(2);
-}
-#vvd{
-	filter: invert(2) grayscale(2) brightness(2) !important;
-}
-/* Product Content */
-.product-title {
-	color: #000f22;
-    font-size: 1.2rem;
-    font-weight:bolder;
-	text-align: center;
-	position: relative;
-	bottom: 24px;
-}
-.product-title,
-.product-description {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    
+@keyframes borderanimation {
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
-.product-description {
-	position: relative;
-	bottom: 30px;
-	font-weight:bolder;
-    font-size: 0.85rem !important;
-    color: #000f22;
-	
-	text-align: center;
+.newton-content1::after {
+  --inset: 4px;
+  background: #111;
+  inset: var(--inset);
+  border-radius: calc(var(--border-radius) - var(--inset));
+  z-index: -1;
+  transition: all 0.3s linear;
 }
+
+.newton-content1:hover::after {
+  background: var(--bg-color);
+}
+
+.hawking1-popup img{
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  bottom: 1px;
+}
+
+.galileo-close1 {
+  position: absolute;
+  z-index: 1000;
+  top: 30px;
+  right: 30px;
+  background: transparent;
+  color: black;
+  border: 2px solid rgba(191, 200, 206, 0.25);
+  padding: 5px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+.galileo-close1:hover {
+  background-color: #0D1615;
+  color: white;
+}
+
+.kepler-desc {
+  font-size: 12px;
+  color: #666;
+}
+
+.button1-group{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.button1-group .button1{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: white ;
+  color: #000f22;
+  font-style: 12px;
+  font-weight: 600;
+  text-transform:capitalize;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  border: 2px solid #186f78;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.button1-group .button1.active{
+  background-color: #000f22;
+  color: white;
+}
+.button1-group .button1:hover{
+  background-color: #0a3d62;
+  color: #c8d1d8;
+}
+div.gallery{
+	margin-top: 80px;
+  width: 100%;
+  position: relative;
+  bottom: 40px;
+ 
+  display: flex;
+  flex-wrap: wrap;
+}
+div.gallery .item{
+   border-radius: 20px;
+  position: relative;
+   gap: 20px;
+   margin: 4px;
+  width: calc(33.33% - 8px);
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.item img{
+	margin: 10px;
+	border-radius: 25px;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+
+  display: block;
+  transition: 0.3s;
+}
+div.gallery .item:hover img{
+  transform: scale(0.9);
+}
+
+
+@media(max-width: 1024px){
+  div.gallery .item{
+    width: calc(50% - 8px);
+  }
+}
+
+@media(max-width: 600px){
+  div.gallery .item{
+    width: 80%;
+    margin: 0px 40px;
+  }
+}
+.newton-content1 {
+  --border-radius: 1rem;
+  --bg-color: #000f22;
+  position: relative;
+  width: 80%;
+  top: 350px;
+  max-width: 800px;
+  right: 150px !important;
+  background: transparent;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+}
+
 		</style>
 	</head>
-	<body>
-		<div id="page" class="main" style="overflow-x: hidden !important;">
+  <body>
 
-			<!--=================================
-			Header -->
-			<header class="header header-sticky">
+    <!--=================================
+    cursor -->
+    <div id="cursor">
+        
+    </div>
+    <!--=================================
+    cursor -->
+    
+    <div id="page" class="main">
+
+      <!--=================================
+      Header -->
+      <header class="header header-sticky">
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 					<div class="container-fluid main-header position-relative">
 						<a class="navbar-brand" href="index.html">
-							<img class="img-fluid" src="images/logo.png" alt="logo">
+							<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
@@ -376,16 +409,10 @@ body {
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
 											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+												<li class="active"><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
-								<li class="nav-item active"><a class="nav-link" href="service.html">Services</a></li>
-
-								
-
-								
-
-								
+								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
 							</ul>
 						</div>
@@ -414,9 +441,9 @@ body {
 					</div>
 				</nav>
 			</header>
-			<!--=================================
-			Header -->
-			<button id="chatbot-toggler">
+      <!--=================================
+      Header -->
+      <button id="chatbot-toggler">
 				<span class="material-icons">mode_comment</span>
 				<span class="material-icons">close</span>
 			  </button>
@@ -462,50 +489,39 @@ body {
 				  </form>
 				</div>
 			  </div>
-			<!--=================================
+      <!--=================================
       Main Menu OffCanvas -->
-	  <div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
-		<div class="offcanvas-header">
-			<h5 class="offcanvas-title" id="offcanvasNavbar2Label">Main Menu</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-				<i class="fa-solid fa-xmark"></i>
-			</button>
-		</div>
-		<div class="offcanvas-body lenis-scroll-disable">
-			<div class="body-inner h-100 pe-3 lenis-scroll-disable">
-				<nav class="navbar h-100">
-					 <ul class="navbar-nav h-100">
-						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-										<li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-										<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>			
-							</ul>
-						</li>
-						<li class="nav-item active"><a class="nav-link" href="service.html" style="color: #2384c6;">Services</a></li>
-						
-						<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
-					</ul>
-				</nav>
+			<div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbar2Label">Main Menu</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+				<div class="offcanvas-body lenis-scroll-disable">
+					<div class="body-inner h-100 pe-3 lenis-scroll-disable">
+						<nav class="navbar h-100">
+							 <ul class="navbar-nav h-100">
+								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="dropdown nav-item active">
+									<a class="nav-link"  data-bs-toggle="dropdown">About<i class="fa-solid fa-chevron-down"></i
+									></a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a href="about-us.html"><span>About us</span></a></li>
+											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
+												<li class="active"><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+								
+								<li class="nav-item"><a href="contact-us.html" >Contact</a></li>
+						</nav>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-      <!--=================================
-      Main Menu OffCanvas -->
-
-      <!--=================================
-      Search -->
-     
-      <!--=================================
-      Search -->
-
-      <!--=================================
-      Right menu -->
       <div class="offcanvas offcanvas-end header-sidepanel bg-white" tabindex="-1" id="offcanvasRight">
         <div class="offcanvas-header text-end justify-content-end">
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #fff !important;">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -522,26 +538,26 @@ body {
                   <i class="icon">
                     <svg width="22" height="22" fill="#2395D4 " viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
                   </i>
-                  <a href="service.html#">Facebook</a></li>
+                  <a href="contact-us.html#">Facebook</a></li>
                 <li>
                   <i class="icon">
                     <svg width="22" height="22" fill="#2395D4 " viewBox="0 0 16 16">
                       <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                     </svg>
                   </i>
-                  <a href="service.html#">Instagram</a></li>
+                  <a href="contact-us.html#">Instagram</a></li>
                 <li>
                   <i class="icon">
                     <svg width="22" height="22" fill="#2395D4 " viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
                   </i>
-                  <a href="service.html#">Twitter</a></li>
+                  <a href="contact-us.html#">Twitter</a></li>
                 <li>
                   <i class="icon">
                     <svg width="22" height="22" fill="#2395D4 " viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8m5.284 3.688a6.8 6.8 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A7 7 0 0 1 8 1.18m-2.907.642A43 43 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.87 6.87 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.82 6.82 0 0 1-1.752-4.564zM8 14.837a6.8 6.8 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.3 28.3 0 0 1 1.457 5.18A6.7 6.7 0 0 1 8 14.837m3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.77 6.77 0 0 1-2.924 4.573z"/>
                     </svg>
                   </i>
-                  <a href="service.html#">Dribble</a></li>
+                  <a href="contact-us.html#">Dribble</a></li>
               </ul>
             </div>
 
@@ -551,234 +567,166 @@ body {
                 <li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
                 <li><a href="tel:7042791249">+251 940 499 999</a></li>
 <li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
-                <li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D"></a>Meskel flower road,
+                <li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower road,
                                         Jems building 9th floor.</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <!--=================================
-      Right menu -->
+      <div class="site-content">
 
-
-			<div class="site-content" >
-
-				<div class="container-fluid">
-					<div class="item-efftect">
-						 <div class="efftect overflow-hidden"></div>
-						 <div class="efftect overflow-hidden"></div>
-						 <div class="efftect overflow-hidden"></div>
-						 <div class="efftect overflow-hidden"></div>
-						 <div class="efftect overflow-hidden"></div>
-					</div>
-				</div>
-
-				<!--=================================
-				inner-banner -->
-
-				<!--=================================
-				inner-banner -->
-				
-                <h6 class="trusted-client" style="position: relative; top: 120px;text-transform: uppercase;  font-size: 55px;" id="bzzxc">Our Services</h6>
-				<div class="content-wrapper">
-					<section class="space-ptb ">
-						<div class="container" id="g">
-							<div class="row justify-content-between">
-								<div class="col-xxl-7 col-lg-9" style="margin-bottom: 50px;">
-									<div class="section-title mb-0 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-										<h2 class="title mb-0" id="diaa"> 
-										"Brilliance in <span class="highlight">Marketing </span>, Precision in <span class="highlight">Communication"</h2>
-									</div>
-								</div>
-							</div>
-
-							
-						</div>
-
-
-                           
-
-					  </section>
-                     
-					  <div class="product-grid" id="bnv">
-			
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/movie.png" alt="Video Production">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Video and Audio Production</h5>
-								<p class="product-description">Produce high-quality videos that captivate <br>audiences, tell compelling stories,<br> and leave a memorable<br> impact.</p>
-							</div>
-							</div>
-						</div>
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/money.png" alt="Media Buying and Monitoring">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Media Buying and Monitoring</h5>
-								<p class="product-description">
-									Strategically purchase ad placements across <br> various platforms 
-									 while tracking <br> performance to maximize<br> reach and ROI.
-								</p>
-							</div>
-							</div>
-						</div>
-						<div class="product-item">
-							<div class="product-box">
-							  <div class="product-icon">
-								<img class="img-fluid" src="/images/service/digital-marketing_3141343.png" alt="Branding" />
-							  </div>
-							  <div class="product-content">
-								<h5 class="product-title">Digital Marketing</h5>
-								<p class="product-description">
-									Boost your online presence and reach
-									more <br> customers through social media, <br>
-									 and data-driven<br> strategies.
-								</p>
-							  </div>
-							</div>
-						  </div>
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/bullhorn.png" alt="Marketing Consultancy">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Marketing Campaign</h5>
-								<p class="product-description">Create impactful marketing
-									 campaigns  that <br>  resonate with your audience, <br>boosting brand <br>visibility.</p>
-							</div>
-							</div>
-						</div>
-
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/content-management_8292451.png" alt="Marketing Consultancy">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Social Media Management</h5>
-								<p class="product-description">
-									Build a strong online presence with consistent <br>
-									content, community engagement,<br> and 
-									 across all major<br> platforms.
-								</p>
-							</div>
-							
-							
-							
-							</div>
-						</div>
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/coding.png" alt="Website Development" id="vvd">
-							</div>
-							<div class="product-content">
-								
-								<h5 class="product-title">Website Development</h5>
-								<p class="product-description">Develop a responsive, user-friendly website <br> that enhances brand presence and <br> visitors through seamless <br> navigation.</p>
-							</div>
-							</div>
-						</div>
-						  
-						<div class="product-item">
-							<div class="product-box">
-							  <div class="product-icon">
-								<img class="img-fluid" src="/images/service/awareness.png" alt="Branding" />
-							  </div>
-							  <div class="product-content">
-								<h5 class="product-title">Branding</h5>
-								<p class="product-description">Create a unique identity for your  business <br> that resonates with  customers and <br> builds lasting emotional <br>connections.</p>
-							  </div>
-							</div>
-						  </div>
-						
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/user_17995436.png" alt="Outdoor Advert">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Event Management</h5>
-								<p class="product-description">
-									Plan and execute memorable events with <br>
-									seamless coordination, 
-									and digital <br>engagement strategies that <br> deliver impact.
-								</p>
-							</div>
-							</div>
-						</div>
-						
-						
+        <div class="container-fluid">
+          <div class="item-efftect">
+             <div class="efftect overflow-hidden"></div>
+             <div class="efftect overflow-hidden"></div>
+             <div class="efftect overflow-hidden"></div>
+             <div class="efftect overflow-hidden"></div>
+             <div class="efftect overflow-hidden"></div>
+          </div>
+        </div>
+    
+        <h6 class="trusted-client" style="position: relative; top: 120px;text-transform: uppercase;  font-size: 45px; @media (max-width: 768px) {
+					font-size: 30px;
 					
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/billboard.png" alt="Outdoor Advert">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Printing & Outdoor Advert</h5>
-								<p class="product-description">Utilize outdoor advertising to <br> make  a visual impact and  <br> reach a broad  audience <br> effectively.</p>
-							</div>
-							</div>
-						</div>
-						
-						
-						<div class="product-item">
-							<div class="product-box">
-							<div class="product-icon">
-								<img class="img-fluid" src="/images/service/analysis.png" alt="Marketing Strategy">
-							</div>
-							<div class="product-content">
-								<h5 class="product-title">Marketing Strategy Development</h5>
-								<p class="product-description">Craft a comprehensive marketing <br>strategy  that drives growth, <br> and ensures brand <br> success.</p>
-							</div>
-							</div>
-						</div>
-					
-						
-					
-						
-					
-						
-					
-						
-						
-						
-					</div>
-
-					
-
-				</div>
+				   }" id="bzxc">Our Gears</h6>
+        
+		<div class="content-wrapper" style="position: relative; top: 120px; " id="cntb">
+			<div class="button1-group">
+				<button class="button1 active" data-filter="*">All</button>
+				<button class="button1" data-filter=".design">Camera</button>
+				<button class="button1" data-filter=".development">Light</button>
+        <button class="button1" data-filter=".software">Software tool</button>
+        <button class="button1" data-filter=".logo">audio</button>
 			</div>
+	
+			<div class="gallery">
+				<div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205057_766.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+				<div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205057_052.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+				<div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205057_322.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205057_333.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205106_473.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205057_766.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205106_473.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205101_946.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205107_871.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205109_993.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205111_829.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205113_150.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205115_810.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205117_778.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205118_961.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205120_328.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item design">
+					<img src="{% static '/images/blog/IMG_20250408_205122_146.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        
+        <div class="item development">
+					<img src="{% static '/images/blog/IMG_20250408_205057_470.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item development">
+					<img src="{% static '/images/blog/2149033391.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item development">
+					<img src="{% static '/images/blog/2150336052.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
 
-			<!--=================================
-			Site Footer -->
-			<footer class="site-footer footer-dark" style="position: relative; top: 0px;" id="bf" >
+        <div class="item logo">
+					<img src="{% static '/images/blog/2148808737.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item logo">
+					<img src="{% static '/images/blog/7932.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        <div class="item logo">
+					<img src="{% static '/images/blog/25278.jpg' %}">
+					<div class="curie-btn1"><i class="fas fa-image"></i></div>
+				</div>
+        
+			</div>
+		</div>
+		<div class="hawking1-popup" id="hawking1-popup">
+			<div class="newton-content1">
+				<button class="galileo-close1" onclick="closePopup()">✖</button>
+				<img id="popup-img1" src="" alt="">
+			</div>
+		</div>
+
+
+
+    
+			<footer class="site-footer footer-dark" style="position: relative; top: 140px; overflow-x: hidden;" id="nnd">
 				<div class="footer-main">
 					<div class="container">
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
 								<a class="footer-logo" href="index.html">
-									<img class="img-fluid" src="images/logo.png" alt="logo">
+									<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 								</a>
 							</div>
 
-							<div class="item" style="overflow-x: hidden;">
+							<div class="item">
 								<div class="widget">
 									<h5 class="widget-title">Office</h5>
 								</div>
 								<div class="contact-info-box">
 									<ul>
-										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction<br> @gmail.com</a></li>
+										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
 										<li><a href="tel:7042791249">+251 940 499 999</a></li>
-<li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
+                    <li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
 										<li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower road,
                                         Jems building 9th floor.</a></li>
 									</ul>
@@ -812,9 +760,6 @@ body {
 							</div>
 						</div>
 					</div>
-
-					<!--=================================
-					Marquee -->
 					<div class="container-fluid p-0">
 						<div class="row g-0">
 							<div class="col-md-12">
@@ -877,42 +822,50 @@ body {
 					</div>
 				</div>
 			</footer>
-			<!--=================================
-			Site Footer -->
+      <!--=================================
+      Site Footer -->
 
-			<!--=================================
-			Back To Top -->
-			<div class="back-to-top">
-				<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-					<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-				</svg>
-			</div>
-        
-		</div>
-		<!--=================================
-		Javascript -->
-		<!-- JS Global Compulsory (Do not remove)-->
-		<script src="js/jquery-3.7.1.min.js"></script>
-		<script src="js/jquery.appear.js"></script>
-		<script src="js/popper/popper.min.js"></script>
-		<script src="js/bootstrap/bootstrap.min.js"></script>
-		<!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-		<script src="js/owl-carousel/owl.carousel.min.js"></script>
-		<script src="js/jarallax/jarallax.min.js"></script>
-		<script src="js/jarallax/jarallax-video.min.js"></script>
-		<script src="js/swiper/swiper.min.js"></script>
-    <script src="js/wow.min.js"></script>
-		<script src="js/swiperanimation/SwiperAnimation.min.js"></script>
-		<script src="js/shuffle/shuffle.min.js"></script>
-		<script src="js/magnific-popup/jquery.magnific-popup.js"></script>
-		<script src="js/counter/jquery.countTo.js"></script>
-		<script src="js/gsap.min.js"></script>
-		<script src="js/lenis.min.js"></script>
+      <!--=================================
+      Back To Top -->
+      <div class="back-to-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+      </div>
+    
+    </div>
+
+    
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/popper/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/swiperanimation/SwiperAnimation.min.js' %}"></script>
+    <script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/counter/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/lenis.min.js' %}"></script>
     <!-- Template Scripts (Do not remove)-->
-		<script src="js/custom.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
+   
+
+
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
 <script>
-	const chatBody = document.querySelector(".chat-body");
+  const chatBody = document.querySelector(".chat-body");
 const messageInput = document.querySelector(".message-input");
 const sendMessage = document.querySelector("#send-message");
 const fileInput = document.querySelector("#file-input");
@@ -922,8 +875,9 @@ const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 // API setup
 const API_KEY = "AIzaSyCeal00-ejR8WMv9xfsL4uAjtdZuFVRqtQ";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 // Initialize user message and file data
+ 
 const userData = {
   message: null,
   file: {
@@ -1074,5 +1028,33 @@ document.querySelector("#file-upload").addEventListener("click", () => fileInput
 closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 </script>
-	</body>
-</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!--   *****   Isotope Filter Link   *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		var $galleryContainer = $('.gallery').isotope({
+			itemSelector: '.item',
+			layoutMode: 'fitRows'
+		});
+		
+		$('.button1-group .button1').on('click', function() {
+			$('.button1-group .button1').removeClass('active');
+			$(this).addClass('active');
+			var value = $(this).attr('data-filter');
+			$galleryContainer.isotope({ filter: value });
+		});
+		
+		$('.curie-btn1').on('click', function () {
+			var imgSrc = $(this).siblings('img').attr('src');
+			$('#popup-img1').attr('src', imgSrc).show();
+			$('#hawking1-popup').fadeIn();
+		});
+	});
+	
+	function closePopup() {
+		$('#hawking1-popup').fadeOut();
+	}
+</script>

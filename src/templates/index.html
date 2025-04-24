@@ -25,7 +25,7 @@
     Online Reputation Management in Ethiopia, 
     Digital Marketing Agencies in Ethiopia, 
     Analytics and Data Analysis Services in Ethiopia">
-  
+	{% load static %}
   <!-- SEO Description -->
   <meta name="description" content="Diamond Marketing offers expert digital marketing services in Ethiopia including SEO, social media, web design, e-commerce, and more. Based in Addis Ababa.">
   <meta name="author" content="diamondmarketinget.com">
@@ -62,25 +62,25 @@
 
 		<!-- Other necessary CSS links -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
-		<link rel="shortcut icon" href="images/log.png">
+		<link rel="shortcut icon" href="{% static 'images/log.png' %}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome/all.min.css">
-		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap/bootstrap-icons.min.css">
-		<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/lenis/lenis.css">
-		<link rel="stylesheet" href="css/swiper/swiper.min.css">
-		<link rel="stylesheet" href="css/animate/animate.min.css">
-		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
-		<link rel="stylesheet" href="css/slideshow/subtle-slideshow.css">
+		<link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-icons.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/lenis/lenis.css' %}">
+		<link rel="stylesheet" href="{% static 'css/swiper/swiper.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/animate/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/slideshow/subtle-slideshow.css' %}">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="{% static 'styles.css' %}">
 		<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	
 	
 	<style>
@@ -209,7 +209,7 @@ body {
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 					<div class="container-fluid main-header position-relative">
 						<a class="navbar-brand" href="index.html">
-							<img class="img-fluid" src="images/logo.png" alt="logo">
+							<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
@@ -418,23 +418,23 @@ body {
 				 <div class="slider-container">
         <div class="slider">
 			<div class="slide">
-                <video src="/home/Diamondweb.mp4" type="video/mp4" autoplay loop muted></video>
+                <video src="{% static '/home/Diamondweb.mp4' %}" type="video/mp4" autoplay loop muted></video>
                 <div class="text-overlay" >Crafting Radiant Brands</div>
             </div>
 			<div class="slide">
-                <video src="/home/home3.mp4" type="video/mp4" autoplay loop muted></video>
+                <video src="{% static '/home/home3.mp4' %}" type="video/mp4" autoplay loop muted></video>
                 <div class="text-overlay" >Crafting Radiant Brands</div>
             </div>
 			<div class="slide">
-                <video src="/home/home2.mp4" type="video/mp4" autoplay loop muted></video>
+                <video src="{% static '/home/home2.mp4' %}" type="video/mp4" autoplay loop muted></video>
                 <div class="text-overlay"   >Elevating Brands with Purpose</div>
             </div>
 			<div class="slide">
-                <img class="img-fluid" src="/images/banner/inner-header/01.jpg" alt="">
+                <img class="img-fluid" src="{% static '/images/banner/inner-header/01.jpg' %}" alt="">
                 <div class="text-overlay"   > Brands with Purpose</div>
             </div>
 			<div class="slide">
-                <video src="/home/home1.mp4" type="video/mp4" autoplay loop muted></video>
+                <video src="{% static '/home/home1.mp4' %}" type="video/mp4" autoplay loop muted></video>
                 <div class="text-overlay" >Where Creativity Meets Impact</div>
             </div>
         </div>
@@ -469,7 +469,7 @@ body {
 						<div class="row justify-content-between">
 							<div class="col-lg-5" id="bcbcbc">
 								<div class="about-img ps-xl-5">
-									<img class="img-fluid radius-20 wow pgsRightToLeft" src="images/team/01.png" alt="#">
+									<img class="img-fluid radius-20 wow pgsRightToLeft" src="{% static 'images/team/01.png' %}" alt="#">
 								</div>
 							</div>
 							<div class="col-lg-7 mb-5 mb-lg-0">
@@ -564,7 +564,7 @@ body {
 					<!-- Video Items -->
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="appdev">
-							<video src="/home/home1.mp4" type="video/mp4"></video>
+							<video src="{% static '/home/home1.mp4' %}" type="video/mp4"></video>
 							<div class="curie-btn"><i class="fas fa-play"></i></div>
 							<div class="darwin-tag" id="txt1">Video production</div>
 						</div>
@@ -573,7 +573,7 @@ body {
 					
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="advertising">
-							<video src="/home/home2.mp4" type="video/mp4"></video>
+							<video src="{% static '/home/home2.mp4' %}" type="video/mp4"></video>
 						<div class="curie-btn"><i class="fas fa-play"></i></div>						
 							<div class="darwin-tag" id="txt1">Tseday Bank</div>
 						</div>
@@ -581,7 +581,7 @@ body {
 					</div>
 					<div class="gallery-item">
 						    <div class="tesla-item" data-category="advertising">
-								<video src="/home/home3.mp4" type="video/mp4"></video>
+								<video src="{% static '/home/home3.mp4' %}" type="video/mp4"></video>
 							  <div class="curie-btn"><i class="fas fa-play"></i></div>
 							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 							
@@ -591,21 +591,21 @@ body {
 					
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<img src="/videos/bz6.jpg" alt="Web Dev Image">
+							<img src="{% static '/videos/bz6.jpg' %}" alt="Web Dev Image">
 							<div class="curie-btn"><i class="fas fa-image"></i></div>
 							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<img src="/videos/bz6.jpg" alt="Web Dev Image">
+							<img src="{% static '/videos/bz6.jpg' %}" alt="Web Dev Image">
 							<div class="curie-btn"><i class="fas fa-image"></i></div>
 							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
 					</div>
 					<div class="gallery-item">
 						<div class="tesla-item" data-category="branding">
-							<img src="/videos/bz6.jpg" alt="Web Dev Image">
+							<img src="{% static '/videos/bz6.jpg' %}" alt="Web Dev Image">
 							<div class="curie-btn"><i class="fas fa-image"></i></div>
 							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
 						</div>
@@ -643,40 +643,40 @@ body {
 									<div class="client-logos">
 										<div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-lg-items="4" data-md-items="4" data-sm-items="4" data-xs-items="2" data-xx-items="2" data-space="82" data-autoheight="true">
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/6cce6e47d56a6bb625af4dd1df12e866.jpg" alt="" style="width: 300px !important;">
+												<img class="img-fluid" src="{% static '/images/client-logo/6cce6e47d56a6bb625af4dd1df12e866.jpg' %}" alt="" style="width: 300px !important;">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/Anbessa-Lion-International-Bank-Ethiopia-Profit-Logo.jpg" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/Anbessa-Lion-International-Bank-Ethiopia-Profit-Logo.jpg' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/Berhan-bank.jpg" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/Berhan-bank.jpg' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/ddddd.png" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/ddddd.png' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/download (1).png" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/download (1).png' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/download.jpg" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/download.jpg' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/errrrrrrrrrrrr.jpg" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/errrrrrrrrrrrr.jpg' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/images.jpg" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/images.jpg' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/images.png" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/images.png' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/qwer.png" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/qwer.png' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/reinholt-legends-logo-300x174.png" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/reinholt-legends-logo-300x174.png' %}" alt="">
 											</div>
 											<div class="item">
-												<img class="img-fluid" src="/images/client-logo/vvv.png" alt="">
+												<img class="img-fluid" src="{% static '/images/client-logo/vvv.png' %}" alt="">
 											</div>
 
 										</div>
@@ -753,7 +753,7 @@ body {
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
 								<a class="footer-logo" href="index.html">
-									<img class="img-fluid" src="images/logo.png" alt="logo">
+									<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 								</a>
 							</div>
 
@@ -917,25 +917,25 @@ body {
 		<!--=================================
 		Javascript -->
 		<!-- JS Global Compulsory (Do not remove)-->
-		<script src="js/jquery-3.7.1.min.js"></script>
-		<script src="js/jquery.appear.js"></script>
-		<script src="js/popper/popper.min.js"></script>
-		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+		<script src="{% static 'js/jquery.appear.js' %}"></script>
+		<script src="{% static 'js/popper/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
 		
 		<!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-		<script src="js/owl-carousel/owl.carousel.min.js"></script>
-		<script src="js/swiper/swiper.min.js"></script>
-		<script src="js/wow.min.js"></script>
-		<script src="js/swiperanimation/SwiperAnimation.min.js"></script>
-		<script src="js/shuffle/shuffle.min.js"></script>
-		<script src="js/magnific-popup/jquery.magnific-popup.js"></script>
-		<script src="js/counter/jquery.countTo.js"></script>
-		<script src="js/gsap.min.js"></script>
-		<script src="js/slideshow/jquery.velocity.min.js"></script>
-		<script src="js/slideshow/jquery.kenburnsy.js"></script>
-		<script src="js/lenis.min.js"></script>
+		<script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+		<script src="{% static 'js/wow.min.js' %}"></script>
+		<script src="{% static 'js/swiperanimation/SwiperAnimation.min.js' %}"></script>
+		<script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
+		<script src="{% static 'js/magnific-popup/jquery.magnific-popup.js' %}"></script>
+		<script src="{% static 'js/counter/jquery.countTo.js' %}"></script>
+		<script src="{% static 'js/gsap.min.js' %}"></script>
+		<script src="{% static 'js/slideshow/jquery.velocity.min.js' %}"></script>
+		<script src="{% static 'js/slideshow/jquery.kenburnsy.js' %}"></script>
+		<script src="{% static 'js/lenis.min.js' %}"></script>
 		<!-- Template Scripts (Do not remove)-->
-		<script src="js/custom.js"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
 
 		
 	</body>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 	<head>
+    {% load static %}
 		<meta charset="utf-8">
 		<meta name="keywords" content="HTML5 Template">
 		<meta name="description" content="Dimond - Digital Marketing">
@@ -34,7 +35,7 @@
 <meta property="og:image" content="https://www.diamondmarketinget.com/images/share.png">
 
   <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.diamondmarketinget.com/gears.html">
+  <link rel="canonical" href="https://www.diamondmarketinget.com/contact.html">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,335 +50,37 @@
   ]
 }
 </script>
-
-		
-		<!-- Google Font for Open Sans -->
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-	
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!-- Other necessary CSS links -->
-		<link rel="shortcut icon" href="images/log.png">
+		<link rel="shortcut icon" href="{% static 'images/log.png' %}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome/all.min.css">
-		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap/bootstrap-icons.min.css">
-		<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/lenis/lenis.css">
-		<link rel="stylesheet" href="css/swiper/swiper.min.css">
-		<link rel="stylesheet" href="css/animate/animate.min.css">
-		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
-		<link rel="stylesheet" href="css/slideshow/subtle-slideshow.css">
+		<link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-icons.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/lenis/lenis.css' %}">
+		<link rel="stylesheet" href="{% static 'css/swiper/swiper.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/animate/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/slideshow/subtle-slideshow.css' %}">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-		<link rel="stylesheet" href="styles.css">
-		
+		<link rel="stylesheet" href="{% static 'styles.css' %}">
+		<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 	<style>
 	/* Apply Comfortaa font globally */
 /* Apply Open Sans font globally */
 body {
     font-family: 'Open Sans', sans-serif;
 }
-
-			html{
-  /*   *****   Storing Colors In Variables   *****  */
-  --body-clr: #f6f9fe;
-  --primary-clr: #05555c;
-  --primary-light-clr: #eaf3fa;
-  --links-clr: #186f78;
-  --text-clr: #3f7277;
-}
-			.curie-btn1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  color: #000f22;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 188;
-}
-
-.curie-btn1::after,
-.curie-btn1::before {
-  content: '';
-  position: absolute;
-  left: 45%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  border: 1px solid white;
-  border-radius: 50%;
-  animation: animate 1.5s infinite;
-  z-index: 888;
-}
-
-@keyframes animate {
-  0% {
-    width: 100px;
-    height: 100px;
-  }
-  100% {
-    width: 150px;
-    height: 150px;
-    opacity: 0;
-  }
-}
-@media (max-width: 600px) {
-  .hawking1-popup {
-  position: fixed;
-  bottom: 500px;
-  left: 550px;
-  width: 50%;
-  height: 40%;
-  background: transparent;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 200;
-}
-
-.newton-content1 {
-  --border-radius: 1rem;
-  --bg-color: #000f22;
-  position: relative;
-  width: 50%;
-  top: 280px !important;
-  max-width: 800px;
-  right: -30px !important;
-  background: transparent;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 10px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.newton-content1::before,
-.newton-content1::after {
-  content: '';
-  position: absolute;
-}
-
-
-  .curie-btn1::after,
-  .curie-btn1::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 50%;
-    animation: animate 1.5s infinite;
-  }
-
-  .curie-btn1 {
-    font-size: 15px;
-    padding: 10px;
-  }
-}
-			.hawking1-popup {
-  position: fixed;
-  bottom: 500px;
-  left: 550px;
-  width: 50%;
-  height: 40%;
-  background: transparent;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 200;
-}
-
-.newton-content1 {
-  --border-radius: 1rem;
-  --bg-color: #000f22;
-  position: relative;
-  width: 50%;
-  top: 150px;
-  max-width: 800px;
-  right: -90px;
-  background: transparent;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 10px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.newton-content1::before,
-.newton-content1::after {
-  content: '';
-  position: absolute;
-}
-
-.newton-content1::before {
-  width: 200%;
-  height: 200%;
-  background-image: conic-gradient(var(--color) 0deg, transparent 60deg, transparent 180deg, var(--color) 180deg, transparent 240deg);
-  inset: -50%;
-  z-index: -2;
-  animation: borderanimation 4s linear infinite;
-}
-
-.newton-content1:hover::before {
-  animation-play-state: paused;
-}
-
-@keyframes borderanimation {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-.newton-content1::after {
-  --inset: 4px;
-  background: #111;
-  inset: var(--inset);
-  border-radius: calc(var(--border-radius) - var(--inset));
-  z-index: -1;
-  transition: all 0.3s linear;
-}
-
-.newton-content1:hover::after {
-  background: var(--bg-color);
-}
-
-.hawking1-popup img{
-  width: 100%;
-  border-radius: 10px;
-  position: relative;
-  bottom: 1px;
-}
-
-.galileo-close1 {
-  position: absolute;
-  z-index: 1000;
-  top: 30px;
-  right: 30px;
-  background: transparent;
-  color: black;
-  border: 2px solid rgba(191, 200, 206, 0.25);
-  padding: 5px 14px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 25px;
-}
-
-.galileo-close1:hover {
-  background-color: #0D1615;
-  color: white;
-}
-
-.kepler-desc {
-  font-size: 12px;
-  color: #666;
-}
-
-.button1-group{
-  text-align: center;
-  margin-bottom: 40px;
-}
-.button1-group .button1{
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 5px;
-  background-color: white ;
-  color: #000f22;
-  font-style: 12px;
-  font-weight: 600;
-  text-transform:capitalize;
-  letter-spacing: 1px;
-  transition: all 0.4s;
-  border: 2px solid #186f78;
-  border-radius: 10px;
-  outline: none;
-  cursor: pointer;
-}
-.button1-group .button1.active{
-  background-color: #000f22;
-  color: white;
-}
-.button1-group .button1:hover{
-  background-color: #0a3d62;
-  color: #c8d1d8;
-}
-div.gallery{
-	margin-top: 80px;
-  width: 100%;
-  position: relative;
-  bottom: 40px;
- 
-  display: flex;
-  flex-wrap: wrap;
-}
-div.gallery .item{
-   border-radius: 20px;
-  position: relative;
-   gap: 20px;
-   margin: 4px;
-  width: calc(33.33% - 8px);
-  overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.item img{
-	margin: 10px;
-	border-radius: 25px;
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-
-  display: block;
-  transition: 0.3s;
-}
-div.gallery .item:hover img{
-  transform: scale(0.9);
-}
-
-
-@media(max-width: 1024px){
-  div.gallery .item{
-    width: calc(50% - 8px);
-  }
-}
-
-@media(max-width: 600px){
-  div.gallery .item{
-    width: 80%;
-    margin: 0px 40px;
-  }
-}
-.newton-content1 {
-  --border-radius: 1rem;
-  --bg-color: #000f22;
-  position: relative;
-  width: 80%;
-  top: 350px;
-  max-width: 800px;
-  right: 150px !important;
-  background: transparent;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 10px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-		</style>
+</style>
 	</head>
   <body>
 
@@ -397,7 +100,7 @@ div.gallery .item:hover img{
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 					<div class="container-fluid main-header position-relative">
 						<a class="navbar-brand" href="index.html">
-							<img class="img-fluid" src="images/logo.png" alt="logo">
+							<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
@@ -408,11 +111,17 @@ div.gallery .item:hover img{
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
 											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li class="active"><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+
+								
+
+								
+
+								
+								<li class="nav-item active"><a class="nav-link" href="contact-us.html" >Contact</a></li>
 							</ul>
 						</div>
 						<div class="action-group">
@@ -493,8 +202,8 @@ div.gallery .item:hover img{
 			<div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
 				<div class="offcanvas-header">
 					<h5 class="offcanvas-title" id="offcanvasNavbar2Label">Main Menu</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-						<i class="fa-solid fa-xmark"></i>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="color: white !important;">
+						<i class="fa-solid fa-xmark" style="color: white !important;"></i>
 					</button>
 				</div>
 				<div class="offcanvas-body lenis-scroll-disable">
@@ -502,25 +211,45 @@ div.gallery .item:hover img{
 						<nav class="navbar h-100">
 							 <ul class="navbar-nav h-100">
 								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-								<li class="dropdown nav-item active">
-									<a class="nav-link"  data-bs-toggle="dropdown">About<i class="fa-solid fa-chevron-down"></i
-									></a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a href="about-us.html"><span>About us</span></a></li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
 											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li class="active"><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 								
-								<li class="nav-item"><a href="contact-us.html" >Contact</a></li>
+                <li class="nav-item active"><a class="nav-link" href="contact-us.html" style="color: #0a3d62;">Contact</a></li>
 						</nav>
 					</div>
 				</div>
 			</div>
+      <!--=================================
+      Main Menu OffCanvas -->
+
+      <!--=================================
+      Search -->
+      <div id="search">
+       
+        <button type="button" class="close"></button>
+        <div class="search-inner">
+          <h2 class="title">Search here...</h2>
+          <form>
+            <input type="search" value="" placeholder="Search">
+            <button type="submit" class="search-btn btn"><span>Search</span></button>
+          </form>
+        </div>
+      </div>
+      <!--=================================
+      Search -->
+
+      <!--=================================
+      Right menu -->
       <div class="offcanvas offcanvas-end header-sidepanel bg-white" tabindex="-1" id="offcanvasRight">
         <div class="offcanvas-header text-end justify-content-end">
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #fff !important;">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -573,6 +302,10 @@ div.gallery .item:hover img{
           </div>
         </div>
       </div>
+      <!--=================================
+      Right menu -->
+
+
       <div class="site-content">
 
         <div class="container-fluid">
@@ -584,136 +317,176 @@ div.gallery .item:hover img{
              <div class="efftect overflow-hidden"></div>
           </div>
         </div>
+
+        <div class="content-wrapper" id="nvnv">
+          <!--=================================
+          banner -->
+          <section class="contact-top space-ptb" style="background-image:url(images/bg/bg-map.png); background-color: transparent;" id="ufff">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+                  <div class="section-title mb-0 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                    <span class="sub-title">[ Contact Us ]</span>
+                    <h2 class="title mb-0">Contact Us for Support, Questions, or More Information</h2>
+                  </div>
+                  <div class="contact-title wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1500ms">We’d Love to Hear from You – Get in Touch</div>
+                </div>
+                
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          banner -->
+
+          <!--=================================
+          contact form section -->
+          <section class="space-medium-pb" id="ufff">
+                        <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="contact-box pe-xl-4 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                    <iframe class="map map-style-02" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.1663904569456!2d38.764679!3d8.995253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850032b7adc3%3A0x5f50581f354199!2sJems%20Building!5e0!3m2!1sen!2set!4v1710765623456!5m2!1sen!2set" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                  </iframe>
+                  </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+                  <div class="contact-us-form ps-xl-4">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                      <span class="sub-title">[ Get in touch ]</span>
+                      <h3 class="title">Send Message</h3>
+                      <p style="color: #00072f">Please fill out the form below with your details and message, and our team will get back to you as soon as possible.</p>
+                    </div>
+                    <form id="contact-form" class="contact-form form-style-border wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <input type="text" name="first_name" class="form-control" placeholder="First Name*" aria-label="First name" style="color: #00072f !important;">
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" name="last_name" class="form-control" placeholder="Last Name*" aria-label="Last name" style="color: #00072f !important;">
+                        </div>
+                        <div class="col-md-6">
+                          <input type="email" name="email" class="form-control" placeholder="Email*" aria-label="Email" style="color: #00072f !important;">
+                        </div>
+                        <div class="col-md-6">
+                          <input type="tel" name="phone" class="form-control" placeholder="Phone*" aria-label="Phone" style="color: #00072f !important;">
+                        </div>
+                        <div class="col-md-12">
+                          <textarea name="message" class="form-control" placeholder="Write Message" rows="4" style="color: #00072f !important;"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="btn" style="color: white; background-color: #00072f;">Send Message</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                
+                <!-- Toast Notification Box -->
+                <div id="toast" style="display: none;"></div>
+                
+              </div>
+            </div>
+          </section>
+          <div class="client-logo-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="client-inner-section border-t">
+                    <span class="trusted-client wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" style="text-align: center;">Trusted by Top 20+ Company</span>
+                    <div class="client-logos wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                      <div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="5" data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="3" data-xx-items="2" data-space="60" data-autoheight="true">
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/6cce6e47d56a6bb625af4dd1df12e866.jpg' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/Anbessa-Lion-International-Bank-Ethiopia-Profit-Logo.jpg' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/Berhan-bank.jpg' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/ddddd.png' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/download (1).png' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/download.jpg' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/errrrrrrrrrrrr.jpg' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/images.jpg' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/images.png' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/qwer.png' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/reinholt-legends-logo-300x174.png' %}" alt="">
+                          </div>
+                          <div class="item">
+                            <img class="img-fluid" src="{% static '/images/client-logo/vvv.png' %}" alt="">
+                          </div>
     
-        <h6 class="trusted-client" style="position: relative; top: 120px;text-transform: uppercase;  font-size: 45px; @media (max-width: 768px) {
-					font-size: 30px;
-					
-				   }" id="bzxc">Our Gears</h6>
+                        
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+                
+                <div class="col-lg-12" id="bvcd">
+                  <div class="contact-address-wrapper grid-wrapper grid-xl-4 grid-lg-2 grid-xs-1">
+                    <div class="contact-address wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1500ms" >
+                      <h6 class="title">Phone Number</h6>
+                      <p class="info">+251 940 499 999</p>
+                      <p class="info">+251 940 299 999</p>
+                    </div>
+                    <div class="contact-address wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1500ms">
+                      <h6 class="title" style="text-align: center;">EmailAddress</h6>
+                      <p class="info" style=" text-align: left;">Diamondproduction</p>
+                      <p class="info" style=" text-align: start;">@gmail.com</p>
+                      
+                    </div>
+                    <div class="contact-address wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1500ms">
+                      <h6 class="title">Office Location</h6>
+                      <p class="info">Meskel flower road,
+                        Jems building 9th floor</p>
+                    </div>
+                    <div class="contact-address wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1500ms">
+                      <h6 class="title">Office Time:</h6>
+                      <p class="info">Mon - Sat : 9.00-8.00</p>
+                      <p class="info">Sunday : Closed</p>
+                    </div>
+                  </div>
+                </div>
+              
+        </div>
         
-		<div class="content-wrapper" style="position: relative; top: 120px; " id="cntb">
-			<div class="button1-group">
-				<button class="button1 active" data-filter="*">All</button>
-				<button class="button1" data-filter=".design">Camera</button>
-				<button class="button1" data-filter=".development">Light</button>
-        <button class="button1" data-filter=".software">Software tool</button>
-        <button class="button1" data-filter=".logo">audio</button>
-			</div>
-	
-			<div class="gallery">
-				<div class="item design">
-					<img src="/images/blog/IMG_20250408_205057_766.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-				<div class="item design">
-					<img src="/images/blog/IMG_20250408_205057_052.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-				<div class="item design">
-					<img src="/images/blog/IMG_20250408_205057_322.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205057_333.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205106_473.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205057_766.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205106_473.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205101_946.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205107_871.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205109_993.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205111_829.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205113_150.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205115_810.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205117_778.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205118_961.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205120_328.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item design">
-					<img src="/images/blog/IMG_20250408_205122_146.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        
-        <div class="item development">
-					<img src="/images/blog/IMG_20250408_205057_470.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item development">
-					<img src="/images/blog/2149033391.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item development">
-					<img src="/images/blog/2150336052.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-
-        <div class="item logo">
-					<img src="/images/blog/2148808737.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item logo">
-					<img src="/images/blog/7932.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        <div class="item logo">
-					<img src="/images/blog/25278.jpg">
-					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
-        
-			</div>
-		</div>
-		<div class="hawking1-popup" id="hawking1-popup">
-			<div class="newton-content1">
-				<button class="galileo-close1" onclick="closePopup()">✖</button>
-				<img id="popup-img1" src="" alt="">
-			</div>
-		</div>
-
-
-
-    
-			<footer class="site-footer footer-dark" style="position: relative; top: 140px; overflow-x: hidden;" id="nnd">
+      </div>
+ 
+      <!--=================================
+      Site Footer -->
+			<footer class="site-footer footer-dark" style="overflow-x: hidden;" id="bvf">
 				<div class="footer-main">
 					<div class="container">
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
 								<a class="footer-logo" href="index.html">
-									<img class="img-fluid" src="images/logo.png" alt="logo">
+									<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 								</a>
 							</div>
 
@@ -725,7 +498,7 @@ div.gallery .item:hover img{
 									<ul>
 										<li><a href="mailto:Diamondproduction@gmail.com">Diamondproduction@gmail.com</a></li>
 										<li><a href="tel:7042791249">+251 940 499 999</a></li>
-                    <li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
+<li><a href="tel+251 940 299 999">+251 940 299 999</a></li>
 										<li><a href="https://www.google.com/maps/place/Jems+Building/@8.995253,38.764679,17z/data=!4m14!1m7!3m6!1s0x164b850032b7adc3:0x5f50581f354199!2sJems+Building!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y!3m5!1s0x164b850032b7adc3:0x5f50581f354199!8m2!3d8.9950994!4d38.7661274!16s%2Fg%2F11w1j_lh1y?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Meskel flower road,
                                         Jems building 9th floor.</a></li>
 									</ul>
@@ -759,6 +532,9 @@ div.gallery .item:hover img{
 							</div>
 						</div>
 					</div>
+
+					<!--=================================
+					Marquee -->
 					<div class="container-fluid p-0">
 						<div class="row g-0">
 							<div class="col-md-12">
@@ -833,29 +609,80 @@ div.gallery .item:hover img{
       </div>
     
     </div>
-
+    <script>
+      // Initialize EmailJS with your public API key
+      emailjs.init("15tzH7bwpPUKiXp0N");
+    
+      // Handle form submission
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the page from refreshing on form submission
+    
+        // Send form data via EmailJS
+        emailjs.sendForm('service_o24q5t1', 'template_dz38xwg', this)
+          .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+    
+            // Show success notification
+            showToast("✅ Message Sent Successfully!", false);
+    
+            // Reset form after submission
+            document.getElementById("contact-form").reset();
+          }, function (error) {
+            console.log('FAILED...', error);
+    
+            // Show error notification
+            showToast("❌ Something Went Wrong. Please Try Again.", true);
+          });
+      });
+    
+      // Function to show toast notification
+      function showToast(message, isError) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.left = '50%';
+        toast.style.transform = 'translateX(-50%)';
+        toast.style.backgroundColor = isError ? '#e74c3c' : '#2ecc71';
+        toast.style.color = '#fff';
+        toast.style.padding = '12px 20px';
+        toast.style.borderRadius = '8px';
+        toast.style.fontSize = '16px';
+        toast.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        toast.style.zIndex = '9999';
+        toast.style.display = 'block';
+        toast.style.opacity = '1';
+        toast.style.transition = 'opacity 0.5s ease';
+        toast.style.width = '300px';
+        // Hide the toast after 3 seconds
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => { toast.style.display = 'none'; }, 500);
+        }, 3000);
+      }
+    </script>
     
     <!--=================================
     Javascript -->
     <!-- JS Global Compulsory (Do not remove)-->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/jquery.appear.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/popper/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jarallax/jarallax.min.js"></script>
-    <script src="js/jarallax/jarallax-video.min.js"></script>
-    <script src="js/swiper/swiper.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/swiperanimation/SwiperAnimation.min.js"></script>
-    <script src="js/shuffle/shuffle.min.js"></script>
-    <script src="js/magnific-popup/jquery.magnific-popup.js"></script>
-    <script src="js/counter/jquery.countTo.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/lenis.min.js"></script>
+    <script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/swiperanimation/SwiperAnimation.min.js' %}"></script>
+    <script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/counter/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/lenis.min.js' %}"></script>
     <!-- Template Scripts (Do not remove)-->
-		<script src="js/custom.js"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
    
 
 
@@ -1026,34 +853,4 @@ sendMessage.addEventListener("click", (e) => handleOutgoingMessage(e));
 document.querySelector("#file-upload").addEventListener("click", () => fileInput.click());
 closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
-<!--   *****   Isotope Filter Link   *****  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-
-<script>
-	$(document).ready(function() {
-		var $galleryContainer = $('.gallery').isotope({
-			itemSelector: '.item',
-			layoutMode: 'fitRows'
-		});
-		
-		$('.button1-group .button1').on('click', function() {
-			$('.button1-group .button1').removeClass('active');
-			$(this).addClass('active');
-			var value = $(this).attr('data-filter');
-			$galleryContainer.isotope({ filter: value });
-		});
-		
-		$('.curie-btn1').on('click', function () {
-			var imgSrc = $(this).siblings('img').attr('src');
-			$('#popup-img1').attr('src', imgSrc).show();
-			$('#hawking1-popup').fadeIn();
-		});
-	});
-	
-	function closePopup() {
-		$('#hawking1-popup').fadeOut();
-	}
 </script>
