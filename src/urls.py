@@ -1,4 +1,6 @@
 from django.urls import path  # type: ignore
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
@@ -8,4 +10,8 @@ urlpatterns = [
     path('contact-us/', views.contact_us_view, name='contact_us'),
     path('blog/', views.blog_view, name='blog'),
     path('about-us/', views.about_us_view, name='about_us'),
-]
+] 
+
+# Serve media files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
