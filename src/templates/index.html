@@ -417,26 +417,45 @@ body {
 				Main Banner -->
 				 <div class="slider-container">
         <div class="slider">
-			<div class="slide">
-                <video src="{% static '/home/Diamondweb.mp4' %}" type="video/mp4" autoplay loop muted></video>
-                <div class="text-overlay" >Crafting Radiant Brands</div>
-            </div>
-			<div class="slide">
-                <video src="{% static '/home/home3.mp4' %}" type="video/mp4" autoplay loop muted></video>
-                <div class="text-overlay" >Crafting Radiant Brands</div>
-            </div>
-			<div class="slide">
-                <video src="{% static '/home/home2.mp4' %}" type="video/mp4" autoplay loop muted></video>
-                <div class="text-overlay"   >Elevating Brands with Purpose</div>
-            </div>
-			<div class="slide">
-                <img class="img-fluid" src="{% static '/images/banner/inner-header/01.jpg' %}" alt="">
-                <div class="text-overlay"   > Brands with Purpose</div>
-            </div>
-			<div class="slide">
-                <video src="{% static '/home/home1.mp4' %}" type="video/mp4" autoplay loop muted></video>
-                <div class="text-overlay" >Where Creativity Meets Impact</div>
-            </div>
+
+
+			
+				{% for hero in hero_data %}
+				<div class="slide">
+					{% if hero.video %}
+					<video src="{{ hero.video.url }}" type="video/mp4" autoplay loop muted></video>
+					{% elif hero.image %}
+					<img src="{{ hero.image.url }}" alt="{{ hero.title }}">
+					{% endif %}
+					<div class="text-overlay">
+						{{ hero.title }}
+					</div>
+				</div>
+				{% endfor %}
+	
+		
+			<!-- 
+				<div class="slide">
+					<video src="{% static '/home/Diamondweb.mp4' %}" type="video/mp4" autoplay loop muted></video>
+					<div class="text-overlay" >Crafting Radiant Brands</div>
+				</div>
+				<div class="slide">
+					<video src="{% static '/home/home3.mp4' %}" type="video/mp4" autoplay loop muted></video>
+					<div class="text-overlay" >Crafting Radiant Brands</div>
+				</div>
+				<div class="slide">
+					<video src="{% static '/home/home2.mp4' %}" type="video/mp4" autoplay loop muted></video>
+					<div class="text-overlay"   >Elevating Brands with Purpose</div>
+				</div>
+				<div class="slide">
+					<img class="img-fluid" src="{% static '/images/banner/inner-header/01.jpg' %}" alt="">
+					<div class="text-overlay"   > Brands with Purpose</div>
+				</div>
+				<div class="slide">
+					<video src="{% static '/home/home1.mp4' %}" type="video/mp4" autoplay loop muted></video>
+					<div class="text-overlay" >Where Creativity Meets Impact</div>
+				</div>
+			-->
         </div>
         <button class="nav-button prev"><i class="fas fa-arrow-left"></i></button>
         <button class="nav-button next"><i class="fas fa-arrow-right"></i></button>
@@ -543,15 +562,9 @@ body {
 			
 						<ul class="tabs">
 							<li class="tab active" data-filter="all">All</li>
-							<li class="tab" data-filter="byd">Documentary</li>
-							<li class="tab" data-filter="tvc">TVC</li>
-							<li class="tab" data-filter="appdev">Video production</li>
-							<li class="tab" data-filter="branding">Branding</li>
-							<li class="tab" data-filter="webdev">Web Development</li>
-							<li class="tab" data-filter="system">System Solution</li>
-							<li class="tab" data-filter="content">Digital/Social Media Marketing</li>
-							<li class="tab" data-filter="graphics">BTL</li>
-							<li class="tab" data-filter="videoedit">Marketing Campaign</li>
+							{% for category in categories %}
+							<li class="tab" data-filter="category-{{ category.id }}">{{ category.name }}</li>
+							{% endfor %}
 						</ul>
 			
 						<div class="icon icon-right">
@@ -561,60 +574,17 @@ body {
 				
 			
 				<div class="einstein-gallery">
-					<!-- Video Items -->
-					<div class="gallery-item">
-						<div class="tesla-item" data-category="appdev">
-							<video src="{% static '/home/home1.mp4' %}" type="video/mp4"></video>
+					{% for work in works %}
+					<div class="gallery-item" data-category="category-{{ work.category.id }}">
+						<div class="tesla-item">
+							{% if work.type == 'video' %}
+							<video src="{{ work.video.url }}" type="video/mp4"></video>
 							<div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag" id="txt1">Video production</div>
-						</div>
-						
-					</div>
-					
-					<div class="gallery-item">
-						<div class="tesla-item" data-category="advertising">
-							<video src="{% static '/home/home2.mp4' %}" type="video/mp4"></video>
-						<div class="curie-btn"><i class="fas fa-play"></i></div>						
-							<div class="darwin-tag" id="txt1">Tseday Bank</div>
-						</div>
-						
-					</div>
-					<div class="gallery-item">
-						    <div class="tesla-item" data-category="advertising">
-								<video src="{% static '/home/home3.mp4' %}" type="video/mp4"></video>
-							  <div class="curie-btn"><i class="fas fa-play"></i></div>
-							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
-							
-						</div>
-						
-					</div>
-					
-					<div class="gallery-item">
-						<div class="tesla-item" data-category="branding">
-							<img src="{% static '/videos/bz6.jpg' %}" alt="Web Dev Image">
-							<div class="curie-btn"><i class="fas fa-image"></i></div>
-							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
+							{% endif %}
+							<div class="darwin-tag" id="txt1">{{ work.title }}</div>
 						</div>
 					</div>
-					<div class="gallery-item">
-						<div class="tesla-item" data-category="branding">
-							<img src="{% static '/videos/bz6.jpg' %}" alt="Web Dev Image">
-							<div class="curie-btn"><i class="fas fa-image"></i></div>
-							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
-						</div>
-					</div>
-					<div class="gallery-item">
-						<div class="tesla-item" data-category="branding">
-							<img src="{% static '/videos/bz6.jpg' %}" alt="Web Dev Image">
-							<div class="curie-btn"><i class="fas fa-image"></i></div>
-							<div class="darwin-tag" id="txt1">Amco Interior Design</div>
-						</div>
-					</div>
-					
-
-
-					
-					
+					{% endfor %}
 				</div>
 			
 			
