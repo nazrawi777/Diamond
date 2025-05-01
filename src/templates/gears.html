@@ -397,23 +397,23 @@ div.gallery .item:hover img{
       <header class="header header-sticky">
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 					<div class="container-fluid main-header position-relative">
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="{% url 'index' %}">
 							<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
 								<li class="dropdown nav-item">
 									<a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">About<i class="fa-solid fa-chevron-down"></i
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li class="active"><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+										<li><a class="dropdown-item" href="{% url 'about_us' %}"><span>About us</span></a></li>
+											    <li><a class="dropdown-item" href="{% url 'blog' %}"><span>blog</span></a></li>
+												<li class="active"><a class="dropdown-item" href="{% url 'gears' %}"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
 							</ul>
 						</div>
 						<div class="action-group">
@@ -502,19 +502,19 @@ div.gallery .item:hover img{
 					<div class="body-inner h-100 pe-3 lenis-scroll-disable">
 						<nav class="navbar h-100">
 							 <ul class="navbar-nav h-100">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
 								<li class="dropdown nav-item active">
 									<a class="nav-link"  data-bs-toggle="dropdown">About<i class="fa-solid fa-chevron-down"></i
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a href="about-us.html"><span>About us</span></a></li>
-											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li class="active"><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+										<li><a href="{% url 'about_us' %}"><span>About us</span></a></li>
+											    <li><a class="dropdown-item" href="{% url 'blog' %}"><span>blog</span></a></li>
+												<li class="active"><a class="dropdown-item" href="{% url 'gears' %}"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
 								
-								<li class="nav-item"><a href="contact-us.html" >Contact</a></li>
+								<li class="nav-item"><a href="{% url 'contact_us' %}" >Contact</a></li>
 						</nav>
 					</div>
 				</div>
@@ -593,15 +593,24 @@ div.gallery .item:hover img{
         
 		<div class="content-wrapper" style="position: relative; top: 120px; " id="cntb">
 			<div class="button1-group">
-				<button class="button1 active" data-filter="*">All</button>
+        {% for category in gear_category %}
+        <button class="button1" data-filter=".{{ category.category }}">{{ category.name }}</button>
+        {% endfor %}
+				<!-- <button class="button1 active" data-filter="*">All</button>
 				<button class="button1" data-filter=".design">Camera</button>
 				<button class="button1" data-filter=".development">Light</button>
         <button class="button1" data-filter=".software">Software tool</button>
-        <button class="button1" data-filter=".logo">audio</button>
+        <button class="button1" data-filter=".logo">audio</button> -->
 			</div>
 	
 			<div class="gallery">
-				<div class="item design">
+        {% for gear in gears %}
+        <div class="item {{ gear.category.name|lower }}">
+          <img src="{{ gear.image.url }}" alt="{{ gear.name }}">
+          <div class="curie-btn1"><i class="fas fa-image"></i></div>
+        </div>
+        {% endfor %}
+				<!-- <div class="item design">
 					<img src="{% static '/images/blog/IMG_20250408_205057_766.jpg' %}">
 					<div class="curie-btn1"><i class="fas fa-image"></i></div>
 				</div>
@@ -694,7 +703,7 @@ div.gallery .item:hover img{
         <div class="item logo">
 					<img src="{% static '/images/blog/25278.jpg' %}">
 					<div class="curie-btn1"><i class="fas fa-image"></i></div>
-				</div>
+				</div> -->
         
 			</div>
 		</div>
@@ -713,7 +722,7 @@ div.gallery .item:hover img{
 					<div class="container">
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
-								<a class="footer-logo" href="index.html">
+								<a class="footer-logo" href="{% url 'index' %}">
 									<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 								</a>
 							</div>
@@ -738,12 +747,12 @@ div.gallery .item:hover img{
 								<div class="widget-menu">
 									<h5 class="widget-title">Quick Links</h5>
 									<ul class="list-unstyled">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="blog.html">blog</a></li>
+										<li><a href="{% url 'index' %}">Home</a></li>
+										<li><a href="{% url 'about_us' %}">About Us</a></li>
+										<li><a href="{% url 'blog' %}">blog</a></li>
 										
-										<li><a href="service.html">Services</a></li>
-										<li><a href="contact-us.html">Contact Us</a></li>
+										<li><a href="{% url 'service' %}">Services</a></li>
+										<li><a href="{% url 'contact_us' %}">Contact Us</a></li>
 									</ul>
 								</div>
 							</div>

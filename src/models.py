@@ -29,10 +29,23 @@ class Hero(models.Model):
             raise ValidationError("Image should not be uploaded for type 'video'.")
 
     def __str__(self):
-        return self.title
-    
+        return self.title          
 
+class BlogCategory(models.Model):
+    name = models.CharField(max_length=255)
+    position = models.PositiveIntegerField(default=0)  # Field for custom ordering
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name   
+    
 class Blog(models.Model):
+    category = models.ForeignKey(
+        BlogCategory,
+        on_delete=models.CASCADE,
+        related_name='blogs',
+        default=1  # Set a default category ID
+    )
     title = models.CharField(max_length=255)
     content = models.TextField()
     image = models.ImageField(upload_to='blog/', blank=True, null=True)

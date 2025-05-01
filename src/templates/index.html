@@ -208,23 +208,23 @@ body {
 			<header class="header header-sticky">
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 					<div class="container-fluid main-header position-relative">
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="{% url 'index' %}">
 							<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
-								<li class="nav-item active"><a class="nav-link" href="index.html" style="font-weight:300;">Home</a></li>
+								<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}" style="font-weight:300;">Home</a></li>
 								<li class="dropdown nav-item">
 									<a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown"    >About<i class="fa-solid fa-chevron-down"></i
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-									    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+										<li><a class="dropdown-item" href="{% url 'about_us' %}"><span>About us</span></a></li>
+									    <li><a class="dropdown-item" href="{% url 'blog' %}"><span>blog</span></a></li>
+												<li><a class="dropdown-item" href="{% url 'gears' %}"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
 							</ul>
 						</div>
 						<div class="action-group">
@@ -314,15 +314,15 @@ body {
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-												<li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>	
+										<li><a class="dropdown-item" href="{% url 'about_us' %}"><span>About us</span></a></li>
+											    <li><a class="dropdown-item" href="{% url 'blog' %}"><span>blog</span></a></li>
+												<li><a class="dropdown-item" href="{% url 'gears' %}"><span>Our Gears</span></a></li>	
 					
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
 								
-								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -488,7 +488,9 @@ body {
 						<div class="row justify-content-between">
 							<div class="col-lg-5" id="bcbcbc">
 								<div class="about-img ps-xl-5">
-									<img class="img-fluid radius-20 wow pgsRightToLeft" src="{% static 'images/team/01.png' %}" alt="#">
+									{% if about_data %}
+									<img class="img-fluid radius-20 wow pgsRightToLeft" src="{{ about_data.image.url }}" alt="{{ about_data.title }}">
+									{% endif %}
 								</div>
 							</div>
 							<div class="col-lg-7 mb-5 mb-lg-0">
@@ -505,7 +507,7 @@ body {
 													providing the best talent, creativity, technology and digital innovation to our clients.
 													
 													</p>
-												<a class="btn" href="about-us.html" >
+												<a class="btn" href="{% url 'about_us' %}" >
 													Let's Get Started
 													<svg fill="#ffffff" width="18px" height="18px" viewBox="0 0 32 32"><path d="M30.713 16.090c0.009-0.041 0.014-0.087 0.014-0.135 0-0.004-0-0.008-0-0.011v0.001c-0.006-0.184-0.079-0.35-0.196-0.475l0 0-10-10c-0.136-0.135-0.323-0.218-0.529-0.218-0.415 0-0.751 0.336-0.751 0.751 0 0.206 0.083 0.393 0.218 0.528l8.721 8.72h-26.189c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h26.188l-8.72 8.719c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.395-0.084 0.531-0.22l10-10.001c0.025-0.026 0.017-0.064 0.038-0.093 0.040-0.052 0.098-0.088 0.124-0.151 0.013-0.050 0.020-0.108 0.020-0.167 0-0.011-0-0.021-0.001-0.032l0 0.002z"/>
 													</svg>
@@ -612,10 +614,14 @@ body {
 									
 									<div class="client-logos">
 										<div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-lg-items="4" data-md-items="4" data-sm-items="4" data-xs-items="2" data-xx-items="2" data-space="82" data-autoheight="true">
+										
+										    {% for client in client_logs %}
 											<div class="item">
-												<img class="img-fluid" src="{% static '/images/client-logo/6cce6e47d56a6bb625af4dd1df12e866.jpg' %}" alt="" style="width: 300px !important;">
+												<img class="img-fluid" src="{{ client.logo.url}}" alt="{{client.name}}" style="width: 300px !important;">
 											</div>
-											<div class="item">
+											{% endfor %}
+
+											<!-- <div class="item">
 												<img class="img-fluid" src="{% static '/images/client-logo/Anbessa-Lion-International-Bank-Ethiopia-Profit-Logo.jpg' %}" alt="">
 											</div>
 											<div class="item">
@@ -647,7 +653,7 @@ body {
 											</div>
 											<div class="item">
 												<img class="img-fluid" src="{% static '/images/client-logo/vvv.png' %}" alt="">
-											</div>
+											</div> -->
 
 										</div>
 									</div>
@@ -722,7 +728,7 @@ body {
 					<div class="container">
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
-								<a class="footer-logo" href="index.html">
+								<a class="footer-logo" href="{% url 'index' %}">
 									<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 								</a>
 							</div>
@@ -747,12 +753,12 @@ body {
 								<div class="widget-menu">
 									<h5 class="widget-title">Quick Links</h5>
 									<ul class="list-unstyled">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="blog.html">blog</a></li>
+										<li><a href="{% url 'index' %}">Home</a></li>
+										<li><a href="{% url 'about_us' %}">About Us</a></li>
+										<li><a href="{% url 'blog' %}">blog</a></li>
 										
-										<li><a href="service.html">Services</a></li>
-										<li><a href="contact-us.html">Contact Us</a></li>
+										<li><a href="{% url 'service' %}">Services</a></li>
+										<li><a href="{% url 'contact_us' %}">Contact Us</a></li>
 									</ul>
 								</div>
 							</div>

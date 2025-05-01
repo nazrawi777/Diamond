@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Hero, Blog, About, Category, Work, ClientLogo, TeamMember, Testimonial, GearCategory, Gear
+from .models import Hero, Blog, About, Category, Work, ClientLogo, TeamMember, Testimonial, GearCategory, Gear, BlogCategory
 
 # Register your models here.
 @admin.register(Hero)
@@ -8,10 +8,18 @@ class HeroAdmin(admin.ModelAdmin):
     list_filter = ('type',)
     search_fields = ('title', 'subtitle')
 
+@admin.register(BlogCategory)
+class BlogCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'position', 'created_at')
+    search_fields = ('name',)
+    ordering = ('position',)
+
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_at')
+    list_display = ('title', 'category', 'created_at')  # Displays the category field
     search_fields = ('title', 'content')
+    list_filter = ('category',)  # Filters by category
+    autocomplete_fields = ('category',)  # Enables autocomplete for category selection
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):

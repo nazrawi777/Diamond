@@ -96,29 +96,29 @@
       <header class="header header-sticky">
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 					<div class="container-fluid main-header position-relative">
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="{% url 'index' %}">
 							<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 						</a>
 						<div class="navbar-collapse collapse"> 
 							<ul class="nav navbar-nav">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
 								<li class="dropdown nav-item active">
 									<a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">About<i class="fa-solid fa-chevron-down"></i
 									></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li class="active"><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>
-                          <li><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>			
+										<li><a class="dropdown-item" href="{% url 'about_us' %}"><span>About us</span></a></li>
+											    <li class="active"><a class="dropdown-item" href="{% url 'blog' %}"><span>blog</span></a></li>
+                          <li><a class="dropdown-item" href="{% url 'gears' %}"><span>Our Gears</span></a></li>			
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
 
 								
 
 								
 
 								
-								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
 							</ul>
 						</div>
 						<div class="action-group">
@@ -207,18 +207,18 @@
 					<div class="body-inner h-100 pe-3 lenis-scroll-disable">
 						<nav class="navbar h-100">
 							 <ul class="navbar-nav h-100">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
 								<li class="nav-item dropdown active">
 									<a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="about-us.html"><span>About us</span></a></li>
-											    <li class="active"><a class="dropdown-item" href="blog.html"><span>blog</span></a></li>	
-                          <li ><a class="dropdown-item" href="gears.html"><span>Our Gears</span></a></li>		
+										<li><a class="dropdown-item" href="{% url 'about_us' %}"><span>About us</span></a></li>
+											    <li class="active"><a class="dropdown-item" href="{% url 'blog' %}"><span>blog</span></a></li>	
+                          <li ><a class="dropdown-item" href="{% url 'gears' %}"><span>Our Gears</span></a></li>		
 									</ul>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
 		
-								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -366,92 +366,43 @@
     top: 0px;
   }">
 
-          <!--=================================
+          <!--================================= -->
           Blog -->
           <section class="space-ptb" id="bnff1">
             <div class="container" id="bnff">
               <div class="row" >
                 <div class="col-lg-8 col-xl-9" id="bnff1">
                   <div class="blogs blog-standard grid-wrapper grid-xl-1 grid-lg-1 grid-md-1 grid-sm-1">
+                   
+                  {% for blog in blogs %}
+
                     <div class="blog-post wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                       <div class="blog-post-img">
-                        <img class="img-fluid" src="{% static 'images/blog/blog-standard/01.jpg' %}" alt="">
+                        <img class="img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}">
                       </div>
                       <div class="blog-post-info">
                         <h2 class="post-title">
-                          <a href="blog-single.html">How to Integrate Marketing Tools into Your Design</a>
+                          <a href="blog-single.html">{{ blog.title }}</a>
                         </h2>
-                        <p class="description">Welcome to our blog, where knowledge meets inspiration! Dive into a world of insightful articles, thought-provoking discussions, and practical tips curated just for you. Whether you're seeking expert advice, exploring new ideas</p>
+                        <p class="description">{{ blog.content }}</p>
                       </div>
                       
                     </div>
 
-                    <div class="blog-post wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                      <div class="blog-post-img">
-                        <img class="img-fluid" src="{% static 'images/blog/blog-standard/02.jpg' %}" alt="">
-                      </div>
-                      <div class="blog-post-info">
-                        <h2 class="post-title">
-                          <a href="blog-single.html">2024 Top SEO Features for Marketing Designs</a>
-                        </h2>
-                        <p class="description">Simply looking for a dose of inspiration, our blog has something for everyone. Join us on this journey as we delve into diverse topics, spark meaningful conversations, and empower you to discover new perspectives.</p>
-                      </div>
+                  {% endfor %}
+
+                  <div class="blog-section">
+                    {% for blog in blogs %}
+                    <div class="blog-post">
+                        <h2>{{ blog.title }}</h2>
+                        <p><strong>Category:</strong> {{ blog.category.name }}</p>
+                        <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                        <p>{{ blog.content }}</p>
+                        <p><em>Published on {{ blog.created_at }}</em></p>
                     </div>
+                    {% endfor %}
+                  </div>
 
-                    <div class="blog-post wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                      <div class="blog-post-img">
-                        <img class="img-fluid" src="{% static 'images/blog/blog-standard/03.jpg' %}" alt="">
-                      </div>
-                      <div class="blog-post-info">
-                        <h2 class="post-title">
-                          <a href="blog-single.html">How can marketing help your business better?</a>
-                        </h2>
-                        <p class="description">Insights and Ideas Blog Hub The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals? Make the plan as detailed as possible. Try to visualize and then plan for, every possible 
-
-
-                        </p>
-                      </div>
-                      
-                    </div>
-
-                    <div class="blog-post wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                      <div class="blog-post-img">
-                        <img class="img-fluid" src="{% static 'images/blog/blog-standard/04.jpg' %}" alt="">
-                      </div>
-                      <div class="blog-post-info">
-                        <h2 class="post-title">
-                          <a href="blog-single.html">Innovative Business Marketing Designs for Success</a>
-                        </h2>
-                        <p class="description">Insights and Ideas Blog Hub The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals? Make the plan as detailed as possible. Try to visualize and then plan for, every possible </p>
-                      </div>
-                      
-                    </div>
-
-                    <div class="blog-post wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                      <div class="blog-post-img">
-                        <img class="img-fluid" src="{% static 'images/blog/blog-standard/05.jpg' %}" alt="">
-                      </div>
-                      <div class="blog-post-info">
-                        <h2 class="post-title">
-                          <a href="blog-single.html">Insights Marketing and Creative Ideas Blog Hub</a>
-                        </h2>
-                        <p class="description">Insights and Ideas Blog Hub The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals? Make the plan as detailed as possible. Try to visualize and then plan for, every possible </p>
-                      </div>
-                      
-                    </div>
-
-                    <div class="blog-post wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                      <div class="blog-post-img">
-                        <img class="img-fluid" src="{% static 'images/blog/blog-standard/06.jpg' %}" alt="">
-                      </div>
-                      <div class="blog-post-info">
-                        <h2 class="post-title">
-                          <a href="blog-single.html">Boost Marketing with Effective Design Integration</a>
-                        </h2>
-                        <p class="description">Insights and Ideas Blog Hub The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals? Make the plan as detailed as possible. Try to visualize and then plan for, every possible </p>
-                      </div>
-                      
-                    </div>
                   </div>
                 </div>
 
@@ -462,7 +413,15 @@
                     <div class="widget widget-categories wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                       <h5 class="widget-title" id="clr">Categories</h5>
                       <ul class="categories-list">
+                      
+                        {% for categorie in blog_category %}
                         <li>
+                          <a href="blog.html#" id="clr1">{{ categorie.name }}</a>
+                          <span class="categories-number"></span>
+                        </li>
+                        {% endfor %}
+
+                        <!-- <li>
                           <a href="blog.html#"id="clr1">Business</a>
                           <span class="categories-number"></span>
                         </li>
@@ -481,7 +440,7 @@
                         <li>
                           <a href="blog.html#"id="clr1">Wordpress</a>
                           <span class="categories-number"></span>
-                        </li>
+                        </li> -->
                       </ul>
                     </div>
 
@@ -521,7 +480,7 @@
 					<div class="container">
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
-								<a class="footer-logo" href="index.html">
+								<a class="footer-logo" href="{% url 'index' %}">
 									<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="logo">
 								</a>
 							</div>
@@ -546,12 +505,12 @@
 								<div class="widget-menu">
 									<h5 class="widget-title">Quick Links</h5>
 									<ul class="list-unstyled">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about-us.html">About Us</a></li>
-										<li><a href="blog.html">blog</a></li>
+										<li><a href="{% url 'index' %}">Home</a></li>
+										<li><a href="{% url 'about_us' %}">About Us</a></li>
+										<li><a href="{% url 'blog' %}">blog</a></li>
 										
-										<li><a href="service.html">Services</a></li>
-										<li><a href="contact-us.html">Contact Us</a></li>
+										<li><a href="{% url 'service' %}">Services</a></li>
+										<li><a href="{% url 'contact_us' %}">Contact Us</a></li>
 									</ul>
 								</div>
 							</div>
