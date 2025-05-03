@@ -18,4 +18,10 @@ echo "Applying database migrations..."
 python manage.py makemigrations
 python manage.py migrate
 
+# Step 4: Verify database tables (for debugging)
+echo "Verifying database tables..."
+python manage.py dbshell <<EOF
+.tables
+EOF
+
 echo "Deployment completed successfully on Render!"
