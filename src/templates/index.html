@@ -8,7 +8,7 @@
 		<meta name="description" content="Dimond - Digital Marketing">
 		<meta name="author" content="potenzaglobalsolutions.com">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Dimond - Digital Marketing</title>initial-scale=1, shrink-to-fit=no">
+		<title>Dimond - Digital Marketing</title>
 <meta name="keywords" content="
     SEO Services in Ethiopia, 
     Social Media Marketing in Addis Ababa, 
@@ -1127,7 +1127,7 @@ document.addEventListener("mouseup", stop);
 
         const filter = this.dataset.filter;
         document.querySelectorAll(".gallery-item").forEach(item => {
-            if (filter === "all" || item.querySelector(".tesla-item").dataset.category === filter) {
+            if (filter === "all" || item.dataset.category === filter) { // Correctly reference item.dataset.category
                 item.style.visibility = "visible";
                 item.style.opacity = "1";
                 item.style.transform = "scale(1)";

@@ -27,7 +27,8 @@ def gears_view(request):
     
 
 def contact_us_view(request):
-    return render(request, 'contact-us.html')  # Path remains the same
+    client_logs = ClientLogo.objects.all()
+    return render(request, 'contact-us.html',{'client_logs': client_logs})  # Path remains the same
 
 def blog_view(request):
     blogs = Blog.objects.select_related('category').all()  # Fetch blogs with their categories
@@ -37,5 +38,4 @@ def blog_view(request):
 def about_us_view(request):
     team_members = TeamMember.objects.all()
     testimonials = Testimonial.objects.all()
-    return render(request, 'about-us.html', { 'team_members':team_members , 'testimonials':testimonials})  # Path remains the same
-
+    return render(request, 'about-us.html', { 'team_members':team_members , 'testimonials':testimonials})  # Path remains the sam

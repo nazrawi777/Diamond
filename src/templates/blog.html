@@ -11,7 +11,6 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Dimond - Digital Marketing</title>
-    initial-scale=1, shrink-to-fit=no">
     <meta
       name="keywords"
       content="
@@ -604,6 +603,7 @@
                       class="blog-post wow fadeInUp"
                       data-wow-delay="0.1s"
                       data-wow-duration="1500ms"
+                      data-category="category-{{ blog.category.id }}"
                     >
 
                     <div class="blog-post-img">
@@ -640,10 +640,12 @@
                     >
                       <h5 class="widget-title" id="clr">Categories</h5>
                       <ul class="categories-list">
+                        <li>
+                          <a href="javascript:void(0);" class="category-filter active" data-filter="all" id="clr1">All</a>
+                        </li>
                         {% for categorie in blog_category %}
                         <li>
-                          <a href="blog.html#" id="clr1"
-                            >{{ categorie.name }}</a>
+                          <a href="javascript:void(0);" class="category-filter" data-filter="category-{{ categorie.id }}" id="clr1">{{ categorie.name }}</a>
                           <span class="categories-number"></span>
                         </li>
                         {% endfor %}
@@ -935,6 +937,33 @@
     <script src="{% static 'js/lenis.min.js' %}"></script>
     <!-- Template Scripts (Do not remove)-->
     <script src="{% static 'js/custom.js' %}"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filters = document.querySelectorAll(".category-filter");
+        const blogPosts = document.querySelectorAll(".blog-post");
+
+        filters.forEach(filter => {
+          filter.addEventListener("click", function () {
+            // Remove active class from all filters
+            filters.forEach(f => f.classList.remove("active"));
+            // Add active class to the clicked filter
+            this.classList.add("active");
+
+            const filterValue = this.dataset.filter;
+
+            blogPosts.forEach(post => {
+              const postCategory = post.dataset.category;
+
+              if (filterValue === "all" || postCategory === filterValue) {
+                post.style.display = "block"; // Show matching posts
+              } else {
+                post.style.display = "none"; // Hide non-matching posts
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
   <script>

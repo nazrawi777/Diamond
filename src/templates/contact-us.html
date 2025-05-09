@@ -7,8 +7,8 @@
 		<meta name="description" content="Dimond - Digital Marketing">
 		<meta name="author" content="potenzaglobalsolutions.com">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Dimond - Digital Marketing</title>initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="
+		<title>Dimond - Digital Marketing</title>
+    <meta name="keywords" content="
     SEO Services in Ethiopia, 
     Social Media Marketing in Addis Ababa, 
     Website Design and Development in Ethiopia, 
@@ -398,46 +398,12 @@ body {
                     <span class="trusted-client wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" style="text-align: center;">Trusted by Top 20+ Company</span>
                     <div class="client-logos wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms">
                       <div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="5" data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="3" data-xx-items="2" data-space="60" data-autoheight="true">
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/6cce6e47d56a6bb625af4dd1df12e866.jpg' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/Anbessa-Lion-International-Bank-Ethiopia-Profit-Logo.jpg' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/Berhan-bank.jpg' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/ddddd.png' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/download (1).png' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/download.jpg' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/errrrrrrrrrrrr.jpg' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/images.jpg' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/images.png' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/qwer.png' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/reinholt-legends-logo-300x174.png' %}" alt="">
-                          </div>
-                          <div class="item">
-                            <img class="img-fluid" src="{% static '/images/client-logo/vvv.png' %}" alt="">
-                          </div>
-    
-                        
 
-
+                        {% for client in client_logs %}
+                        <div class="item">
+                          <img class="img-fluid" src="{{ client.logo.url}}" alt="{{client.name}}" style="width: 300px !important;">
+                        </div>
+                        {% endfor %}
                       </div>
                     </div>
                   </div>
