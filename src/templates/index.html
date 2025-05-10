@@ -104,11 +104,11 @@ body {
 			 }}
         .slide video { width: 100%; height: 100%; object-fit: cover; 
 			@media (max-width: 768px) {
-				height: 100%;
+				height: 300px;
 			 }}
 			 .slide img { width: 100%; height: 100%; object-fit: cover; 
 			@media (max-width: 768px) {
-				height: 90%;
+				height: 300px;
 			 }}
         .text-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-align: center; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); }
         .nav-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: #0a3d62; color: white; border: none; padding: 10px 15px; font-size: 24px; cursor: pointer; border-radius: 50%; }
@@ -186,6 +186,9 @@ body {
             .yt-nav-button { padding: 8px 12px; font-size: 16px; }
             .yt-prev { left: -0px; }
             .yt-next { right: -0px; }
+#xxxxgd{
+			max-width :95% !important;
+	}
         }
         
 
@@ -461,13 +464,14 @@ body {
         <button class="nav-button next"><i class="fas fa-arrow-right"></i></button>
 
         <!-- Social Media Icons -->
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
+       <div class="social-icons">
+            <a href="https://www.instagram.com/diamond_production2?igsh=MWRvMTJjbnpwbzI2dQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/61552492615394/posts/pfbid02N4RBapGdyrHvt1SqfZZ4i7GSW8jirYE4co5EhRPCAw55aK4pwJasvqe6ysfevtsil/?sfnsn=wa" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@diamond_production22?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/diamond-production-b70a63295/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@DiamondProduction-kc7hb" target="_blank"><i class="fab fa-youtube"></i></a>
+			<a href="https://t.me/DPcasting" target="_blank"><i class="fab fa-telegram"></i></a>
+       </div>
     </div>
 
 	
@@ -489,7 +493,7 @@ body {
 							<div class="col-lg-5" id="bcbcbc">
 								<div class="about-img ps-xl-5">
 									{% if about_data %}
-									<img class="img-fluid radius-20 wow pgsRightToLeft" src="{{ about_data.image.url }}" alt="{{ about_data.title }}">
+									<img class="img-fluid radius-20 wow pgsRightToLeft" src="{{ about_data.image.url }}" alt="{{ about_data.title }}" id="xxxxgd">
 									{% endif %}
 								</div>
 							</div>
