@@ -1334,9 +1334,8 @@ const closeChatbot = document.querySelector("#close-chatbot");
 
 const API_KEY = "AIzaSyC6iNnr4SWE89LVc0oma6_OLdHA2BXuGlA";
 
-// Update the model ID to your specific model version
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro-preview-05-06:generateContent?key=${API_KEY}`;
-
+// Update the model ID to use the Gemini 2.5 Pro Experimental model
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro-exp-03-25:generateContent?key=${API_KEY}`;
 const userData = {
   message: null,
   file: {
