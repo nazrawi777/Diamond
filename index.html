@@ -1360,23 +1360,12 @@ const createMessageElement = (content, ...classes) => {
 const generateBotResponse = async (incomingMessageDiv) => {
   const messageElement = incomingMessageDiv.querySelector(".message-text");
 
-  // Add user message to chat history
-  chatHistory.push({
-    role: "user",
-    parts: [
-      { text: userData.message },
-      ...(userData.file.data ? [{ inline_data: userData.file }] : []),
-    ],
-  });
-
-  // API request body with updated system instruction
-  const requestBody = {
-    contents: chatHistory,
-    system_instruction: {
+  // Add system instruction to chat history (only once, at the start)
+  if (chatHistory.length === 0) {
+    chatHistory.push({
       role: "system",
-      parts: [
-        {
-          text: `You are a chatbot for Diamond Marketing and Communication PLC, a marketing company founded 2 years ago in Addis Ababa, Ethiopia, located at Meskel Flower Road, Jems Building 9th Floor. The company offers diversified services in Advertising, Branding, Communication, Media Placement & Monitoring, Digital Marketing, Campaign Management, Event Management, Media Production, PR, and related works. You have access to the following FAQ document for Diamond Marketing and Communication PLC:
+      parts: [{
+        text: `You are a chatbot for Diamond Marketing and Communication PLC, a marketing company founded 2 years ago in Addis Ababa, Ethiopia, located at Meskel Flower Road, Jems Building 9th Floor. The company offers diversified services in Advertising, Branding, Communication, Media Placement & Monitoring, Digital Marketing, Campaign Management, Event Management, Media Production, PR, and related works. You have access to the following FAQ document for Diamond Marketing and Communication PLC:
 
 FAQ Content:
 
@@ -1423,15 +1412,28 @@ FAQ Content:
     We offer media relations, press release distribution, crisis management, corporate communications, and more.
 
 15. Will you provide printing & digital outdoor screen advert?
-    Yes, we deliver professional printing services and digital outdoor advertising on LED screens.
+    We deliver professional printing services and digital outdoor advertising on LED screens.
 
 Instructions:
-Answer all user questions by referencing the FAQ content above as the primary source of information. For questions directly answered in the FAQ, provide accurate and concise responses based on the FAQ text. For questions that are related to the company or its services but not explicitly answered in the FAQ, use the FAQ as a foundation and provide a creative, smart, and engaging response that adds value and is contextually relevant to the user's question. Incorporate insights or suggestions that align with the company’s services to enhance the response, while ensuring the answer remains grounded in the FAQ content. If the question is completely unrelated or beyond the scope of the FAQ, politely inform the user that the information is not available and offer to assist with something else related to Diamond Marketing and Communication PLC.
+Answer all user questions by referencing the FAQ content above as the primary source of information. For questions directly answered in the FAQ, provide accurate and concise responses based on the FAQ text. For questions that are related to the company or its services but not explicitly answered in the FAQ, use the FAQ as a foundation and provide a creative, smart, and engaging response that adds value and is contextually relevant to the user's question. Incorporate insights or suggestions that align with the company’s services to enhance the response, while ensuring the answer remains grounded in the FAQ content. If the user uploads an image and asks a related question (e.g., "Can you use this for an ad?"), analyze the image and provide a creative response based on the FAQ’s advertising or branding services, suggesting how the image could be incorporated into a campaign or design. If the question is completely unrelated or beyond the scope of the FAQ, politely inform the user that the information is not available and offer to assist with something else related to Diamond Marketing and Communication PLC.
 
-You are a friendly and professional chatbot for Diamond Marketing and Communication PLC. Engage with users in a conversational, polite, and helpful tone. Start each response with a warm introduction, introducing yourself as the chatbot for Diamond Marketing and Communication PLC, and mentioning that we are a marketing company based in Addis Ababa, Ethiopia. Offer to assist with questions about the company’s services, history, or operations. Respond to user queries in a clear and concise manner, ensuring the tone is professional yet approachable. To make responses more fascinating and engaging, add relevant emojis that match the context of the answer (e.g., 📣 for advertising, 🎥 for media production, 📧 for contact information, 🚀 for campaigns, 💡 for ideas/strategies, 😊 for friendly tone). Use emojis sparingly to enhance the tone without overwhelming the response. If the user asks a question that requires clarification, ask follow-up questions politely to better understand their needs. Always aim to provide helpful, relevant, and creative information based on the FAQ content.`
-        }
-      ]
-    },
+You are a friendly and professional chatbot for Diamond Marketing and Communication PLC. Engage with users in a conversational, polite, and helpful tone. For the first response in a conversation or after a significant time gap, start with a warm introduction, introducing yourself as the chatbot for Diamond Marketing and Communication PLC, and mentioning that we are a marketing company based in Addis Ababa, Ethiopia. For subsequent responses, omit the introduction unless the context requires re-establishing the tone. Offer to assist with questions about the company’s services, history, or operations. Respond to user queries in a clear and concise manner, ensuring the tone is professional yet approachable. To make responses more fascinating and engaging, add relevant emojis that match the context of the answer (e.g., 📣 for advertising, 🎥 for media production, 📧 for contact information, 🚀 for campaigns, 💡 for ideas/strategies, 😊 for friendly tone). Use emojis sparingly to enhance the tone without overwhelming the response. If the user asks a question that requires clarification, ask follow-up questions politely to better understand their needs. Always aim to provide helpful, relevant, and creative information based on the FAQ content.`
+      }]
+    });
+  }
+
+  // Add user message to chat history
+  chatHistory.push({
+    role: "user",
+    parts: [
+      { text: userData.message },
+      ...(userData.file.data ? [{ inline_data: userData.file }] : []),
+    ],
+  });
+
+  // API request body
+  const requestBody = {
+    contents: chatHistory,
     generationConfig: {
       responseMimeType: "text/plain",
     },
@@ -1448,13 +1450,21 @@ You are a friendly and professional chatbot for Diamond Marketing and Communicat
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    // Handle streaming response
+    // Handle streaming response with batched DOM updates
     const reader = response.body.getReader();
     let botResponseText = "";
+    const updateInterval = setInterval(() => {
+      messageElement.innerText = botResponseText;
+      chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
+    }, 100);
 
     while (true) {
       const { done, value } = await reader.read();
-      if (done) break;
+      if (done) {
+        clearInterval(updateInterval);
+        messageElement.innerText = botResponseText;
+        break;
+      }
 
       const chunk = new TextDecoder().decode(value);
       const lines = chunk.split("\n").filter((line) => line.trim());
@@ -1465,14 +1475,11 @@ You are a friendly and professional chatbot for Diamond Marketing and Communicat
           if (parsed.candidates && parsed.candidates[0].content.parts[0].text) {
             const text = parsed.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
             botResponseText += text;
-            messageElement.innerText = botResponseText;
           }
         } catch (error) {
           console.error("Error parsing chunk:", error);
         }
       }
-
-      chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
     }
 
     // Add final bot response to chat history
