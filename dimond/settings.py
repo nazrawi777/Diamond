@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure--hf%d%3rz+fani(g_w_p3#v)n_*-eem+!g!j57x13f6#&oh+me
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['diamondmarketinget.com','www.diamondmarketinget.com']
 
 
 # Application definition
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'src', 
+    'django.contrib.sitemaps',
+    
 ]
 
 MIDDLEWARE = [
@@ -133,13 +135,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'src', 'static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory to collect static files during deployment
+STATIC_ROOT = "/home/diamoniu/public_html/static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/media/'  # URL to access media files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory to store media files
-ALLOWED_HOSTS = ['*']
+MEDIA_URL = "/media/"  # URL to access media files
+MEDIA_ROOT = "/home/diamoniu/public_html/media"
+ 
