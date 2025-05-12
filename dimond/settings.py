@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--hf%d%3rz+fani(g_w_p3#v)n_*-eem+!g!j57x13f6#&oh+me'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG', 'False')
 
 ALLOWED_HOSTS = ['diamondmarketinget.com','www.diamondmarketinget.com']
 
