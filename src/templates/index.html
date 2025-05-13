@@ -705,8 +705,10 @@ body {
 						<div class="tesla-item">
 							{% if work.type == 'video' %}
 							<video src="{{ work.video.url }}" type="video/mp4"></video>
-							<div class="curie-btn"><i class="fas fa-play"></i></div>
+							{% elif work.type == 'image' %}
+							<img src="{{ work.image.url }}" alt="{{ work.category.name }}">
 							{% endif %}
+							<div class="curie-btn"><i class="fas fa-play"></i></div>
 							<div class="darwin-tag" id="txt1">{{ work.title }}</div>
 						</div>
 					</div>
