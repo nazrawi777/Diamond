@@ -18,6 +18,11 @@ urlpatterns = [
     path('contact-us/', views.contact_us_view, name='contact_us'),
     path('blog/', views.blog_view, name='blog'),
     path('about-us/', views.about_us_view, name='about_us'),
+    
+    path('chat/', views.chat_view, name='chat_view'),
+    path('chat/toggle/', views.toggle_chatbot, name='toggle_chatbot'),
+    path('chat/clear/', views.clear_chat, name='clear_chat'),
+    
      path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ] 
 

@@ -1,0 +1,154 @@
+{% block extra_styles %}
+<style>
+#toast.toast {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    min-width: 250px !important;
+    max-width: 350px !important;
+    padding: 16px 20px !important;
+    background-color: #333 !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+    z-index: 10000 !important;
+    visibility: hidden !important;
+}
+#toast.toast.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+}
+#toast.toast.success {
+    background-color: #4caf50 !important;
+}
+#toast.toast.error {
+    background-color: #f44336 !important;
+}
+#toast .toast-icon::before {
+    font-family: 'Arial', sans-serif !important;
+    font-size: 20px !important;
+    display: inline-block !important;
+}
+#toast.success .toast-icon::before {
+    content: '✔' !important;
+}
+#toast.error .toast-icon::before {
+    content: '✖' !important;
+}
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes slideOut {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(20px) scale(0.95); }
+}
+#toast.toast.show {
+    animation: slideIn 0.3s ease forwards !important;
+}
+#toast.toast:not(.show) {
+    animation: slideOut 0.3s ease forwards !important;
+}
+@media (max-width: 600px) {
+    #toast.toast {
+        bottom: 25px !important;
+        right: 5px !important;
+        left: 250px !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        width: calc(100% - 30px) !important;
+        font-size: 14px !important;
+        paddingivariate: 12px 16px !important;
+        z-index: 9999999 !important;
+    }
+    #toast .toast-icon::before {
+        font-size: 18px !important;
+    }
+}
+</style>
+{% endblock %}
+
+{% load static %}
+<div class="chatbot-popup {% if show_chatbot %}show{% endif %}">
+    <!-- Chatbot Header -->
+    <div class="chat-header">
+        <div class="header-info">
+            <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/>
+            </svg>
+            <h2 class="logo-text">Chatbot</h2>
+        </div>
+        <a href="{% url 'toggle_chatbot' %}" id="close-chatbot" class="material-icons">keyboard_arrow_down</a>
+    </div>
+    <!-- Chatbot Body -->
+    <div class="chat-body">
+        {% for message in chat_history %}
+            <div class="message {% if message.role == 'user' %}user-message{% else %}bot-message{% endif %}">
+                {% if message.role == 'model' %}
+                    <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                        <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/>
+                    </svg>
+                {% endif %}
+                <div class="message-text">
+                    {% for part in message.parts %}
+                        {% if part.text %}
+                            {{ part.text|safe }}
+                        {% endif %}
+                        {% if part.inline_data %}
+                            <img class="attachment" src="data:{{ part.inline_data.mime_type }};base64,{{ part.inline_data.data }}" alt="Attachment">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% empty %}
+            <div class="message bot-message">
+                <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"/>
+                </svg>
+                <div class="message-text">Hey there<br />How can I help you today?</div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- Chatbot Footer -->
+    <div class="chat-footer">
+        <form method="post" enctype="multipart/form-data" class="chat-form">
+            {% csrf_token %}
+            {{ form.message.label_tag }}
+            {{ form.message }}
+            <div class="chat-controls">
+                <button type="button" id="emoji-picker" class="material-icons" disabled>sentiment_satisfied</button>
+                <div class="file-upload-wrapper">
+                    {{ form.file }}
+                    <img src="#" alt="Preview" style="display: none;" />
+                    <button type="button" id="file-upload" class="material-icons" onclick="document.getElementById('id_file').click();">attach_file</button>
+                    <button type="button" id="file-cancel" class="material-icons">close</button>
+                </div>
+                <button type="submit" id="send-message" class="material-icons">arrow_upward</button>
+            </div>
+            {% if form.errors %}
+                <div class="error">
+                    {% for field in form %}
+                        {{ field.errors }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+<!-- Toast Notification for Form Feedback -->
+{% if messages %}
+    {% for message in messages %}
+        <div id="toast" class="toast {% if message.tags == 'success' %}success{% else %}error{% endif %} show">
+            <span class="toast-icon"></span>
+            <span class="toast-message">{{ message }}</span>
+        </div>
+    {% endfor %}
+{% endif %}

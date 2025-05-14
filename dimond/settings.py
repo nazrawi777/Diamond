@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'src', 
     'django.contrib.sites', 
     'django.contrib.sitemaps',
+    'django.contrib.sessions',
+    'django.contrib.messages',
     
 ]
 
@@ -59,6 +61,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
 ]
 
 ROOT_URLCONF = 'dimond.urls'
@@ -77,7 +82,7 @@ TEMPLATES = [
         },
     },
 ]
-
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'your-api-key-here')
 WSGI_APPLICATION = 'dimond.wsgi.application'
 
 
