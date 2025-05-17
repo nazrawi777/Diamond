@@ -8721,11 +8721,11 @@ bottom: 3780px;}
 }
 #bnff{
   position: relative !important;
-  top: 10px !important;
+  top: -100px !important;
 }
 #bbt{
   position: relative;
-  top: 40px;
+  top: 70px;
   
 }
 .icon-box-item{
@@ -8753,13 +8753,13 @@ bottom: 3780px;}
     .sidebar .widget:not(:last-child) {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 3167px !important;}
+  bottom: 1930px !important;}
   }
   @media only screen and (min-width: 420px) and (max-width: 439px) {
     .sidebar .widget:not(:last-child) {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 3210px !important;}
+  bottom: 1910px !important;}
   }
   @media only screen and (min-width: 320px) and (max-width: 390px) {
   .contact-address {
@@ -8769,7 +8769,7 @@ bottom: 3780px;}
     .sidebar .widget:not(:last-child) {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 3275px !important;}
+  bottom: 1875px !important;}
   .site-footer .footer-logo img{
     height: 62px !important;
     width: 100px !important;
@@ -8783,7 +8783,8 @@ bottom: 3780px;}
     .sidebar .widget:not(:last-child) {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 3205px !important;}
+	    bottom: 1865px !important;}
+  
   .site-footer .footer-logo img{
     height: 62px !important;
     width: 100px !important;
@@ -8797,7 +8798,7 @@ bottom: 3780px;}
     .sidebar .widget:not(:last-child) {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 4550px !important;
+  bottom: 2450px !important;
 }
   }
   @media only screen and (min-width: 700px) and (max-width: 1024px) {
