@@ -532,8 +532,10 @@
 			</nav>
 		</header>
 		<button id="chatbot-toggler">
+			<a href="{% url 'toggle_chatbot' %}">
 			<span class="material-icons">mode_comment</span> <!-- Open Icon -->
 			<span class="material-icons">close</span> <!-- Close Icon -->
+		</a>
 		</button>
 		
 		
@@ -1486,7 +1488,8 @@
 			const data = await response.json();
 			if (!response.ok) throw new Error(data.error.message);
 			// Extract and display bot's response text
-			const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+			
+			//const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\/g, "$1").trim();
 			messageElement.innerText = apiResponseText;
 			// Add bot response to chat history
 			chatHistory.push({

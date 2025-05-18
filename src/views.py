@@ -5,8 +5,8 @@ import os
 from django.contrib import messages
 from django.conf import settings
 from .forms import ChatForm
-import google.generativeai as genai
-from google.generativeai.types import Content, Part, GenerateContentConfig
+from google import genai
+from google.genai import types # type: ignore
 
 
 def service_view(request):
@@ -63,7 +63,9 @@ def about_us_view(request):
 
 def chat_view(request):
     # Configure Gemini API
-    genai.configure(api_key=settings.GEMINI_API_KEY)
+    client = genai.Client(
+        api_key=settings.GEMINI_API_KEY,
+    )
 
     # Initialize chat history in session
     if 'chat_history' not in request.session:
@@ -116,17 +118,17 @@ def chat_view(request):
 
             # Convert session history to Gemini API format
             contents = [
-                Content(role=msg['role'], parts=[
-                    Part.from_text(part['text']) if 'text' in part else Part.from_data(part['inline_data']['data'], part['inline_data']['mime_type'])
+                types.Content(role=msg['role'], parts=[
+                    types.Part.from_text(part['text']) if 'text' in part else types.Part.from_data(part['inline_data']['data'], part['inline_data']['mime_type'])
                     for part in msg['parts']
                 ]) for msg in chat_history
             ]
 
             # Configure Gemini model
             model = genai.GenerativeModel('gemini-1.5-flash')
-            config = GenerateContentConfig(
+            config = types.GenerateContentConfig(
                 response_mime_type='text/plain',
-                system_instruction=[Part.from_text(text="You are a helpful chatbot for Diamond Marketing. Provide accurate and friendly responses.")]
+                system_instruction=[types.Part.from_text(text="You are a helpful chatbot for Diamond Marketing. Provide accurate and friendly responses.")]
             )
 
             try:

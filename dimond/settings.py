@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure--hf%d%3rz+fani(g_w_p3#v)n_*-eem+!g!j57x13f6#&oh+me
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False')
 
-ALLOWED_HOSTS = ['diamondmarketinget.com','www.diamondmarketinget.com']
+ALLOWED_HOSTS = ['diamondmarketinget.com','www.diamondmarketinget.com',"127.0.0.1:8000","127.0.0.1"]
 
 
 # Application definition
@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'src', 
     'django.contrib.sites', 
     'django.contrib.sitemaps',
-    'django.contrib.sessions',
-    'django.contrib.messages',
     
 ]
 
