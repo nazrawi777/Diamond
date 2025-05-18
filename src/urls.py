@@ -19,6 +19,7 @@ urlpatterns = [
     path('blog/', views.blog_view, name='blog'),
     path('about-us/', views.about_us_view, name='about_us'),
      path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path("chatbot/", views.chatbot_response, name="chatbot_response"),
 ] 
 
 # Serve media files during development

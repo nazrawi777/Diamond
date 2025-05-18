@@ -30,8 +30,9 @@ SECRET_KEY = 'django-insecure--hf%d%3rz+fani(g_w_p3#v)n_*-eem+!g!j57x13f6#&oh+me
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False')
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
 
-ALLOWED_HOSTS = ['diamondmarketinget.com','www.diamondmarketinget.com']
+ALLOWED_HOSTS = ['diamondmarketinget.com','www.diamondmarketinget.com','http://127.0.0.1','127.0.0.1']
 
 
 # Application definition
