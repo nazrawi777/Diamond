@@ -102,6 +102,7 @@ class TeamMember(models.Model):
     role = models.CharField(max_length=255)
     image = models.ImageField(upload_to='team_members/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    position = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name

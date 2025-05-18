@@ -37,5 +37,5 @@ def blog_view(request):
 
 def about_us_view(request):
     team_members = TeamMember.objects.all()
-    testimonials = Testimonial.objects.all()
+    testimonials = Testimonial.objects.all().order_by('position')
     return render(request, 'about-us.html', { 'team_members':team_members , 'testimonials':testimonials})  # Path remains the sam
