@@ -43,8 +43,8 @@ def blog_view(request):
     return render(request, 'blog.html', {'blogs': blogs , 'blog_category': blog_category})
 
 def about_us_view(request):
-    team_members = TeamMember.objects.all()
-    testimonials = Testimonial.objects.all().order_by('position')
+    team_members = TeamMember.objects.all().order_by('position')
+    testimonials = Testimonial.objects.all()
     return render(request, 'about-us.html', { 'team_members':team_members , 'testimonials':testimonials})  # Path remains the sam
 
 @csrf_exempt
