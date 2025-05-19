@@ -135,8 +135,7 @@ you don't need to add `Hello there! 😊 I'm the chatbot for Diamond Marketing a
                 config=generate_content_config,
             ):
                 response_text += chunk.text
-            
-            print(response_text)
+        
             return JsonResponse({"bot_message": response_text.strip()})
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
