@@ -8701,10 +8701,7 @@ body:has(#search.open) {
     width: 140% !important;
     height: 180% !important;
    }
-  .sidebar .widget:not(:last-child) {
-    margin-bottom: 30px; 
-  position: relative;
-bottom: 3780px;}
+
 #nn3{
   overflow-x: hidden !important;
   position: relative;
