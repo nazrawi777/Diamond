@@ -1375,9 +1375,7 @@
       const fileCancelButton = fileUploadWrapper.querySelector("#file-cancel");
       const chatbotToggler = document.querySelector("#chatbot-toggler");
       const closeChatbot = document.querySelector("#close-chatbot");
-      // API setup
-      const API_KEY = "AIzaSyCeal00-ejR8WMv9xfsL4uAjtdZuFVRqtQ";
-      const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
       // Initialize user message and file data
       const userData = {
         message: null,
@@ -1408,21 +1406,22 @@
             ...(userData.file.data ? [{ inline_data: userData.file }] : []),
           ],
         });
-        // API request options
-        const requestOptions = {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: chatHistory,
-          }),
-        };
+
         try {
-          // Fetch bot response from API
-          const response = await fetch(API_URL, requestOptions);
+          // Send the user's message to the backend
+          const response = await fetch("/chatbot/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userData.message }),
+          });
+
           const data = await response.json();
-          if (!response.ok) throw new Error(data.error.message);
+
+          if (!response.ok)
+            throw new Error(data.error || "Failed to fetch response");
+
           // Extract and display bot's response text
-          const apiResponseText = data.candidates[0].content.parts[0].text
+          const apiResponseText = data.bot_message
             .replace(/\*\*(.*?)\*\*/g, "$1")
             .trim();
           messageElement.innerText = apiResponseText;
