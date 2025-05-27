@@ -8746,7 +8746,7 @@ body:has(#search.open) {
     color: #000f22 !important;
   }
   @media (max-width: 465px) {
-    .sidebar .widget:not(:last-child) {
+    #nazra11 {
       margin-bottom: 30px; 
     position: relative;
   bottom: 1930px !important;}
@@ -8755,14 +8755,14 @@ body:has(#search.open) {
     #nazra11 {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 1800px !important;}
+  bottom: 1910px !important;}
   }
   @media only screen and (min-width: 320px) and (max-width: 390px) {
   .contact-address {
     padding: 8px; }
   }
   @media only screen and (min-width: 320px) and (max-width: 369px) {
-    .sidebar .widget:not(:last-child) {
+    #nazra11 {
       margin-bottom: 30px; 
     position: relative;
   bottom: 1875px !important;}
@@ -8776,7 +8776,7 @@ body:has(#search.open) {
   top: 405px;}
   }
   @media only screen and (min-width: 370px) and (max-width: 399px) {
-    .sidebar .widget:not(:last-child) {
+    #nazra11 {
       margin-bottom: 30px; 
     position: relative;
   bottom: 1865px !important;}
