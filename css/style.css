@@ -8752,10 +8752,10 @@ body:has(#search.open) {
   bottom: 1930px !important;}
   }
   @media only screen and (min-width: 420px) and (max-width: 439px) {
-    .sidebar .widget:not(:last-child) {
+    #nazra11 {
       margin-bottom: 30px; 
     position: relative;
-  bottom: 1910px !important;}
+  bottom: 1900px !important;}
   }
   @media only screen and (min-width: 320px) and (max-width: 390px) {
   .contact-address {
