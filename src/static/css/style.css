@@ -9109,6 +9109,9 @@ body:has(#search.open) {
   cursor: pointer;
   background: white !important;
   display: flex;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16/9;
   flex-direction: column;
   justify-content: center;
   border: none;
@@ -9134,6 +9137,7 @@ body:has(#search.open) {
   width: 100%;
   height: 100%;
   object-fit: cover;
+ object-position: center;
   background-color: white !important;
   border: 1px solid transparent;
 }
