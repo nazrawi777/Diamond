@@ -293,6 +293,46 @@ body {
         }
         
 
+
+		.tesla-item {
+  color: white !important;
+  position: relative;
+  border-radius: 2px;
+  cursor: pointer;
+  background: white !important;
+  display: flex;
+  width: 100%!important;
+  max-width: 100% !important;
+  aspect-ratio: 16/9 !important;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+   /* Ensures pseudo-elements don’t go outside */
+  z-index: 1; /* Keeps item above background */
+}
+
+.tesla-item::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 101%;
+  height: 101%;
+  border-radius: inherit;;
+  z-index: -1; /* Ensures it's behind the item */
+  animation: spin 3s linear infinite;
+}
+
+
+.tesla-item img, video {
+  z-index: -9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ object-position: center;
+  background-color: white !important;
+  border: 1px solid transparent;
+}
     </style>
 	</head>
 	<body>
